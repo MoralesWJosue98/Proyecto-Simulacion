@@ -1,0 +1,206 @@
+cond Point-Constraints
+4
+global
+cond(int,1)==0 && cond(int,2)==0 && cond(int,3)==0 
+1
+0
+0
+simbols\rodillo.geo
+global
+cond(int,4)==0 && cond(int,5)==0 && cond(int,6)==0
+1
+0
+0
+simbols\apoio.geo
+global
+(cond(int,1)+cond(int,2)+cond(int,3)+cond(int,4)+cond(int,5)+cond(int,6))==6
+1
+0
+0
+simbols\empotramiento.geo
+global
+cond(int,1)+cond(int,2)+cond(int,3)+cond(int,4)+cond(int,5)+cond(int,6)<6
+1
+0
+0
+simbols\soporte.geo
+cond Line-Constraints
+3
+global
+cond(int,1)==0 || cond(int,2)==0 || cond(int,3)==0
+1
+0
+0
+simbols\rodillo.geo
+global
+cond(int,1)==1 && cond(int,2)==1 && cond(int,3)==1 && cond(int,4)==0 || cond(int,5)==0 || cond(int,6)==0
+1
+0
+0
+simbols\apoio.geo
+global
+cond(int,1)+cond(int,2)+cond(int,3)+cond(int,4)+cond(int,5)+cond(int,6)==6
+1
+0
+0
+simbols\empotramiento.geo
+cond Surface-Constraints
+3
+global
+cond(int,1)==0 || cond(int,2)==0 || cond(int,3)==0
+1
+0
+0
+simbols\rodillo.geo
+global
+cond(int,1)==1 && cond(int,2)==1 && cond(int,3)==1 && cond(int,4)==0 || cond(int,5)==0 || cond(int,6)==0
+1
+0
+0
+simbols\apoio.geo
+global
+cond(int,1)+cond(int,2)+cond(int,3)+cond(int,4)+cond(int,5)+cond(int,6)==6
+1
+0
+0
+simbols\empotramiento.geo
+cond Point-Force-Load
+1
+global
+fabs(cond(real,1))+fabs(cond(real,2))+fabs(cond(real,3))>0
+cond(real,1)
+cond(real,2)
+cond(real,3)
+simbols\forca.geo
+cond Moment
+1
+global
+fabs(cond(real,1))+fabs(cond(real,2))+fabs(cond(real,3))>0
+cond(real,1)
+cond(real,2)
+cond(real,3)
+simbols\moment1.geo
+cond Line-Pressure-Load
+1
+global
+fabs(cond(real,1))+fabs(cond(real,2))+fabs(cond(real,3))>0
+cond(real,2)
+cond(real,3)
+cond(real,4)
+simbols\preline.geo
+cond Line-Projected-Pressure-Load
+1
+global
+fabs(cond(real,1))+fabs(cond(real,2))+fabs(cond(real,3))>0
+cond(real,2)
+cond(real,3)
+cond(real,4)
+simbols\preproj.geo
+cond Line-Triangular-Pressure-Load
+1
+global
+fabs(cond(real,1))+fabs(cond(real,2))+fabs(cond(real,3))>0
+cond(real,2)
+cond(real,3)
+cond(real,4)
+simbols\triline.geo
+cond Surface-Pressure-Load
+1
+global
+fabs(cond(real,1))+fabs(cond(real,2))+fabs(cond(real,3))>0
+cond(real,1)
+cond(real,2)
+cond(real,3)
+simbols\presurf.geo
+cond Point-Enforced-Displacement
+2
+global
+cond(real,1)!=0 || cond(real,2)!=0 || cond(real,3)!=0
+cond(real,1)
+cond(real,2)
+cond(real,3)
+simbols\enfdisp.geo
+global
+cond(real,4)!=0 || cond(real,5)!=0 || cond(real,6)!=0
+cond(real,4)
+cond(real,5)
+cond(real,6)
+simbols\enfrot.geo
+cond Line-Local-Axes
+1
+local
+1
+1
+0
+0
+simbols\localaxes.geo
+cond Point-Disconnect
+1
+global
+(cond(int,1)+cond(int,2)+cond(int,3)+cond(int,4)+cond(int,5)+cond(int,6))!=0
+1
+0
+0
+simbols\disc.geo
+cond Point_Freq_Dynamic_Type1
+1
+global
+cond(real,2)!=0
+1
+0
+0
+simbols\dynamic.geo
+cond Line_Freq_Dynamic_Type1
+1
+global
+cond(real,2)!=0
+1
+0
+0
+simbols\dynamic.geo
+cond Surface_Freq_Dynamic_Type1
+1
+global
+cond(real,2)!=0
+1
+0
+0
+simbols\dynamic.geo
+cond Point_Freq_Dynamic_Type2
+1
+global
+cond(real,2)!=0
+1
+0
+0
+simbols\dynamic.geo
+cond Line_Freq_Dynamic_Type2
+1
+global
+cond(real,2)!=0
+1
+0
+0
+simbols\dynamic.geo
+cond Surface_Freq_Dynamic_Type2
+1
+global
+cond(real,2)!=0
+1
+0
+0
+simbols\dynamic.geo
+cond Line_Pressure_Freq_Type1
+1
+global
+(fabs(cond(real,3))+fabs(cond(real,4))+fabs(cond(real,5)))>0
+cond(real,4)
+cond(real,5)
+cond(real,6)
+simbols\predynamic.geo
+
+
+
+
+
+

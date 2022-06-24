@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8"?><!-- -*- coding: utf-8;-*- -->
+<!DOCTYPE ramtranslator SYSTEM "ramtranslator.dtd">
+<ramtranslator version="1.11b">
+    <maxrow>77</maxrow>
+    <languages>
+        <langlist>Spanish es English en</langlist>
+        <current>Spanish</current>
+    </languages>
+    <srcstrings>
+        <src id="140">
+            <base>About</base>
+            <position>FEniCS.tcl:113;FEniCS.tcl:120</position>
+            <priority>0</priority>
+        </src>
+        <src id="153">
+            <base>domain body of surface</base>
+            <position>FEniCS.cnd:31</position>
+            <priority>0</priority>
+        </src>
+        <src id="154">
+            <base>domain body of volume</base>
+            <position>FEniCS.cnd:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="155">
+            <base>domain edge of surface</base>
+            <position>FEniCS.cnd:23</position>
+            <priority>0</priority>
+        </src>
+        <src id="156">
+            <base>domain face of volume</base>
+            <position>FEniCS.cnd:5</position>
+            <priority>0</priority>
+        </src>
+        <src id="157">
+            <base>domains 2d</base>
+            <position>FEniCS.cnd:21</position>
+            <priority>0</priority>
+        </src>
+        <src id="158">
+            <base>domains 3d</base>
+            <position>FEniCS.cnd:3</position>
+            <priority>0</priority>
+        </src>
+        <src id="159">
+            <base>id</base>
+            <position>FEniCS.cnd:34</position>
+            <priority>0</priority>
+        </src>
+        <src id="160">
+            <base>integer number to identify a domain</base>
+            <position>FEniCS.cnd:46</position>
+            <priority>0</priority>
+        </src>
+        <src id="161">
+            <base>mesh function body of volume</base>
+            <position>FEniCS.cnd:49</position>
+            <priority>0</priority>
+        </src>
+        <src id="162">
+            <base>mesh function face of volume</base>
+            <position>FEniCS.cnd:41</position>
+            <priority>0</priority>
+        </src>
+        <src id="163">
+            <base>mesh function value</base>
+            <position>FEniCS.cnd:54</position>
+            <priority>0</priority>
+        </src>
+        <src id="164">
+            <base>mesh functions</base>
+            <position>FEniCS.cnd:39</position>
+            <priority>0</priority>
+        </src>
+        <src id="165">
+            <base>value</base>
+            <position>FEniCS.cnd:52</position>
+            <priority>0</priority>
+        </src>
+        <src id="166">
+            <base>Dolfin</base>
+            <position>FEniCS.prb:4</position>
+            <priority>0</priority>
+        </src>
+        <src id="167">
+            <base>Epetra</base>
+            <position>FEniCS.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="168">
+            <base>MTL4</base>
+            <position>FEniCS.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="169">
+            <base>PETSc</base>
+            <position>FEniCS.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="170">
+            <base>absolute tolerance</base>
+            <position>FEniCS.prb:83</position>
+            <priority>0</priority>
+        </src>
+        <src id="171">
+            <base>allow extrapolation</base>
+            <position>FEniCS.prb:6</position>
+            <priority>0</priority>
+        </src>
+        <src id="172">
+            <base>cache dir</base>
+            <position>FEniCS.prb:38</position>
+            <priority>0</priority>
+        </src>
+        <src id="173">
+            <base>convert exceptions to warnings</base>
+            <position>FEniCS.prb:40</position>
+            <priority>0</priority>
+        </src>
+        <src id="174">
+            <base>cpp optimize</base>
+            <position>FEniCS.prb:42</position>
+            <priority>0</priority>
+        </src>
+        <src id="175">
+            <base>cpp optimize flags</base>
+            <position>FEniCS.prb:44</position>
+            <priority>0</priority>
+        </src>
+        <src id="176">
+            <base>divergence limit</base>
+            <position>FEniCS.prb:85</position>
+            <priority>0</priority>
+        </src>
+        <src id="177">
+            <base>epsilon</base>
+            <position>FEniCS.prb:46</position>
+            <priority>0</priority>
+        </src>
+        <src id="178">
+            <base>error control</base>
+            <position>FEniCS.prb:48</position>
+            <priority>0</priority>
+        </src>
+        <src id="179">
+            <base>error on nonconvergence</base>
+            <position>FEniCS.prb:87</position>
+            <priority>0</priority>
+        </src>
+        <src id="180">
+            <base>exact interpolation</base>
+            <position>FEniCS.prb:9</position>
+            <priority>0</priority>
+        </src>
+        <src id="181">
+            <base>false</base>
+            <position>FEniCS.prb:113</position>
+            <priority>0</priority>
+        </src>
+        <src id="182">
+            <base>form compiler</base>
+            <position>FEniCS.prb:36</position>
+            <priority>0</priority>
+        </src>
+        <src id="183">
+            <base>form postfix</base>
+            <position>FEniCS.prb:50</position>
+            <priority>0</priority>
+        </src>
+        <src id="184">
+            <base>format</base>
+            <position>FEniCS.prb:52</position>
+            <priority>0</priority>
+        </src>
+        <src id="185">
+            <base>gmres restart</base>
+            <position>FEniCS.prb:97</position>
+            <priority>0</priority>
+        </src>
+        <src id="186">
+            <base>graph coloring library</base>
+            <position>FEniCS.prb:11</position>
+            <priority>0</priority>
+        </src>
+        <src id="187">
+            <base>krylov solver</base>
+            <position>FEniCS.prb:77</position>
+            <priority>0</priority>
+        </src>
+        <src id="188">
+            <base>linear algebra backend</base>
+            <position>FEniCS.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="189">
+            <base>log level</base>
+            <position>FEniCS.prb:54</position>
+            <priority>0</priority>
+        </src>
+        <src id="190">
+            <base>log prefix</base>
+            <position>FEniCS.prb:56</position>
+            <priority>0</priority>
+        </src>
+        <src id="191">
+            <base>lu solver</base>
+            <position>FEniCS.prb:77</position>
+            <priority>0</priority>
+        </src>
+        <src id="192">
+            <base>maximum iterations</base>
+            <position>FEniCS.prb:89</position>
+            <priority>0</priority>
+        </src>
+        <src id="193">
+            <base>mesh partitioner</base>
+            <position>FEniCS.prb:15</position>
+            <priority>0</priority>
+        </src>
+        <src id="194">
+            <base>monitor convergence</base>
+            <position>FEniCS.prb:91</position>
+            <priority>0</priority>
+        </src>
+        <src id="195">
+            <base>name</base>
+            <position>FEniCS.prb:58</position>
+            <priority>0</priority>
+        </src>
+        <src id="196">
+            <base>nonzero initial guess</base>
+            <position>FEniCS.prb:93</position>
+            <priority>0</priority>
+        </src>
+        <src id="197">
+            <base>num threads</base>
+            <position>FEniCS.prb:17</position>
+            <priority>0</priority>
+        </src>
+        <src id="198">
+            <base>optimize dolfin</base>
+            <position>FEniCS.prb:19</position>
+            <priority>0</priority>
+        </src>
+        <src id="199">
+            <base>optimize form</base>
+            <position>FEniCS.prb:21</position>
+            <priority>0</priority>
+        </src>
+        <src id="200">
+            <base>optimize form compiler</base>
+            <position>FEniCS.prb:60</position>
+            <priority>0</priority>
+        </src>
+        <src id="201">
+            <base>optimize use dofmap cache</base>
+            <position>FEniCS.prb:23</position>
+            <priority>0</priority>
+        </src>
+        <src id="202">
+            <base>optimize use tensor cache</base>
+            <position>FEniCS.prb:25</position>
+            <priority>0</priority>
+        </src>
+        <src id="203">
+            <base>output dir</base>
+            <position>FEniCS.prb:62</position>
+            <priority>0</priority>
+        </src>
+        <src id="204">
+            <base>plot filename prefix</base>
+            <position>FEniCS.prb:27</position>
+            <priority>0</priority>
+        </src>
+        <src id="205">
+            <base>precision</base>
+            <position>FEniCS.prb:64</position>
+            <priority>0</priority>
+        </src>
+        <src id="206">
+            <base>preconditioner ilu fill level</base>
+            <position>FEniCS.prb:107</position>
+            <priority>0</priority>
+        </src>
+        <src id="207">
+            <base>preconditioner report</base>
+            <position>FEniCS.prb:99</position>
+            <priority>0</priority>
+        </src>
+        <src id="208">
+            <base>preconditioner reuse</base>
+            <position>FEniCS.prb:101</position>
+            <priority>0</priority>
+        </src>
+        <src id="209">
+            <base>preconditioner same nonzero pattern</base>
+            <position>FEniCS.prb:103</position>
+            <priority>0</priority>
+        </src>
+        <src id="210">
+            <base>preconditioner schwarz overlap</base>
+            <position>FEniCS.prb:109</position>
+            <priority>0</priority>
+        </src>
+        <src id="211">
+            <base>preconditioner shift nonzero</base>
+            <position>FEniCS.prb:105</position>
+            <priority>0</priority>
+        </src>
+        <src id="212">
+            <base>quadrature degree</base>
+            <position>FEniCS.prb:66</position>
+            <priority>0</priority>
+        </src>
+        <src id="213">
+            <base>quadrature rule</base>
+            <position>FEniCS.prb:68</position>
+            <priority>0</priority>
+        </src>
+        <src id="214">
+            <base>refinement algorithm</base>
+            <position>FEniCS.prb:29</position>
+            <priority>0</priority>
+        </src>
+        <src id="215">
+            <base>relative tolerance</base>
+            <position>FEniCS.prb:95</position>
+            <priority>0</priority>
+        </src>
+        <src id="216">
+            <base>report</base>
+            <position>FEniCS.prb:81</position>
+            <priority>0</priority>
+        </src>
+        <src id="217">
+            <base>representation</base>
+            <position>FEniCS.prb:70</position>
+            <priority>0</priority>
+        </src>
+        <src id="218">
+            <base>reuse factorization</base>
+            <position>FEniCS.prb:111</position>
+            <priority>0</priority>
+        </src>
+        <src id="219">
+            <base>same nonzero pattern</base>
+            <position>FEniCS.prb:113</position>
+            <priority>0</priority>
+        </src>
+        <src id="220">
+            <base>solver</base>
+            <position>FEniCS.prb:77</position>
+            <priority>0</priority>
+        </src>
+        <src id="221">
+            <base>solvers</base>
+            <position>FEniCS.prb:75</position>
+            <priority>0</priority>
+        </src>
+        <src id="222">
+            <base>split</base>
+            <position>FEniCS.prb:72</position>
+            <priority>0</priority>
+        </src>
+        <src id="223">
+            <base>std out all processes</base>
+            <position>FEniCS.prb:31</position>
+            <priority>0</priority>
+        </src>
+        <src id="224">
+            <base>timer prefix</base>
+            <position>FEniCS.prb:33</position>
+            <priority>0</priority>
+        </src>
+        <src id="225">
+            <base>to allow extrapolate functions outside the computational domain</base>
+            <position>FEniCS.prb:8</position>
+            <priority>0</priority>
+        </src>
+        <src id="226">
+            <base>true</base>
+            <position>FEniCS.prb:113</position>
+            <priority>0</priority>
+        </src>
+        <src id="227">
+            <base>uBLAS</base>
+            <position>FEniCS.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="228">
+            <base>Help on</base>
+            <position>FEniCS.tcl:112;FEniCS.tcl:119</position>
+            <priority>0</priority>
+        </src>
+    </srcstrings>
+    <translatestrings>
+        <lan lan="es">
+            <translate id="140">
+                <base>Acerca de</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="153">
+                <base>dominio cuerpo de superficie</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="154">
+                <base>dominio cuerpo de volúmen</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="155">
+                <base>dominio arista de superficie</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="156">
+                <base>dominio cara de volúmen</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="157">
+                <base>dominios 2d</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="158">
+                <base>dominios 3d</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="159">
+                <base>identificador</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="160">
+                <base>número entero que identifica un dominio</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="161">
+                <base>función malla cuerpo de volúmen</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="162">
+                <base>función malla cara de volúmen</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="163">
+                <base>valor función malla</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="164">
+                <base>funciones malla</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="165">
+                <base>valor</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="166">
+                <base>Dolfin</base>
+            </translate>
+            <translate id="167">
+                <base>Epetra</base>
+            </translate>
+            <translate id="168">
+                <base>MTL4</base>
+            </translate>
+            <translate id="169">
+                <base>PETSc</base>
+            </translate>
+            <translate id="170">
+                <base>tolerancia absoluta</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="171">
+                <base>permitir extrapolación</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="172">
+                <base>directorio cache </base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="173">
+                <base>convertir excepciones en avisos</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="174">
+                <base>optimizar c++</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="175">
+                <base>parámetros de optimización c++</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="176">
+                <base>límite de divergencia</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="177">
+                <base>epsilon</base>
+            </translate>
+            <translate id="178">
+                <base>control de error</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="179">
+                <base>error si no converge</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="180">
+                <base>interpolación exacta</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="181">
+                <base>falso</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="182">
+                <base>form compilador</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="183">
+                <base>form sufijo</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="184">
+                <base>formato</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="185">
+                <base>gmres reiniciar</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="186">
+                <base>biblioteca de coloreado de grafos</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="187">
+                <base>solucionador krylov</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="188">
+                <base>paquete algegra lineal</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="189">
+                <base>nivel log</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="190">
+                <base>prefijo log</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="191">
+                <base>solucionador lu</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="192">
+                <base>máximo iteraciones</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="193">
+                <base>particionador malla</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="194">
+                <base>monitorizar convergencia</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="195">
+                <base>nombre</base>
+            </translate>
+            <translate id="196">
+                <base>previsión incial no nulos</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="197">
+                <base>número hilos</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="198">
+                <base>optimizar dolfin</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="199">
+                <base>optimizar form</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="200">
+                <base>optimizar compilador form</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="201">
+                <base>optimizar uso dofmap cache</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="202">
+                <base>optimizar uso tensor cache</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="203">
+                <base>directorio salida</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="204">
+                <base>prefijo fichero plot</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="205">
+                <base>precisión</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="206">
+                <base>preconcionador ilu nivel llenado</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="207">
+                <base>informe precondicionador</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="208">
+                <base>reusar precondicionador</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="209">
+                <base>precondicionador mismo patrón no nulos</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="210">
+                <base>precondicionador schwarz solapamiento</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="211">
+                <base>precondicionador desplazar no nulos</base>
+            </translate>
+            <translate id="212">
+                <base>nivel cuadratura</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="213">
+                <base>regla cuadratura</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="214">
+                <base>algorimo refinamiento</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="215">
+                <base>tolerancia relativa</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="216">
+                <base>informe</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="217">
+                <base>representación</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="218">
+                <base>reusar factorización</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="219">
+                <base>mismo patrón no nulos</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="220">
+                <base>solucionador</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="221">
+                <base>solucionadores</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="222">
+                <base>dividir</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="223">
+                <base>salida estandar todos procesos</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="224">
+                <base>prefijo timer</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="225">
+                <base>para permitir extrapolar funciones fuera del dominio computacional</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-19</date>
+            </translate>
+            <translate id="226">
+                <base>verdadero</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+            <translate id="227">
+                <base>uBLAS</base>
+            </translate>
+            <translate id="228">
+                <base>Ayuda de</base>
+                <tuser>Translator</tuser>
+                <date>2012-06-18</date>
+            </translate>
+        </lan>
+        <lan lan="en"/>
+    </translatestrings>
+    <users>
+        <user id="1">Programmer</user>
+        <user id="2">Translator</user>
+        <user id="3">Web</user>
+        <user id="4">escolano</user>
+        <current>Translator</current>
+    </users>
+    <abbrevs/>
+    <options>
+        <option name="defaultexportdir" value="C:/gid project more/Proyectos/FeniCS/problemtypes/FEniCS.gid/msgs"/>
+        <option name="TranslationProgram" value="SAP2000 {{C:\gid project more\Proyectos\FeniCS\problemtypes\FEniCS.gid}} {.cnd .mat .prb .tcl} 1"/>
+    </options>
+</ramtranslator>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Abaqus : Prepare the geometry and generate the mesh</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Abaqus : Prepare the geometry and generate the mesh
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>The geometry is created or imported using the standard <strong>GiD</strong>
+ commands (See <strong>GiD</strong>
+ Help for details). The mesh is also generated using standard <strong>GiD</strong>
+ commands and all <strong>GiD</strong>
+ element types are supported. <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image image-center" height="329" width="391" loading="lazy" src="attachments/2522743208/2522743207.jpeg?width=391" data-image-src="attachments/2522743208/2522743207.png" data-unresolved-comment-count="0" data-linked-resource-id="2522743207" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav1257da0acab25c24a45d0ee26c2c7daf.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2522743208" data-linked-resource-container-version="4" data-media-id="f84c838d-a7ba-4eda-ba22-d1032aeade1e" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+The following element formulation is set y default for each <strong>GiD</strong>
+ element type (two values are presented because the mesh can also be quadratic):            </p>
+            <ul>
+              <li>Linear Elements: B31,B32</li>
+              <li>Triangle Elements: S3,S6</li>
+              <li>Quadrilateral Elements: S4,S8,S9</li>
+              <li>Tetrahedra Elements: C3D4,C3D10</li>
+              <li>Hexahedra Elements: C3D8,C3D20,C3D27</li>
+              <li>Prism Elements: C3D6,C3D15</li>
+            </ul>
+            <p>
+              <br class="atl-forced-newline"/>
+The user can change the formulation of each element with the condition <strong>Element formulation</strong>
+ (found in the menu <em>Data-&gt;Define Sets</em>
+ for 1,2 and 3D elements), by selecting the different mesh or geometry entities of the model as in the sets assignment. Some options are suggested by the GUI but the user can also enter the formulation by hand (thanks to the <em>User defined</em>
+ option): <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image image-center" height="369" width="268" loading="lazy" src="attachments/2522743208/2522743213.jpeg?width=268" data-image-src="attachments/2522743208/2522743213.png" data-unresolved-comment-count="0" data-linked-resource-id="2522743213" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav8d67db2ee669de4f2156f42a5b22e716.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2522743208" data-linked-resource-container-version="4" data-media-id="755612e6-c84e-4550-b1b9-c72bdede5a8b" data-media-type="file"/>
+              </span>
+            </p>
+            <p style="text-align: center;">
+              <em>Selecting an element formulation from the suggested list</em>
+            </p>
+            <p style="text-align: center;">
+              <br class="atl-forced-newline"/>
+              <span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image image-center" height="204" width="294" loading="lazy" src="attachments/2522743208/2522743218.jpeg?width=294" data-image-src="attachments/2522743208/2522743218.png" data-unresolved-comment-count="0" data-linked-resource-id="2522743218" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavef77b98b24b9f50596954d7b0aa428ba.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2522743208" data-linked-resource-container-version="4" data-media-id="cb8afb0d-b97e-44ed-a3a7-02ac591ffceb" data-media-type="file"/>
+              </span>
+              <br/>
+              <em>Entering an element formulation by hand</em>
+            </p>
+            <p>
+              <br/>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

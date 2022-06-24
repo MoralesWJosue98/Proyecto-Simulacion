@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Property</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Property
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Properties → Property<br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+A beam or shell entity can only have one property defined. It is possible to choose between the following types of properties: <br class="atl-forced-newline"/>
+-<strong>Linear elements</strong>
+: List of properties that can be assigned to lines.<br/>
+              <strong>-<em>
+                  <span style="text-decoration: underline;">Bar</span>
+                </em>
+:              </strong>
+ useful for bars and beams definition with the same beginning and ending section. <br class="atl-forced-newline"/>
+Definitions of the different statements: <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Area:</span>
+                </em>
+              </strong>
+ Area of a section. <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Moments of inertia</span>
+                </em>
+:              </strong>
+ Area moments of inertia (Real, I1I2 &gt; I212) <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Torsional constant</span>
+                </em>
+              </strong>
+ (Real) <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Y-Shear Area (K1), Z-Shear Area (K2):</span>
+                </em>
+              </strong>
+ The quantities K1 and K2 are expressed by relative amounts (0.0 to 1.0) of the total cross-sectional area. The quantities contribute to the transverse shear stiffness (KAG) in the direction of the two principal axes. These quantities are ignored if I12 is not zero. The following are the default values for K1 and K2: <br/>
+K1 =(12*E*I1)/(L*L*L)<br/>
+K2=(12*EII2)/(L*L*L). <br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">Nonstructural mass/ length:</span>
+                </em>
+              </strong>
+ It is possible to add mass to structural mass (Real). <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">Stress recovery:</span>
+                </em>
+              </strong>
+ Stress recovery coefficients (Real). <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">Material composition</span>
+                </em>
+              </strong>
+              <em>:</em>
+ It is possible to choose a material composition from a materials list defined in the materials section.            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="242" width="339" loading="lazy" src="attachments/2678391726/2678391725.png?width=339" data-image-src="attachments/2678391726/2678391725.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391725" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddava285c62b4d9bc26f137dddd405a1f3af.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391726" data-linked-resource-container-version="6" data-media-id="a6d6d7d4-c33b-4414-8552-695babb101c4" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 7 – Composition Material Combo Box</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <ul class="alternate">
+              <li>
+                <p class="auto-cursor-target">
+                  <strong>
+                    <em>
+                      <span style="text-decoration: underline;">Section Button</span>
+                    </em>
+                  </strong>
+                  <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                    <img class="confluence-embedded-image" height="31" width="57" loading="lazy" src="attachments/2678391726/2678391731.gif?width=57" data-image-src="attachments/2678391726/2678391731.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391731" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav44e98d14cd077a7268ec599df2292bbc.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391726" data-linked-resource-container-version="6" data-media-id="c650ff0b-4880-44bf-9646-4fb4daace298" data-media-type="file"/>
+                  </span>
+ This functionality allows to the user defines the shape of different sections of bars and beams. At the moment it is possible work with rectangular section, semi-circular section, trapezoidal section and double T section.                </p>
+                <div class="table-wrap">
+                  <table class="confluenceTable">
+                    <colgroup>
+                      <col/>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td class="confluenceTd">
+                          <p>
+                            <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                              <img class="confluence-embedded-image" height="457" width="499" loading="lazy" src="attachments/2678391726/2678391736.png?width=499" data-image-src="attachments/2678391726/2678391736.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391736" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav54009e58aadd4f1120344a38bfa629ce.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391726" data-linked-resource-container-version="6" data-media-id="bf2284a8-3589-4b63-a17d-f8e5ad7e3209" data-media-type="file"/>
+                            </span>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td colspan="1" class="confluenceTd">
+                          <em>Figure 8 - Section window</em>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <strong>-<em>
+                    <span style="text-decoration: underline;">Beam</span>
+                  </em>
+:                </strong>
+                <span style="color: rgb(9,30,66);">
+                  <span> </span>
+In this version it is the same like a bar.                </span>
+                <br/>
+                <strong>-<em>
+                    <span style="text-decoration: underline;">Curved Beam</span>
+                  </em>
+:                </strong>
+                <span style="color: rgb(9,30,66);">
+                  <span> </span>
+The only difference between bars and beams is Bend Radius statement.                </span>
+                <br/>
+                <strong>-<em>
+                    <span style="text-decoration: underline;">Tube:</span>
+                  </em>
+                </strong>
+                <span style="color: rgb(9,30,66);">
+                  <span> </span>
+Defines the properties of a thin-walled cylindrical tube element.                </span>
+                <br/>
+                <strong>-<em>
+                    <span style="text-decoration: underline;">Viscous Damper:</span>
+                  </em>
+                </strong>
+                <span style="color: rgb(9,30,66);">
+                  <span> </span>
+Defines a one-dimensional viscous damper element of the structural model. Used only for direct formulation of dynamic analyses. Parameters of this property are viscous coefficients for extension and rotation (Real).                </span>
+                <br/>
+                <strong>-<em>
+                    <span style="text-decoration: underline;">Spring:</span>
+                  </em>
+                </strong>
+                <span style="color: rgb(9,30,66);">
+                  <span> </span>
+spring element is a spring, which connects either translational (Axial) or rotational (Torsional) degrees of freedom. You cannot specify both stiffness and damping values for the same elements.                </span>
+                <br/>
+                <strong>-<em>
+                    <span style="text-decoration: underline;">DOF Spring</span>
+                  </em>
+:                </strong>
+                <span style="color: rgb(9,30,66);">
+                  <span> </span>
+Unlike the Spring Element, which acts along the line between the elemental endpoints, the DOF Spring connects two nodal degrees of freedom - independent from their orientation relative to each other. Degrees of freedom via the combo boxes should be chosen at the end of the dialog box. Similar to the spring however, you can specify both stiffness and damping.                </span>
+                <br/>
+                <strong>
+                  <em>Note for NASTRAN advanced users:</em>
+                </strong>
+                <br/>
+                <em>The following table describes relations between viscous damper, springs, DOF springs and NASTRAN elements.</em>
+              </li>
+              <li>
+                <div class="table-wrap">
+                  <div class="table-wrap">
+                    <table class="confluenceTable">
+                      <colgroup>
+                        <col/>
+                        <col/>
+                        <col/>
+                        <col/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Spring</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Torsional</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Stiffness</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>CROD</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Spring</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Axial</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Stiffness</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>CROD</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>DOF Spring</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>
+                              <br/>
+                            </p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Damper</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>CDAMP2</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>DOF Spring</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>
+                              <br/>
+                            </p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Stiffness</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>CELAS2</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>DOF Spring</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>
+                              <br/>
+                            </p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Stiffness/Damper</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>CELAS2</p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Viscous Damper</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Axial/Torsional</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>Damper</p>
+                          </td>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>CVISC</p>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="auto-cursor-target">Springs are modeled using CROD elements, where 1.e-6 multiplies stiffness factor in axial springs and 2.5e-6 in torsional springs. Springs are composed of a material with very high Young Modulus.</p>
+                </div>
+                <p>-<strong>Surface elements</strong>
+: List of properties that can be assigned to surfaces.<br/>
+                  <strong>-<em>
+                      <span style="text-decoration: underline;">Shear Panel</span>
+                    </em>
+:                  </strong>
+                  <span> </span>
+Defines a shear panel element (SHEAR) of a structural model. A shear panel is a two-dimensional structural element that resists an action of tangential forces applied to its edges, but does not resist an action of normal forces. The structural and nonstructural mass of the shear panel is lumped at the connected nodes. (For more information see NASTRAN user manual).                </p>
+                <ul>
+                  <li>
+                    <strong>
+                      <em>
+                        <span style="text-decoration: underline;">Laminate:</span>
+                      </em>
+                    </strong>
+                    <span> </span>
+Defines a laminate panel. This window is divided in two sections Laminate and Materials.                  </li>
+                </ul>
+                <p>Materials section has to be filled first.<br/>
+-Materials section: Defines the material property for an orthotropic material temperature independent.<br class="atl-forced-newline"/>
+                  <br class="atl-forced-newline"/>
+E1: Modulus of elasticity in longitudinal direction, also defined as the fiber direction or 1-direction.<br/>
+E2: Modulus of elasticity in lateral direction, also defined as the matrix direction or 2-direction.<br/>
+NU12: Poisson's ratio (e2/e1 for uniaxial loading in 1-direction). Note that u21 = e2/e1 for uniaxial loading in 2-direction is related to u12, E1, and E2 by the relation u12 E2 = u21 E1.<br/>
+G12: In-plane shear modulus.<br/>
+G13: Transverse shear modulus for shear in 1-Z plane.<br/>
+G23: Transverse shear modulus for shear in 2-Z plane.<br class="atl-forced-newline"/>
+-Laminate section: Defines the properties of an n-ply composite material laminate.<br/>
+Distance Bottom: Distance from the reference plane to the bottom surface.<br/>
+-Allowable stress: Allowable shear stress of the bonding material. Required if failure index is desired.<br/>
+-Failure theory: The following theories are allowed.<br class="atl-forced-newline"/>
+HILL or the Hill theory<br/>
+HOFF for the Hoffman theory<br/>
+TSAI for the Tsai-Wu theory<br/>
+STRESS for the maximum stress theory<br/>
+STRAIN for the maximum strain theory                </p>
+                <div class="table-wrap">
+                  <div class="table-wrap">
+                    <table class="confluenceTable">
+                      <colgroup>
+                        <col/>
+                      </colgroup>
+                      <tbody>
+                        <tr>
+                          <td style="text-align: left;" class="confluenceTd">
+                            <p>
+                              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                  <img class="confluence-embedded-image" height="422" width="499" loading="lazy" src="attachments/2678391726/2678161558.png?width=499" data-image-src="attachments/2678391726/2678161558.png" data-unresolved-comment-count="0" data-linked-resource-id="2678161558" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav3e410d86001b5de24cd861ae1fc030f8.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391726" data-linked-resource-container-version="6" data-media-id="c740b3f1-80f3-4530-a5a9-a9ca6a5bc274" data-media-type="file"/>
+                                </span>
+                              </span>
+                            </p>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="1" class="confluenceTd">
+                            <em>Figue 9 - Laminate window</em>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p>
+                    <strong>-<em>
+                        <span style="text-decoration: underline;">The rest of properties</span>
+                      </em>
+                    </strong>
+                    <span> </span>
+are the same with different degrees of control over the definition parameters of surface. With these properties it is possible to define a plate element of a structural model. This is an iso-parametric membrane-bending element, with variable element thickness, layered composite material, and thermal analysis capabilities.<br/>
+A property that gives more control over definition parameters of surface is Plate property. Some statements were removed in the rest of the properties, which means that the program uses default values for these statements. Following is a list of default values for statements:<br class="atl-forced-newline"/>
+                    <strong>
+                      <em>
+                        <span style="text-decoration: underline;">-Stress recovery:</span>
+                      </em>
+                    </strong>
+                    <span> </span>
+Fiber distances for stress computation. The positive direction is determined by the right hand rule and the order in which the nodes are listed on the connection entry. (Real or blank; defaults are -T/2 for Z1 and +T/2 for Z2.) (T=Thickness)<br class="atl-forced-newline"/>
+                    <strong>
+                      <em>
+                        <span style="text-decoration: underline;">Bend Stiffness:</span>
+                      </em>
+                    </strong>
+                    <span> </span>
+Bending stiffness parameter (Real or blank, default = 1.0)<br class="atl-forced-newline"/>
+                    <strong>
+                      <em>
+                        <span style="text-decoration: underline;">Tshear/MenThickness:</span>
+                      </em>
+                    </strong>
+                    <span> </span>
+Transverse shear thickness divided by membrane thickness (Real or blank; default = 0.833333)<br/>
+                    <strong>-Volume elements:</strong>
+                    <span> </span>
+List of properties that can be assigned to volumes.<br/>
+                    <strong>
+                      <em>
+                        <span style="text-decoration: underline;">-Tetrahedron:</span>
+                      </em>
+                    </strong>
+                    <span> </span>
+Defines the connections of a four-sided solid element with four or ten nodes. It is possible select between Element coordinate system and Basic coordinate system.<br/>
+Basic coordinate system is global coordinate system of geometry (screen axes).<br/>
+Definition of element coordinate system is the following:<br/>
+The element coordinate system is derived from the three vectors R, S, and T that join the midpoints of opposite edges. R vector joins midpoints of edges G1-G2 and G3-G4S vector joins midpoints of edges G1-G3 and G2-G4T vector joins midpoints of edges G1-G4 and G2-G3The origin of the coordinate system is located at G1. The element coordinate system is chosen as close as possible to the R, S, and T vectors and points in the same general direction. (Mathematically speaking, the coordinate system is computed in such a way, that if the R, S, and T vectors are described in the element coordinate system, a 3-by-3 positive definite symmetric matrix would be produced).                  </p>
+                  <div class="table-wrap">
+                    <div class="table-wrap">
+                      <table class="confluenceTable">
+                        <colgroup>
+                          <col/>
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td style="text-align: left;" class="confluenceTd">
+                              <p>
+                                <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                  <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                    <img class="confluence-embedded-image" height="180" width="229" loading="lazy" src="attachments/2678391726/2677932358.gif?width=229" data-image-src="attachments/2678391726/2677932358.png" data-unresolved-comment-count="0" data-linked-resource-id="2677932358" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav18a88e79f4751db03c559f400ed53aff.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391726" data-linked-resource-container-version="6" data-media-id="663b6684-fa72-4880-ad78-e77d186f9462" data-media-type="file"/>
+                                  </span>
+                                </span>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left;" class="confluenceTd">
+                              <p>
+                                <em>Figure 10 – Nodes Number</em>
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <p>
+                    <br/>
+                  </p>
+                  <div class="table-wrap">
+                    <div class="table-wrap">
+                      <table class="confluenceTable">
+                        <colgroup>
+                          <col/>
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td style="text-align: left;" class="confluenceTd">
+                              <p>
+                                <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                  <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                    <img class="confluence-embedded-image" height="211" width="231" loading="lazy" src="attachments/2678391726/2677932362.gif?width=231" data-image-src="attachments/2678391726/2677932362.png" data-unresolved-comment-count="0" data-linked-resource-id="2677932362" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav03eb6251e0f70f95a08d64185cbae42f.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391726" data-linked-resource-container-version="6" data-media-id="5a23aa73-ecef-4e99-8bbc-cc42ddbd7aca" data-media-type="file"/>
+                                  </span>
+                                </span>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left;" class="confluenceTd">
+                              <p>
+                                <em>Figure 11 – Element Coordinate System</em>
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <p>
+                    <br class="atl-forced-newline"/>
+                    <strong>
+                      <em>
+                        <span style="text-decoration: underline;">-Hexahedron:</span>
+                      </em>
+                    </strong>
+                    <span> </span>
+Defines the connections of a six-sided solid element with eight or twenty nodes. It is possible to select between Element coordinate system and Basic coordinate system.<br/>
+Basic coordinate system is global coordinate system of geometry (screen axes).<br/>
+Definition of element coordinate system is the following:<br/>
+The element coordinate system for the CHEXA element is defined in terms of the three vectors R, S, and T that join the centroids of opposite faces. R vector joins the centroids of faces G4-G1-G5-G8 and G3-G2-G6-G7S vector joins the centroids of faces G1-G2-G6-G5 and G4-G3-G7-G8T vector joins the centroids of faces G1-G2-G3-G4 and G5-G6-G7-G8The origin of the coordinate system is located at the intersection of these vectors. The X, Y, and Z axes of the element coordinate system are chosen as close as possible to the R, S, and T vectors and point in the same general direction. (Mathematically speaking, the coordinate system is computed in such a way, that if the R, S, and T vectors were described in the element coordinate system a 3-by-3 positive definite symmetric matrix would be produced.)                  </p>
+                  <div class="table-wrap">
+                    <div class="table-wrap">
+                      <table class="confluenceTable">
+                        <colgroup>
+                          <col/>
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td style="text-align: left;" class="confluenceTd">
+                              <p>
+                                <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                  <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                    <img class="confluence-embedded-image" height="190" width="252" loading="lazy" src="attachments/2678391726/2677932366.jpeg?width=252" data-image-src="attachments/2678391726/2677932366.png" data-unresolved-comment-count="0" data-linked-resource-id="2677932366" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddava8e3438b7a91c238847bbdd50f3c4a6b.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391726" data-linked-resource-container-version="6" data-media-id="10a03f51-a157-438f-a005-053d4f90d6e7" data-media-type="file"/>
+                                  </span>
+                                </span>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left;" class="confluenceTd">
+                              <p>
+                                <em>Figure 12 – Nodes Numbers</em>
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <p>
+                    <br/>
+                  </p>
+                  <div class="table-wrap">
+                    <div class="table-wrap">
+                      <table class="confluenceTable">
+                        <colgroup>
+                          <col/>
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td style="text-align: left;" class="confluenceTd">
+                              <p>
+                                <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                  <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                                    <img class="confluence-embedded-image" height="138" width="267" loading="lazy" src="attachments/2678391726/2677932370.jpeg?width=267" data-image-src="attachments/2678391726/2677932370.png" data-unresolved-comment-count="0" data-linked-resource-id="2677932370" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav9490aa4665e19c044dfca29bdceb1f5d.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391726" data-linked-resource-container-version="6" data-media-id="f48e7588-08ea-41ef-b5e6-9c5a50618b9b" data-media-type="file"/>
+                                  </span>
+                                </span>
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align: left;" class="confluenceTd">
+                              <p>
+                                <em>Figure 13 - Element Coordinate System</em>
+                              </p>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                  <p>
+                    <br/>
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

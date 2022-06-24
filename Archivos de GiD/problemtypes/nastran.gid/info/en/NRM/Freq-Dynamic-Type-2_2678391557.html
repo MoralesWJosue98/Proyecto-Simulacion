@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Freq Dynamic Type 2</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Freq Dynamic Type 2
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <br class="atl-forced-newline"/>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Loads → Dynamics Loads<br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Defines a frequency dependent dynamic load of the form: <br class="atl-forced-newline"/>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391557/2678325455.png" data-image-src="attachments/2678391557/2678325455.png" data-unresolved-comment-count="0" data-linked-resource-id="2678325455" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_12-54-42.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391557" data-linked-resource-container-version="4" data-media-id="2dcbf15e-baf7-466a-93f8-78726e98eb71" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+For use in frequency response problems, where: <br/>
+f= independent variable, it is a frequency.<br/>
+i= imaginary unit.<br/>
+A= Scale factor <br/>
+F<sub>t</sub>
+= Frequency delay<br/>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391557/2677833988.png" data-image-src="attachments/2678391557/2677833988.png" data-unresolved-comment-count="0" data-linked-resource-id="2677833988" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_12-58-5.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391557" data-linked-resource-container-version="4" data-media-id="66f27c40-df35-4cc2-aefb-f1129175b488" data-media-type="file"/>
+              </span>
+= Phase lead<br/>
+B(f) and <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391557/2678489197.png" data-image-src="attachments/2678391557/2678489197.png" data-unresolved-comment-count="0" data-linked-resource-id="2678489197" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_12-58-58.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391557" data-linked-resource-container-version="4" data-media-id="d62b9bea-cfc2-40dc-9c3e-756e2a160d76" data-media-type="file"/>
+              </span>
+(f) are functions defined by tables of interpolation. Tables have to be created before assigning this condition and associated to the condition using statements "Table Interpolation Values B[f]" or "Table Interpolation Values <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391557/2678456429.png" data-image-src="attachments/2678391557/2678456429.png" data-unresolved-comment-count="0" data-linked-resource-id="2678456429" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_12-59-11.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391557" data-linked-resource-container-version="4" data-media-id="a31018d9-6e0f-421b-b03c-51b014c03100" data-media-type="file"/>
+              </span>
+ [f]".<br/>
+The user has to define these tables using the following menu sequence: Materials-&gt;Tables. More information about table creation can be found in the chapter Tables of this manual<br/>
+This condition can be assigned over points, lines and surfaces and has effect over nodes of the mesh. <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Line-Triangular-Pressure</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Line-Triangular-Pressure
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Loads → Static loads<br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Defines a triangular distributed load to linear elements of a structure. The coordinate system works the same way: Line-Pressure-Load, but in this condition, element axes make reference to element axes and not to the local axes of the line (normally, it is common that element axes are equal to line axes). It is very important to use this condition correctly. Remember that it is only applicable to mesh linear elements.<br/>
+In this condition it is necessary to introduce a pressure to the start point and a pressure to the end point. To know which ends of the element is the start point, the user has to pay attention to the origin of the X-Element axis. <br class="atl-forced-newline"/>
+The following figure is an example of triangular load in Basic coordinate system.             </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="259" width="448" loading="lazy" src="attachments/2678391507/2678391506.png?width=448" data-image-src="attachments/2678391507/2678391506.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391506" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav7dfc49a821e7b1c05efdb095052c66fe.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391507" data-linked-resource-container-version="2" data-media-id="f2f66c41-f7af-4dc4-8c64-cfc6ad3a0df6" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 5 - Triangular Pressure Load</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Suggestion: If the user wants to apply this kind of load directly over a line, one option may be mesh with only one liner element all line.             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

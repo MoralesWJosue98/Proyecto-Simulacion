@@ -1,0 +1,418 @@
+CONDITION: Layer_Scalar_result
+CONDTYPE: over layer
+CONDMESHTYPE: over nodes
+QUESTION: Value
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Volume_Scalar_result
+CONDTYPE: over volumes
+CONDMESHTYPE: over nodes
+QUESTION: Value
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Surface_Scalar_result
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+QUESTION: Value
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Line_Scalar_result
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes
+QUESTION: Value
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Point_Scalar_result
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: Value
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Layer_Vector_result
+CONDTYPE: over layer
+CONDMESHTYPE: over nodes
+QUESTION: Value_X
+VALUE: 0.0
+QUESTION: Value_Y
+VALUE: 0.0
+QUESTION: Value_Z
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Volume_Vector_result
+CONDTYPE: over volumes
+CONDMESHTYPE: over nodes
+QUESTION: Value_X
+VALUE: 0.0
+QUESTION: Value_Y
+VALUE: 0.0
+QUESTION: Value_Z
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Volume_Scalar_function
+CONDTYPE: over volumes
+CONDMESHTYPE: over nodes
+HELP: {Here you can define a function/expresion which will be evaluated by the *Operation command in the bas file. \nUse \$x, \$y, \$z for the x, y and z coordinates of the node, and \$t for the time step: 1.0..10.0 in increments of 1.0}
+QUESTION: UserFunction
+VALUE: 0.0#WIDTH#(64)
+END CONDITION
+
+CONDITION: Volume_Vector_function
+CONDTYPE: over volumes
+CONDMESHTYPE: over nodes
+HELP: {Here you can define a function/expresion which will be evaluated by the *Operation command in the bas file. \nUse \$x, \$y, \$z for the x, y and z coordinates of the node, and \$t for the time step: 1.0..10.0 in increments of 1.0}
+QUESTION: Ux
+VALUE: 0.0#WIDTH#(64)
+QUESTION: Uy
+VALUE: 0.0#WIDTH#(64)
+QUESTION: Uz
+VALUE: 0.0#WIDTH#(64)
+END CONDITION
+
+CONDITION: Surface_Vector_result
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+QUESTION: Value_X
+VALUE: 0.0
+QUESTION: Value_Y
+VALUE: 0.0
+QUESTION: Value_Z
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Surface_Scalar_function
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+HELP: {Here you can define a function/expresion which will be evaluated by the *Operation command in the bas file. \nUse \$x, \$y, \$z for the x, y and z coordinates of the node, and \$t for the time step: 1.0..10.0 in increments of 1.0}
+QUESTION: UserFunction
+VALUE: 0.0#WIDTH#(64)
+END CONDITION
+
+CONDITION: Surface_Vector_function
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+HELP: {Here you can define a function/expresion which will be evaluated by the *Operation command in the bas file. \nUse \$x, \$y, \$z for the x, y and z coordinates of the node, and \$t for the time step: 1.0..10.0 in increments of 1.0}
+QUESTION: Ux
+VALUE: 0.0#WIDTH#(64)
+QUESTION: Uy
+VALUE: 0.0#WIDTH#(64)
+QUESTION: Uz
+VALUE: 0.0#WIDTH#(64)
+END CONDITION
+
+CONDITION: Line_Vector_result
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes
+QUESTION: Value_X
+VALUE: 0.0
+QUESTION: Value_Y
+VALUE: 0.0
+QUESTION: Value_Z
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Point_Vector_result
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: Value_X
+VALUE: 0.0
+QUESTION: Value_Y
+VALUE: 0.0
+QUESTION: Value_Z
+VALUE: 0.0
+END CONDITION
+
+CONDITION: Layer_Scalar_SinCos
+CONDTYPE: over layer
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*sin(x)*cos(y)+B*sin(z)*cos(z))
+VALUE: A*sin(x)*cos(y)+B*sin(z)*cos(z)
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*sin(x)*cos(y)+Cond(3,REAL)*sin(z)*cos(z))
+VALUE: 0
+END CONDITION
+
+CONDITION: Volume_Scalar_SinCos
+CONDTYPE: over volumes
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*sin(x)*cos(y)+B*sin(z)*cos(z))
+VALUE: A*sin(x)*cos(y)+B*sin(z)*cos(z)
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*sin(x)*cos(y)+Cond(3,REAL)*sin(z)*cos(z))
+VALUE: 0
+END CONDITION
+
+CONDITION: Surface_Scalar_SinCos
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*sin(x)*cos(y)+B*sin(z)*cos(z))
+VALUE: A*sin(x)*cos(y)+B*sin(z)*cos(z)
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*sin(x)*cos(y)+Cond(3,REAL)*sin(z)*cos(z))
+VALUE: 0
+END CONDITION
+
+CONDITION: Line_Scalar_SinCos
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*sin(x)*cos(y)+B*sin(z)*cos(z))
+VALUE: A*sin(x)*cos(y)+B*sin(z)*cos(z)
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*sin(x)*cos(y)+Cond(3,REAL)*sin(z)*cos(z))
+VALUE: 0
+END CONDITION
+
+CONDITION: Point_Scalar_SinCos
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*sin(x)*cos(y)+B*sin(z)*cos(z))
+VALUE: A*sin(x)*cos(y)+B*sin(z)*cos(z)
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*sin(x)*cos(y)+Cond(3,REAL)*sin(z)*cos(z))
+VALUE: 0
+END CONDITION
+
+CONDITION: Layer_Vector_Escalado
+CONDTYPE: over layer
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x;B*y;C*z)
+VALUE: A*x;B*y;C*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncionX#FUNC#(Cond(2,REAL)*x)
+VALUE: 0
+QUESTION: valorFuncionY#FUNC#(Cond(3,REAL)*y)
+VALUE: 0
+QUESTION: valorFuncionZ#FUNC#(Cond(4,REAL)*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Volume_Vector_Escalado
+CONDTYPE: over volume
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x;B*y;C*z)
+VALUE: A*x;B*y;C*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncionX#FUNC#(Cond(2,REAL)*x)
+VALUE: 0
+QUESTION: valorFuncionY#FUNC#(Cond(3,REAL)*y)
+VALUE: 0
+QUESTION: valorFuncionZ#FUNC#(Cond(4,REAL)*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Surface_Vector_Escalado
+CONDTYPE: over surface
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x;B*y;C*z)
+VALUE: A*x;B*y;C*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncionX#FUNC#(Cond(2,REAL)*x)
+VALUE: 0
+QUESTION: valorFuncionY#FUNC#(Cond(3,REAL)*y)
+VALUE: 0
+QUESTION: valorFuncionZ#FUNC#(Cond(4,REAL)*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Line_Vector_Escalado
+CONDTYPE: over line
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x;B*y;C*z)
+VALUE: A*x;B*y;C*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncionX#FUNC#(Cond(2,REAL)*x)
+VALUE: 0
+QUESTION: valorFuncionY#FUNC#(Cond(3,REAL)*y)
+VALUE: 0
+QUESTION: valorFuncionZ#FUNC#(Cond(4,REAL)*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Point_Vector_Escalado
+CONDTYPE: over point
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x;B*y;C*z)
+VALUE: A*x;B*y;C*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncionX#FUNC#(Cond(2,REAL)*x)
+VALUE: 0
+QUESTION: valorFuncionY#FUNC#(Cond(3,REAL)*y)
+VALUE: 0
+QUESTION: valorFuncionZ#FUNC#(Cond(4,REAL)*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Layer_Scalar_Poli
+CONDTYPE: over layer
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x*x*x+B*y*y*y+C*z*z*z)
+VALUE: A*x*x*x+B*y*y*y+C*z*z*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*x*x*x+Cond(3,REAL)*y*y*y+Cond(4,REAL)*z*z*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Volume_Scalar_Poli
+CONDTYPE: over volumes
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x*x*x+B*y*y*y+C*z*z*z)
+VALUE: A*x*x*x+B*y*y*y+C*z*z*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*x*x*x+Cond(3,REAL)*y*y*y+Cond(4,REAL)*z*z*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Surface_Scalar_Poli
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x*x*x+B*y*y*y+C*z*z*z)
+VALUE: A*x*x*x+B*y*y*y+C*z*z*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*x*x*x+Cond(3,REAL)*y*y*y+Cond(4,REAL)*z*z*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Line_Scalar_Poli
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x*x*x+B*y*y*y+C*z*z*z)
+VALUE: A*x*x*x+B*y*y*y+C*z*z*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*x*x*x+Cond(3,REAL)*y*y*y+Cond(4,REAL)*z*z*z)
+VALUE: 0
+END CONDITION
+
+CONDITION: Point_Scalar_Poli
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: funcion#CB#(A*x*x*x+B*y*y*y+C*z*z*z)
+VALUE: A*x*x*x+B*y*y*y+C*z*z*z
+QUESTION: A
+VALUE: 1.0
+QUESTION: B
+VALUE: 1.0
+QUESTION: C
+VALUE: 1.0
+QUESTION: valorFuncion#FUNC#(Cond(2,REAL)*x*x*x+Cond(3,REAL)*y*y*y+Cond(4,REAL)*z*z*z)
+VALUE: 0
+END CONDITION
+
+
+CONDITION: Volume_Element_Centre
+CONDTYPE: over volumes
+CONDMESHTYPE: over body elements
+HELP: {With this condition the centre of the volume element is written as 1 gauss point result}
+QUESTION: GaussPointName#CB#(GP_TETRAHEDRA_1,GP_HEXAHEDRA_1,GP_PRISM_1,GP_PIRAMID_1,GP_SPHERE_1)
+VALUE: GP_TETRAHEDRA_1
+END CONDITION
+
+
+CONDITION: Volume_Element_Scalar_function
+CONDTYPE: over volumes
+CONDMESHTYPE: over body elements
+HELP: {Here you can define a function/expresion which will be evaluated by the *Operation command in the bas file. \nUse \$i for the element id, \$n for the number of elems and \$t for the time step: 1.0..10.0 in increments of 1.0}
+QUESTION: UserFunction
+VALUE: 0.0#WIDTH#(64)
+QUESTION: GaussPointName#CB#(GP_TETRAHEDRA_1,GP_HEXAHEDRA_1,GP_PRISM_1,GP_PIRAMID_1,GP_SPHERE_1)
+VALUE: GP_TETRAHEDRA_1
+END CONDITION
+
+CONDITION: Volume_Element_Vector_function
+CONDTYPE: over volumes
+CONDMESHTYPE: over body elements
+HELP: {Here you can define a function/expresion which will be evaluated by the *Operation command in the bas file. \nUse \$i for the element id, \$n for the number of elems and \$t for the time step: 1.0..10.0 in increments of 1.0}
+QUESTION: Ux
+VALUE: 0.0#WIDTH#(64)
+QUESTION: Uy
+VALUE: 0.0#WIDTH#(64)
+QUESTION: Uz
+VALUE: 0.0#WIDTH#(64)
+QUESTION: GaussPointName#CB#(GP_TETRAHEDRA_1,GP_HEXAHEDRA_1,GP_PRISM_1,GP_PIRAMID_1,GP_SPHERE_1)
+VALUE: GP_TETRAHEDRA_1
+END CONDITION
+# 
+# CONDITION: Surface_Element_Scalar_function
+# CONDTYPE: over surfaces
+# CONDMESHTYPE: over body elements
+# HELP: {Here you can define a function/expresion which will be evaluated by the *Operation command in the bas file. \nUse \$i for the element id, and \$t for the time step: 1.0..10.0 in increments of 1.0}
+# QUESTION: UserFunction
+# VALUE: 0.0#WIDTH#(64)
+# END CONDITION
+# 
+# CONDITION: Surface_Element_Vector_function
+# CONDTYPE: over surfaces
+# CONDMESHTYPE: over body elements
+# HELP: {Here you can define a function/expresion which will be evaluated by the *Operation command in the bas file. \nUse \$i for the element id, and \$t for the time step: 1.0..10.0 in increments of 1.0}
+# QUESTION: Ux
+# VALUE: 0.0#WIDTH#(64)
+# QUESTION: Uy
+# VALUE: 0.0#WIDTH#(64)
+# QUESTION: Uz
+# VALUE: 0.0#WIDTH#(64)
+# END CONDITION

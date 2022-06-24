@@ -1,0 +1,91 @@
+<html>
+    <!---*- coding: utf-8;-*- -->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <style type="text/css">
+	    p { text-align:justify; }
+	    body { font-family: Verdana, Arial, Helvetica, Geneva; font-size 8px; }
+	    a { text-decoration:none }
+	    pre { font-family:Courier New, Courier, Mono; }
+	    h1 { font-family:Arial; font-size: 28; font-weight: bold; color:DarkBlue; }
+	    h2 { font-family:Arial; font-size: 24; font-weight: bold; color:DarkBlue; }
+	    h3 { font-family:Arial; font-size: 22; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    P { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+	    code { font-family:Courier New, Courier, Mono; font-size: 16; }
+	    li { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	    ol { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17;  
+		margin-top: 7px; }
+	    ul { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	</style>
+        <title>Modo de uso</title>
+    </head>
+    <body>
+        <a name="SAP2000&gt;How to use"/>
+        <h3>Modo de uso</h3>
+        <p>Como usar el programa:</p>
+        <ul>
+            <li> Iniciar GiD y cargar el tipo de problema SAP2000 desde  el menu Datos-&gt;Tipo de problema-&gt;SAP2000, </li>
+        </ul>
+        <blockquote>
+            <p>entonces las condiciones y materiales ser&#225;n definidas y aparecer&#225; un nuevo menu SAP2000.</p>
+        </blockquote>
+        <ul>
+            <li> Crear o importar la geometria, aplicar las condiciones de contorno, cargas, materiales y generar la malla. (es posible importar una malla SAP2000, pero no es lo usual)</li>
+        </ul>
+        <ul>
+            <li> Pulsar Calcular para escribir el fichero .s2k de entrada para SAP2000 y automaticamente arrancar&#225; este programa y cargar&#225; el fichero mencionado.</li>
+        </ul>
+        <p>(para que arranque SAP2000 su ruta debe ser correcta en el fichero .win.bat , por defecto es "C:\Program Files\Computers and Structures\SAP2000 15\SAP2000.exe")</p>
+        <p/>
+        <ul>
+            <li>Una vez arrancado SAP2000 es necesario calcular y escribir sus resultados en formato de texte .s2k (desafortunamente ahora no es posible automatizar esto en modo bach)</li>
+        </ul>
+        <blockquote>
+            <ul>
+                <li>menu: Analize-&gt;Run analysis- Run now</li>
+            </ul>
+        </blockquote>
+        <blockquote>
+            <ul>
+                <li>menu: File-&gt;Export-&gt;SAP2000 .s2k Text file  (seleccionar todo los resultados del analisis para ser escritos)</li>
+            </ul>
+        </blockquote>
+        <p/>
+        <p>
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <center>
+                                <img src="SAP_images/pastedimage.png" width="420"/>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"/>
+                    </tr>
+                </table>
+            </center>
+        </p>
+        <blockquote>
+            <ul>
+                <li> Salir de SAP2000 y volver a GiD para visualizar estos resultados:</li>
+            </ul>
+        </blockquote>
+        <ul>
+            <li> Se sugiere usar como nombre de fichero &lt;modelo&gt;_res.s2k, en tal caso al salir de SAP2000 este fichero ser&#225; automaticalmente convertido en &lt;modelo&gt;.post.res</li>
+        </ul>
+        <p>  (es posible invocar esta conversi&#243;n desde el menu de GiD: SAP2000-&gt;Convertir resultados SAP2000...)</p>
+        <ul>
+            <li> Cambiar a GiD postprocess y los resultados ser&#225;n leidos automaticament y ser&#225; posible visualizarlos con todas las posibilidades de GiD.</li>
+        </ul>
+        <ul>
+            <li> Es posible exportar un resultado escalar en un fichero VRML (Virtual Reality Modelling Language) desde postproceso, desde el menu SAP2000-&gt;Exportar fichero VRML...)</li>
+        </ul>
+    </body>
+</html>

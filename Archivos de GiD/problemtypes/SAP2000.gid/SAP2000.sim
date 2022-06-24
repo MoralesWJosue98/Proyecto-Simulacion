@@ -1,0 +1,58 @@
+cond point_Load
+1
+global
+1
+cond(real,1)
+cond(real,2)
+cond(real,3)
+symbols/arrow.geo
+cond point_Momentum
+1
+global
+1
+cond(real,1)
+cond(real,2)
+cond(real,3)
+symbols/momentum.geo
+cond Point_Restraints
+2
+global
+strcmp(cond(1),"Yes")==0 && strcmp(cond(2),"Yes")==0 && strcmp(cond(3),"Yes")==0 && strcmp(cond(4),"Yes")==0 && strcmp(cond(5),"Yes")==0 && strcmp(cond(6),"Yes")==0
+1
+0
+0
+symbols/constraint1_3d.geo
+global
+strcmp(cond(1),"Yes")==0 && strcmp(cond(2),"Yes")==0 && strcmp(cond(3),"Yes")==0
+1
+0
+0
+symbols/constraint2_3d.geo
+cond Line_Restraints
+2
+global
+strcmp(cond(1),"Yes")==0 && strcmp(cond(2),"Yes")==0 && strcmp(cond(3),"Yes")==0 && strcmp(cond(4),"Yes")==0 && strcmp(cond(5),"Yes")==0 && strcmp(cond(6),"Yes")==0
+1
+0
+0
+symbols/constraint1_3d.geo
+global
+strcmp(cond(1),"Yes")==0 && strcmp(cond(2),"Yes")==0 && strcmp(cond(3),"Yes")==0
+1
+0
+0
+symbols/constraint2_3d.geo
+cond Surface_Restraints
+2
+global
+strcmp(cond(1),"Yes")==0 && strcmp(cond(2),"Yes")==0 && strcmp(cond(3),"Yes")==0 && strcmp(cond(4),"Yes")==0 && strcmp(cond(5),"Yes")==0 && strcmp(cond(6),"Yes")==0
+1
+0
+0
+symbols/constraint1_3d.geo
+global
+strcmp(cond(1),"Yes")==0 && strcmp(cond(2),"Yes")==0 && strcmp(cond(3),"Yes")==0
+1
+0
+0
+symbols/constraint2_3d.geo

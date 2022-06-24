@@ -1,0 +1,35 @@
+MATERIAL: Air
+QUESTION: Superficial_density#UNITS#
+VALUE: 1.01 kg/m^2
+HELP: superficial density assuming a thickness of 1 meter
+END MATERIAL
+
+MATERIAL: Steel
+QUESTION: Superficial_density#UNITS#
+VALUE: 7850 kg/m^2
+HELP: superficial density assuming a thickness of 1 meter
+END MATERIAL
+
+MATERIAL: Aluminium
+QUESTION: Superficial_density#UNITS#
+VALUE: 2650 kg/m^2
+HELP: superficial density assuming a thickness of 1 meter
+END MATERIAL
+
+MATERIAL: Concrete
+QUESTION: Superficial_density#UNITS#
+VALUE: 2350 kg/m^2
+HELP: superficial density assuming a thickness of 1 meter
+END MATERIAL
+
+MATERIAL: Water
+QUESTION: Superficial_density#UNITS#
+VALUE: 997 kg/m^2
+HELP: superficial density assuming a thickness of 1 meter
+END MATERIAL
+
+MATERIAL: Sand
+QUESTION: Superficial_density#UNITS#
+VALUE: 1370 kg/m^2
+HELP: superficial density assuming a thickness of 1 meter
+END MATERIAL

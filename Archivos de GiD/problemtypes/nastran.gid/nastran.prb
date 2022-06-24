@@ -1,0 +1,297 @@
+PROBLEM DATA
+BOOK:Executive_Control
+QUESTION: Activate_Load_Cases#CB#(prestress,independent,combined)
+VALUE: independent
+STATE: HIDDEN
+QUESTION: Combined_load_cases:(name,isstrength,loads)
+VALUE: #N# 3 Combined_1 1 allone
+STATE: HIDDEN
+QUESTION: Constraints_load_cases
+VALUE: none
+STATE: HIDDEN
+QUESTION: NASTRAN_Type:#CB#(NE/NASTRAN,MSC/NASTRAN,MI/NASTRAN)
+VALUE: NE/NASTRAN
+DEPENDENCIES:(NE/NASTRAN,HIDE,Diagnostics,#CURRENT#,HIDE,Rigid_Format_approach,#CURRENT#)(MSC/NASTRAN,RESTORE,Diagnostics,#CURRENT#,RESTORE,Rigid_Format_approach,#CURRENT#)(MI/NASTRAN,RESTORE,Diagnostics,#CURRENT#,RESTORE,Rigid_Format_approach,#CURRENT#)
+QUESTION: ID:
+VALUE: ID
+QUESTION:Analysis_Type#CB#(STATIC,BUCKLING,PRESTRESS_STATIC,STEADY_STATE_HEAT_TRANSFER,MODES,PRESTRESS_MODES,DIRECT_FREQUENCY_RESPONSE,DIRECT_TRANSIENT_RESPONSE,MODAL_FREQUENCY_RESPONSE,MODAL_TRANSIENT_RESPONSE,DIRECT_COMPLEX_EIGENVALUES,NONLINEAR_STATIC,NONLINEAR_TRANSIENT,NONLINEAR_BUCKLING)
+VALUE:STATIC
+DEPENDENCIES:(STEADY_STATE_HEAT_TRANSFER,RESTORE,Temperature,1)(#DEFAULT#,RESTORE,Temperature,0)
+QUESTION: TIME(min):
+VALUE: 20
+QUESTION: Diagnostics:
+VALUE:5
+QUESTION: Rigid_Format_approach:#CB#(DISPLACEMENT,HEAT,AERO)
+VALUE:DISPLACEMENT
+TKWIDGET: CheckDataWidget::Control "TIME(min) int+ Diagnostics int+" 
+BOOK:Case_Control
+TITLE:Input_Data
+QUESTION:Consider_Acceleration#CB#(YES,NO)
+VALUE: NO
+DEPENDENCIES:(NO,SET,Modul,#CURRENT#,SET,X-Acceleration,#CURRENT#,SET,Y-Acceleration,#CURRENT#,SET,Z-Acceleration,#CURRENT#)(YES,RESTORE,Modul,#CURRENT#,RESTORE,X-Acceleration,#CURRENT#,RESTORE,Y-Acceleration,#CURRENT#,RESTORE,Z-Acceleration,#CURRENT#)
+QUESTION:Modul_Acceleration:
+VALUE: 386
+QUESTION:X-Acceleration_Vector:
+VALUE: 0.0
+QUESTION:Y-Acceleration_Vector:
+VALUE: 0.0
+QUESTION:Z-Acceleration_Vector:
+VALUE: -1.0
+TKWIDGET: CheckDataWidget::Control "Modul_Acceleration real+ X-Acceleration_Vector real  Y-Acceleration_Vector real Z-Acceleration_Vector real" 
+TITLE:Output_Data
+QUESTION: Title:
+VALUE: Title
+QUESTION: Format_File:#CB#(Small,Large)
+VALUE: Small
+QUESTION: Displacement#CB#(0,1)
+VALUE: 1
+QUESTION: Applied_Load#CB#(0,1)
+VALUE: 1
+QUESTION: Constraint_Force#CB#(0,1)
+VALUE: 1
+QUESTION: Velocity#CB#(0,1)
+VALUE: 0
+QUESTION: Acceleration#CB#(0,1)
+VALUE: 0
+QUESTION: Element_Stress#CB#(0,1)
+VALUE: 1
+QUESTION: Element_Force#CB#(0,1)
+VALUE: 1
+QUESTION: Element_Strain#CB#(0,1)
+VALUE: 0
+QUESTION: Strain_Energy#CB#(0,1)
+VALUE:0
+QUESTION: Temperature#CB#(0,1)
+VALUE:0
+QUESTION: Flux#CB#(0,1)
+VALUE:0
+QUESTION:Output#CB#(Design)
+VALUE:Design
+QUESTION: Element_Corner_Output#CB#(0,1)
+VALUE:1
+QUESTION:Output_Device:#CB#(PLOT,PUNCH,PRINT,NOPRINT)
+VALUE:PLOT
+QUESTION:Complex_Eigenvalue_or_Frequency_Response:#CB#(REAL,IMAG,PHASE)
+VALUE:REAL
+QUESTION:Auxiliary_Output_Points_for_stress_and_force_recovery_output.
+VALUE:0
+TKWIDGET: CheckDataWidget::Control "Auxiliary_Output_Points_for_stress_and_force_recovery_output int0+"
+TITLE:Advanced_Data
+QUESTION: Subtitle:
+VALUE: Subtitle
+QUESTION: Label:
+VALUE: Label
+QUESTION:Lines_per_printed_page:
+VALUE:50
+QUESTION:Maximum_number_of_output_lines:
+VALUE:20000
+QUESTION: ECHO:#CB#(SORT,UNSORT,BOTH,NONE,PUNCH)
+VALUE:NONE
+TKWIDGET: CheckDataWidget::Control "Lines_per_printed_page int+ Maximum_number_of_output_lines int+"
+BOOK: Buckling
+QUESTION: Design_buckling_modes#CB#(extraction)
+VALUE: extraction
+QUESTION: Eigenvalue_range_of_interest#CB#(0,1)
+VALUE: 0
+DEPENDENCIES:(0,SET,Initial_eigenvalue,#CURRENT#,SET,Final_eigenvalue,#CURRENT#)(1,RESTORE,Initial_eigenvalue,#CURRENT#,RESTORE,Final_eigenvalue,#CURRENT#)
+QUESTION: Initial_eigenvalue:
+VALUE: 0.0
+QUESTION: Final_eigenvalue:
+VALUE: 0.0
+QUESTION: Number_of_roots_desired:
+VALUE: 1
+QUESTION: Sturm_sequence#CB#(YES,NO)
+VALUE:NO
+QUESTION: Maximum_iterations:
+VALUE: 30
+QUESTION: Convergence_tolerance:
+VALUE: 1.0e-6
+TKWIDGET: CheckDataWidget::Control "Initial_eigenvalue real Final_eigenvalue real Number_of_roots_desired int+ Maximum_iterations int+"
+BOOK:Dynamics
+TITLE:Modes_Analysis
+QUESTION:Design_REAL_eigenvalue#CB#(extraction)
+VALUE:extraction
+QUESTION:Method_of_eigenvalue_extraction:#CB#(INV,DET,GIV,MGIV,FEER,FEER-Q,FEER-X,UINV,UDET)
+VALUE:INV
+DEPENDENCIES:(GIV,SET,Estimate,0,HIDE,Center,0.0,HIDE,Tolerance,0.0,RESTORE,First_frequency,0.0,RESTORE,Last_frequency,0.0)(FEER,SET,Estimate,0,RESTORE,Center,0.0,RESTORE,Tolerance,0.0,HIDE,First_frequency,0.0,HIDE,Last_frequency,0.0)(#DEFAULT#,RESTORE,Estimate,0,HIDE,Center,0.0,HIDE,Tolerance,0.0,RESTORE,First_frequency,0.0,RESTORE,Last_frequency,0.0)
+QUESTION:Frequency_Range_of#CB#(Interest)
+VALUE:Interest 
+QUESTION:First_frequency_(Hz):
+VALUE:0.0
+QUESTION:Last_frequency_(Hz): 
+VALUE:0.0
+QUESTION:Center:
+VALUE:0.0
+QUESTION:Tolerance:
+VALUE:0.0
+QUESTION:Eigenvalues#CB#(Eigenvectors)
+VALUE:Eigenvectors
+QUESTION:Estimate_number:
+VALUE:0
+QUESTION:Desired_number:
+VALUE:0
+QUESTION:Mass_orthogonality_test#CB#(0,1)
+VALUE:0
+DEPENDENCIES:(0,SET,Tolerance_for,#CURRENT#)(1,RESTORE,Tolerance_for,#CURRENT#)
+QUESTION:Tolerance_for_Mass_orthogonality_test:
+VALUE:1.E-5  
+QUESTION:Normalization_method:#CB#(MASS,MAX,POINT)
+VALUE:MASS
+DEPENDENCIES:(POINT,RESTORE,NodeID,#CURRENT#,RESTORE,DOF,#CURRENT#)(#DEFAULT#,SET,NodeID,#CURRENT#,SET,DOF,#CURRENT#)
+QUESTION:NodeID:
+VALUE:-ANY-
+QUESTION:DOF_(integer_1-6):
+VALUE:-ANY-
+TKWIDGET: CheckDataWidget::Control "First_frequency_(Hz) real0+ Last_frequency_(Hz) real0+ Center real0+ Tolerance real0+ Estimate_number int0+ Desired_number int0+"
+TITLE:Dynamic_Design
+QUESTION:Solution_Method:#CB#(Direct,Modal)
+VALUE:Direct
+DEPENDENCIES:(Direct,HIDE,Number_of_Mode,#CURRENT#,HIDE,Lowest_Freq,#CURRENT#,HIDE,Highest_Freq,#CURRENT#)(Modal,RESTORE,Number_of_Mode,#CURRENT#,RESTORE,Lowest_Freq,#CURRENT#,RESTORE,Highest_Freq,#CURRENT#)
+QUESTION:Domain_of_Solution:#CB#(Transient,Frequency)
+VALUE:Transient
+DEPENDENCIES:(Transient,HIDE,Initial_frequency,#CURRENT#,HIDE,Frequency_increment,#CURRENT#,HIDE,Number_of_frequency,#CURRENT#,RESTORE,Frequency_for_System,#CURRENT#,RESTORE,Frequency_for_Element,#CURRENT#,RESTORE,Transient_Time,#CURRENT#,RESTORE,Number_of_time,#CURRENT#,RESTORE,Number_of_time,#CURRENT#,RESTORE,Time,#CURRENT#,RESTORE,Skip,#CURRENT#,HIDE,Frequency_,#CURRENT#,SET,Select_Range,#CURRENT#,HIDE,Select_Range_of,#CURRENT#,HIDE,Response_Based,#CURRENT#,HIDE,Number_of_Modes,#CURRENT#,HIDE,Lowest_Freq,#CURRENT#,HIDE,Highest_Freq,#CURRENT#)(Frequency,HIDE,Frequency_for_System,#CURRENT#,HIDE,Frequency_for_Element,#CURRENT#,HIDE,Transient_Time,#CURRENT#,HIDE,Number_of_time,#CURRENT#,HIDE,Number_of_time,#CURRENT#,HIDE,Time,#CURRENT#,HIDE,Skip,#CURRENT#,RESTORE,Frequency_,#CURRENT#,RESTORE,Select_Range,#CURRENT#,RESTORE,Initial_frequency,#CURRENT#,RESTORE,Frequency_increment,#CURRENT#,RESTORE,Number_of_frequency,#CURRENT#,RESTORE,Select_Range_of,#CURRENT#,RESTORE,Response_Based,#CURRENT#,RESTORE,Number_of_Modes,#CURRENT#,RESTORE,Lowest_Freq,#CURRENT#,RESTORE,Highest_Freq,#CURRENT#)
+QUESTION:Equivalent_Viscous#CB#(Damping)
+VALUE:Damping
+QUESTION:Overall_Structural_Damping_Coeff(G):
+VALUE:0.0
+QUESTION:Equivalent_Viscous_Damping#CB#(Conversion)
+VALUE:Conversion
+QUESTION:Frequency_for_System_Damping(W3-Hz):
+VALUE:0.0
+QUESTION:Frequency_for_Element_Damping(W4-Hz):
+VALUE:0.0
+QUESTION:Transient_Time#CB#(Step)
+VALUE:Step
+QUESTION:Number_of_time_steps:
+VALUE:2
+QUESTION:Time_increment:
+VALUE:0.0
+QUESTION:Skip_factor_for_output:
+VALUE:0  
+QUESTION:Frequency_#CB#(Step)
+VALUE:Step
+QUESTION:Initial_frequency:
+VALUE:0.0
+QUESTION:Frequency_increment: 
+VALUE:0.0
+QUESTION:Number_of_frequency_increments:
+VALUE:0  
+QUESTION:Mass_formulation:#CB#(Default,Lumped,Coupled)
+VALUE:Default
+QUESTION:Response_Based_on#CB#(Modes)
+VALUE:Modes
+QUESTION:Number_of_Modes:
+VALUE:0
+QUESTION:Lowest_Freq(Hz):
+VALUE:0.0
+QUESTION:Highest_Freq(Hz):
+VALUE:0.0  
+QUESTION:Select_Range_of_frequencies_for_Output#CB#(0,1)
+VALUE:0
+DEPENDENCIES:(0,HIDE,From,#CURRENT#,HIDE,Output_Number_of,#CURRENT#)(1,RESTORE,From,#CURRENT#,RESTORE,Output_Number_of,#CURRENT#)
+QUESTION:From(Hz):
+VALUE:0.0
+QUESTION:Output_Number_of_frequency_increments:
+VALUE:0  
+TKWIDGET: CheckDataWidget::Control "Overall_Structural_Damping_Coeff(G) real0+ Frequency_for_System_Damping(W3-Hz) real0+ Number_of_time_steps int+ Time_increment real0+ Skip_factor_for_output int0+ Initial_frequency real0+ Frequency_increment real0+Number_of_frequency_increments int0+ Number_of_Modes int0+ Lowest_Freq(Hz) real0+ Highest_Freq(Hz) real0+ Select_Range_of_frequencies_for_Output int0+"
+BOOK: Parameters
+TITLE:Geometry
+QUESTION: MULTBC#CB#(0,1)
+VALUE:0
+QUESTION: BODYLOAD#CB#(0,1)
+VALUE:0
+QUESTION: GPFORCE#CB#(0,1)
+VALUE:0
+QUESTION: MPCFORCE#CB#(0,1)
+VALUE:0
+QUESTION: PELMCHK#CB#(0,1)
+VALUE:0
+QUESTION: PRGPST#CB#(0,1)
+VALUE:0
+QUESTION: K6ROT
+VALUE:100.
+QUESTION: GRDPNT#CB#(0,1)
+VALUE:0
+QUESTION: WTMASS:
+VALUE:0.0
+TITLE: Solution
+QUESTION: AUTOSPC#CB#(0,1)
+VALUE:1
+QUESTION: IRES#CB#(0,1)
+VALUE:0
+QUESTION: MODACC#CB#(0,1)
+VALUE:0
+QUESTION: PRTGPST#CB#(0,1)
+VALUE:1
+QUESTION: SINGOPT#CB#(SPC,STIFF,MPC)
+VALUE:SPC
+QUESTION: INRELF#CB#(0,1)
+VALUE:0
+QUESTION: MAXRATIO:
+VALUE:1.E+8
+TITLE:Nonlinear
+QUESTION: BISECT#CB#(0,1)
+VALUE:0
+QUESTION: LANGLE#CB#(,OFF,GIMBAL,ROTATION)
+VALUE:OFF
+QUESTION: LGDISP#CB#(0,1)
+VALUE:0
+QUESTION: NLINSOLACCEL#CB#(0,1)
+VALUE:0
+BOOK: NonLinear
+QUESTION: NonLinear_Solution#CB#(Parameters)
+VALUE: Parameters
+QUESTION: NL_Analysis:#CB#(Static,Buckling,Dynamic)
+VALUE: Static
+DEPENDENCIES:(Static,HIDE,Stiffness_method_dyn,#CURRENT#,RESTORE,Stiffness_method,#CURRENT#,RESTORE,Num._increments,#CURRENT#,RESTORE,Max._iter._load_increment,#CURRENT#,HIDE,Max._iter._time_increment,#CURRENT#,HIDE,Skip_factor_time_adjust,#CURRENT#)(Buckling,HIDE,Stiffness_method_dyn,#CURRENT#,RESTORE,Stiffness_method,#CURRENT#,RESTORE,Num._increments,#CURRENT#,RESTORE,Max._iter._load_increment,#CURRENT#,HIDE,Max._iter._time_increment,#CURRENT#,HIDE,Skip_factor_time_adjust,#CURRENT#)(Dynamic,RESTORE,Stiffness_method_dyn,#CURRENT#,HIDE,Stiffness_method,#CURRENT#,HIDE,Num._increments,#CURRENT#,HIDE,Max._iter._load_increment,#CURRENT#,RESTORE,Max._iter._time_increment,#CURRENT#,RESTORE,Skip_factor_time_adjust,#CURRENT#)
+QUESTION: Num._increments:
+VALUE: 1
+QUESTION: Stiffness_method#CB#(AUTO,SEMI,ITER)
+VALUE: AUTO
+DEPENDENCIES:(AUTO,HIDE,Iter_stiffness_update,#CURRENT#)(SEMI,HIDE,Iter_stiffness_update,#CURRENT#)(ITER,RESTORE,Iter_stiffness_update,#CURRENT#)
+QUESTION: Max._iter._load_increment:
+VALUE: 30
+QUESTION: Stiffness_method_dyn#CB#(AUTO,TSTEP,ADAPT)
+VALUE: AUTO
+DEPENDENCIES:(AUTO,HIDE,Iter_stiffness_update,#CURRENT#,HIDE,Skip_factor_time_adjust,#CURRENT#)(TSETP,RESTORE,Iter_stiffness_update,#CURRENT#,HIDE,Skip_factor_time_adjust,#CURRENT#)(ADAPT,HIDE,Iter_stiffness_update,#CURRENT#,RESTORE,Skip_factor_time_adjust,#CURRENT#)
+QUESTION: Iter_stiffness_update:
+VALUE: 5
+QUESTION: Skip_factor_time_adjust.:
+VALUE: 5
+QUESTION: Max._iter._time_increment:
+VALUE: 30
+QUESTION: Convergence_type#CB#(criteria)
+VALUE:criteria
+QUESTION: Displacement_Criteria#CB#(YES,NO)
+VALUE: NO
+DEPENDENCIES:(NO,HIDE,Disp._tolerance,#CURRENT#)(YES,RESTORE,Disp._tolerance,#CURRENT#)
+QUESTION: Disp._tolerance:
+VALUE: 1e-2
+QUESTION: Load_Criteria#CB#(YES,NO)
+VALUE: YES
+DEPENDENCIES:(NO,HIDE,Load_tolerance,#CURRENT#)(YES,RESTORE,Load_tolerance,#CURRENT#)
+QUESTION: Load_tolerance:
+VALUE: 1e-3
+QUESTION: Work_Criteria#CB#(YES,NO)
+VALUE: YES
+DEPENDENCIES:(NO,HIDE,Work_tolerance,#CURRENT#)(YES,RESTORE,Work_tolerance,#CURRENT#)
+QUESTION: Work_tolerance:
+VALUE: 1e-6
+QUESTION: Max_iter._divergence:
+VALUE: 3
+BOOK: Thermal
+QUESTION: Ambient_Temperature:
+VALUE: 20
+QUESTION:Model_Initial_Temperature:
+VALUE: 20
+QUESTION:Scale_Factor_Abs._Temperature:
+VALUE: 459.69
+QUESTION: Stefan-Boltzmann:
+VALUE: 3.97e-14
+END GENERAL DATA
+INTERVAL DATA
+BOOK: interval data
+QUESTION: Interval_name
+VALUE: default
+STATE: HIDDEN
+END INTERVAL DATA

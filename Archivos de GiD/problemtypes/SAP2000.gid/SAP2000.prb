@@ -1,0 +1,26 @@
+Problem Data
+TITLE: SAP2000
+QUESTION:Behavior#CB#(Solid,Shell,Membrane,Plate)
+VALUE:Solid
+HELP: set the kind of structural model and implicilty its degrees of freedom
+QUESTION:Self_weight#CB#(Active,Deactive)
+VALUE:Active
+HELP: enable or disable the self-weigh load
+QUESTION:SAP2000_Version#CB#(15.0.0,12.0.0)
+VALUE:15.0.0
+HELP: format version of the .s2k file written as input for SAP2000 (version formats could have small differences)
+QUESTION:Units#CB#(lb-in-F,lb-ft-F,Kip-in-F,Kip-ft-F,KN-mm-C,KN-m-C,Kgf-mm-C,Kgf-m-C,N-mm-C,N-m-C,Ton-mm-C,Ton-m-C,KN-cm-C,Kgf-cm-C,N-cm-C,Ton-cm-C) 
+VALUE:KN-m-C
+QUESTION:Degree_of_freedom_DX#CB#(Yes,No)
+VALUE:Yes
+QUESTION:Degree_of_freedom_DY#CB#(Yes,No)
+VALUE:Yes
+QUESTION:Degree_of_freedom_DZ#CB#(Yes,No)
+VALUE:Yes
+QUESTION:Degree_of_freedom_ROTX#CB#(Yes,No)
+VALUE:Yes
+QUESTION:Degree_of_freedom_ROTY#CB#(Yes,No)
+VALUE:Yes
+QUESTION:Degree_of_freedom_ROTZ#CB#(Yes,No)
+VALUE:Yes
+End Problem Data

@@ -1,0 +1,133 @@
+<html>
+    <!---*- coding: utf-8;-*- -->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <style type="text/css">
+	p { text-align:justify; }
+	body { font-family: Verdana, Arial, Helvetica, Geneva; font-size 8px; }
+	a { text-decoration:none }
+	pre { font-family:Courier New, Courier, Mono; }
+	h1 { font-family:Arial; font-size: 28; }
+	h2 { font-family:Arial; font-size: 24; }
+	h3 { font-family:Arial; font-size: 22; }
+	h4 { font-family:Arial; font-size: 18; }
+	P { font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+	code { font-family:Courier New, Courier, Mono; font-size: 16; }
+	li { font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+	ol { font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+	ul { font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+    </style>
+        <title>Boundary conditions</title>
+    </head>
+    <body>
+        <a name="Boundary conditions"/>
+        <h2>Boundary conditions</h2>
+        <p>Boundary conditions can be applied either to geometry (recommended) or mesh entities. 1D or 2D elements can be selected using all the GiD available tools, and grouped into different sets with an unique name. These selections can be performed with the help of the Zones definition window, which can be opened from the FLUENT toolbar or from the data menu: </p>
+        <p/>
+        <p>From the Fluent Toolbar:<center>
+                <table>
+                    <tr>
+                        <td>
+                            <center>
+                                <img src="GiD_Fluent_Interface_images/pastedimage.gif" width="24"/>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"/>
+                    </tr>
+                </table>
+            </center>
+        </p>
+        <p>From the GiD Menu: Data-&gt;Zones Definition</p>
+        <p/>
+        <p>Then the correct Boundary Condition type must be clicked (lines for 2D problems or surfaces for 3D problems) </p>
+        <p/>
+        <p>
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <center>
+                                <img src="GiD_Fluent_Interface_images/pastedimage9.png" width="266"/>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"/>
+                    </tr>
+                </table>
+            </center>
+        </p>
+        <p/>
+        <p>Each condition group should be related with a single boundary type from the next list:</p>
+        <p/>
+        <ul>
+            <li> Wall  </li>
+        </ul>
+        <ul>
+            <li> Pressure-Inlet </li>
+        </ul>
+        <ul>
+            <li> Inlet-Vent</li>
+        </ul>
+        <ul>
+            <li> Intake-fan</li>
+        </ul>
+        <ul>
+            <li> Pressure-Outlet </li>
+        </ul>
+        <ul>
+            <li> Exhaust-Fan </li>
+        </ul>
+        <ul>
+            <li> Oulet-Vent </li>
+        </ul>
+        <ul>
+            <li> Symmetry </li>
+        </ul>
+        <ul>
+            <li> Periodic</li>
+        </ul>
+        <ul>
+            <li> Shadow</li>
+        </ul>
+        <ul>
+            <li> Pressure-far-field</li>
+        </ul>
+        <ul>
+            <li> Velocity-Inlet</li>
+        </ul>
+        <ul>
+            <li> Periodic</li>
+        </ul>
+        <ul>
+            <li> Fan</li>
+        </ul>
+        <ul>
+            <li> Porous-Jump</li>
+        </ul>
+        <ul>
+            <li> Radiator</li>
+        </ul>
+        <ul>
+            <li> Mass-flow-inlet</li>
+        </ul>
+        <ul>
+            <li> Interface</li>
+        </ul>
+        <ul>
+            <li> Parent</li>
+        </ul>
+        <ul>
+            <li> Outflow</li>
+        </ul>
+        <ul>
+            <li> Axis</li>
+        </ul>
+        <p/>
+        <p>It's not required to relate each problem's entity with one of these boundary types. By default, GiD-FLUENT interface prints the unassigned edges as <b>Interior Edges</b>
+ (if the edge is surrounded by two elements) or <b>Wall Edges</b>
+ (only one element is connected to the edge).        </p>
+    </body>
+</html>

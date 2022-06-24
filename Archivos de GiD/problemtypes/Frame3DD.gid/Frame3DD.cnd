@@ -1,0 +1,271 @@
+BOOK: Sections
+
+CONDITION: Section_properties
+CONDTYPE: over lines
+CONDMESHTYPE: over body elements
+CANREPEAT: no
+QUESTION: Local_Axes#LA#(Automatic#A#)
+VALUE: Automatic
+STATE: HIDDEN
+QUESTION: Ax#UNITS#
+VALUE: 0 m^2
+HELP: Cross-sectional area
+QUESTION: Asy#UNITS#
+VALUE: 0 m^2
+HELP: Shear area y
+QUESTION: Asz#UNITS#
+VALUE: 0 m^2
+HELP: Shear area z
+QUESTION: Jx#UNITS#
+VALUE: 0 m^4
+HELP: Polar Moment of Inertia (torsion)
+QUESTION: Iy#UNITS#
+VALUE: 0 m^4
+HELP: Moment of inertia (bending)
+QUESTION: Iz#UNITS#
+VALUE: 0 m^4
+HELP: Moment of inertia (bending)
+QUESTION: Material#MAT#
+VALUE:
+END CONDITION
+
+BOOK: Constraints
+
+CONDITION: point_Constraint
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+CANREPEAT: no
+TITLE: Basic
+QUESTION: Fixed_translation_x:#CB#(1,0)
+VALUE:1
+HELP: Nodes with fixed displacement
+QUESTION: Fixed_translation_y:#CB#(1,0)
+VALUE:1
+HELP: Nodes with fixed displacement
+QUESTION: Fixed_translation_z:#CB#(1,0)
+VALUE:1
+HELP: Nodes with fixed displacement
+QUESTION: Fixed_rotation_x:#CB#(1,0)
+VALUE:1
+HELP: Nodes with fixed rotation
+QUESTION: Fixed_rotation_y:#CB#(1,0)
+VALUE:1
+HELP: Nodes with fixed rotation
+QUESTION: Fixed_rotation_z:#CB#(1,0)
+VALUE:1
+HELP: Nodes with fixed rotation
+TITLE: Advanced
+QUESTION: Value_translation_x#UNITS#
+VALUE: 0.0 m
+HELP: Translation value
+QUESTION: Value_translation_y#UNITS#
+VALUE: 0.0 m
+HELP: Translation value
+QUESTION: Value_translation_z#UNITS#
+VALUE: 0.0 m
+HELP: Translation value
+QUESTION: Value_rotation_x#UNITS#
+VALUE: 0.0 rad
+HELP: Rotation value
+QUESTION: Value_rotation_y#UNITS#
+VALUE: 0.0 rad
+HELP: Rotation value
+QUESTION: Value_rotation_z#UNITS#
+VALUE: 0.0 rad
+HELP: Rotation value
+END CONDITION
+
+BOOK: Loads
+
+CONDITION: point_Load
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Force_x#UNITS#
+VALUE: 0.0 N
+HELP: concentrated load
+QUESTION: Force_y#UNITS#
+VALUE: 0.0 N
+HELP: concentrated load
+QUESTION: Force_z#UNITS#
+VALUE: 0.0 N
+HELP: concentrated load
+END CONDITION
+
+CONDITION: point_Momentum
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Momentum_x#UNITS#
+VALUE: 0.0 N*m
+HELP: concentrated momentum
+QUESTION: Momentum_y#UNITS#
+VALUE: 0.0 N*m
+HELP: concentrated momentum
+QUESTION: Momentum_z#UNITS#
+VALUE: 0.0 N*m
+HELP: concentrated momentum
+END CONDITION
+
+CONDITION: line_Uniform_load
+CONDTYPE: over lines
+CONDMESHTYPE: over body elements
+CANREPEAT: yes
+QUESTION: Coordinates_system#CB#(Global,Local)
+VALUE: Global
+HELP: To allow specify the force in global XYZ axes or local bar axes
+QUESTION: Load_x#UNITS#
+VALUE: 0.0 N/m
+HELP: x-component of uniformly-distributed element loads
+QUESTION: Load_y#UNITS#
+VALUE: 0.0 N/m
+HELP: y-component of uniformly-distributed element loads
+QUESTION: Load_z#UNITS#
+VALUE: 0.0 N/m
+HELP: z-component of uniformly-distributed element loads
+END CONDITION
+
+CONDITION: line_Interior_point_load
+CONDTYPE: over lines
+CONDMESHTYPE: over body elements
+CANREPEAT: yes
+QUESTION: Id#FUNC#(NumEntity)
+VALUE: 0
+STATE: HIDDEN
+HELP: auxiliary  hidden field to identify the geometri line id source of each the mesh element
+QUESTION: Coordinates_system#CB#(Global,Local)
+VALUE: Global
+HELP: To allow specify the force in global XYZ axes or local bar axes
+QUESTION: Relative_position
+VALUE: 0.5
+HELP: Relative coordinates (0.0 to 1.0) along the line element to define the location
+TKWIDGET: GidUtils::TkwidgetPickRelativePointInElement
+QUESTION: Force_x#UNITS#
+VALUE: 0.0 N
+HELP: x-component of concentrated load
+QUESTION: Force_y#UNITS#
+VALUE: 0.0 N
+HELP: y-component of concentrated load
+QUESTION: Force_z#UNITS#
+VALUE: 0.0 N
+HELP: z-component of concentrated load
+END CONDITION
+
+CONDITION: line_Trapezoidal_load
+CONDTYPE: over lines
+CONDMESHTYPE: over body elements
+CANREPEAT: yes
+QUESTION: Id#FUNC#(NumEntity)
+VALUE: 0
+STATE: HIDDEN
+HELP: auxiliary  hidden field to identify the geometri line id source of each the mesh element
+QUESTION: Coordinates_system#CB#(Global,Local)
+VALUE: Global
+HELP: To allow specify the force in global XYZ axes or local bar axes
+QUESTION: Start_relative_position
+VALUE: 0.0
+HELP: Relative coordinates (0.0 to 1.0) along the line element to define the location where the load starts
+TKWIDGET: GidUtils::TkwidgetPickRelativePointInElement
+QUESTION: Start_load_x#UNITS#
+VALUE: 0.0 N/m
+HELP: x-component value of trapezoidal load at start
+QUESTION: Start_load_y#UNITS#
+VALUE: 0.0 N/m
+HELP: y-component value of trapezoidal load at start
+QUESTION: Start_load_z#UNITS#
+VALUE: 0.0 N/m
+HELP: z-component value of trapezoidal load at start
+QUESTION: End_relative_position
+VALUE: 1.0
+HELP: Relative coordinates (0.0 to 1.0) along the line element to define the location where the load ends
+TKWIDGET: GidUtils::TkwidgetPickRelativePointInElement
+QUESTION: End_load_x#UNITS#
+VALUE: 0.0 N/m
+HELP: x-component value of trapezoidal load at end
+QUESTION: End_load_y#UNITS#
+VALUE: 0.0 N/m
+HELP: y-component value of trapezoidal load at end
+QUESTION: End_load_z#UNITS#
+VALUE: 0.0 N/m
+HELP: z-component value of trapezoidal load at end
+END CONDITION
+
+CONDITION: line_Thermal_load
+CONDTYPE: over lines
+CONDMESHTYPE: over body elements
+CANREPEAT: yes
+QUESTION: Coefficient#UNITS#
+VALUE: 0.0 One/Cel
+HELP: coefficient of thermal expansion
+QUESTION: Y-depth#UNITS#
+VALUE: 0.0 m
+HELP: depth of the section in the local y direction
+QUESTION: Z-depth#UNITS#
+VALUE: 0.0 m
+HELP: depth of the section in the local z direction
+QUESTION: DeltaTy+#UNITS#
+VALUE: 0.0Cel
+HELP: temperature increment on the +y surface
+QUESTION: DeltaTy-#UNITS#
+VALUE: 0.0 Cel
+HELP: temperature increment on the -y surface
+QUESTION: DeltaTz+#UNITS#
+VALUE: 0.0 Cel
+HELP: temperature increment on the +z surface
+QUESTION: DeltaTz-#UNITS#
+VALUE: 0.0 Cel
+HELP: temperature increment on the -z surface
+END CONDITION
+
+BOOK: Dynamic analysis
+
+CONDITION: point_Extra_mass
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+CANREPEAT: no
+QUESTION: Mass#UNITS#
+VALUE: 0.0 kg
+HELP: concentrated extra mass
+QUESTION: Inertia_x#UNITS#
+VALUE: 0.0 kg*m^2
+HELP: concentrated extra rotatory inertia (global axes)
+QUESTION: Inertia_y#UNITS#
+VALUE: 0.0 kg*m^2
+HELP: concentrated extra rotatory inertia (global axes)
+QUESTION: Inertia_z#UNITS#
+VALUE: 0.0 kg*m^2
+HELP: concentrated extra rotatory inertia (global axes)
+END CONDITION
+
+CONDITION: line_Extra_mass
+CONDTYPE: over lines
+CONDMESHTYPE: over body elements
+CANREPEAT: no
+QUESTION: Mass#UNITS#
+VALUE: 0.0 kg
+HELP: extra mass
+END CONDITION
+
+CONDITION: point_Condensed
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+CANREPEAT: no
+QUESTION: Condense_x:#CB#(1,0)
+VALUE: 1
+HELP: to condense or not the degree of freedom
+QUESTION: Condense_y:#CB#(1,0)
+VALUE: 1
+HELP: to condense or not the degree of freedom
+QUESTION: Condense_z:#CB#(1,0)
+VALUE: 1
+HELP: to condense or not the degree of freedom
+QUESTION: Condense_xx:#CB#(1,0)
+VALUE: 1
+HELP: to condense or not the degree of freedom
+QUESTION: Condense_yy:#CB#(1,0)
+VALUE: 1
+HELP: to condense or not the degree of freedom
+QUESTION: Condense_zz:#CB#(1,0)
+VALUE: 1
+HELP: to condense or not the degree of freedom
+END CONDITION

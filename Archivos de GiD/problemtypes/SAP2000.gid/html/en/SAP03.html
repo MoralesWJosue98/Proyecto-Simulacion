@@ -1,0 +1,88 @@
+<html>
+    <!---*- coding: utf-8;-*- -->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <style type="text/css">
+	    p { text-align:justify; }
+	    body { font-family: Verdana, Arial, Helvetica, Geneva; font-size 8px; }
+	    a { text-decoration:none }
+	    pre { font-family:Courier New, Courier, Mono; }
+	    h1 { font-family:Arial; font-size: 28; font-weight: bold; color:DarkBlue; }
+	    h2 { font-family:Arial; font-size: 24; font-weight: bold; color:DarkBlue; }
+	    h3 { font-family:Arial; font-size: 22; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    P { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+	    code { font-family:Courier New, Courier, Mono; font-size: 16; }
+	    li { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	    ol { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17;  
+		margin-top: 7px; }
+	    ul { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	</style>
+        <title>How to use</title>
+    </head>
+    <body>
+        <a name="SAP2000&gt;How to use"/>
+        <h3>How to use</h3>
+        <p>How to use the program:</p>
+        <ul>
+            <li> Start GiD and load the SAP2000 problemtype from the menu Data-&gt;Problemtype-&gt;SAP2000, then conditions and material fields are defined, and a new SAP2000 menu appear.</li>
+        </ul>
+        <ul>
+            <li> Create or import the geometry, apply the boundary conditions, loads, materials and generate the mesh. (is it possible to import a SAP2000 mesh, but this is not usual)</li>
+        </ul>
+        <ul>
+            <li> Press calculate to write the .s2k input file of SAP2000 and automatically start this program with the related file as input.</li>
+        </ul>
+        <p>(to start SAP2000 its path  must be set in the file .win.bat instead the default one "C:\Program Files\Computers and Structures\SAP2000 15\SAP2000.exe")</p>
+        <p/>
+        <ul>
+            <li>Once started SAP2000 is necessary calculate and write its results in text .s2k format (unfortunatelly now is not possible to automatice it in bach mode)</li>
+        </ul>
+        <blockquote>
+            <ul>
+                <li>menu: Analize-&gt;Run analysis- Run now</li>
+            </ul>
+        </blockquote>
+        <blockquote>
+            <ul>
+                <li>menu: File-&gt;Export-&gt;SAP2000 .s2k Text file  (select all analysis results to be written)</li>
+            </ul>
+        </blockquote>
+        <p/>
+        <p>
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <center>
+                                <img src="SAP_images/pastedimage.png" width="420"/>
+                            </center>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"/>
+                    </tr>
+                </table>
+            </center>
+        </p>
+        <blockquote>
+            <ul>
+                <li> Exit SAP2000 and go back to GiD to visualice these results:</li>
+            </ul>
+        </blockquote>
+        <ul>
+            <li> It is suggested to use as filename &lt;modelname&gt;_res.s2k, then when exiting SAP2000 this file is automatically converted into &lt;modelname&gt;.post.res</li>
+        </ul>
+        <p>  (it is possible invoke the conversion from the GiD menu: SAP2000-&gt;Convert SAP2000 results...)</p>
+        <ul>
+            <li> Go to GiD postprocess and the results will be automatically read and are able to be visualized with all GiD features.</li>
+        </ul>
+        <ul>
+            <li> It is possible to export a scalar result as a VRML (Virtual Reality Modelling Language) file in postprocess from the menu SAP2000-&gt;Export VRML file...)</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,54 @@
+USE BASE SYSTEMS: DISABLED
+USER DEFINED: ENABLED
+HIDDEN: acceleration, angle, pressure, temperature, area, inertia, momentum, strength_linear, rotatory_inertia, inverse_temperature, density
+
+BEGIN TABLE
+acceleration : m/s^2, mm/s^2, 1e2 cm/s^2
+angle: rad, 57.293489913 degree
+length   : m , 100 cm, 1e3 mm
+mass     : kg , 1e3 gr, 1e-6 Ton
+pressure : Pa , N/m^2, 1.02e-5 kp/cm^2, 1e-6 MPa
+strength : N , kg*m/s^2
+temperature : Cel
+area: m^2, 1e6 mm^2, 1e4 cm^2
+inertia: m^4, 1e12 mm^4, 1e8 cm^4
+momentum: N*m, 1e3 N*mm, 1e2 N*cm
+strength_linear: N/m, 1e-3 N/mm, 1e-2 N/cm
+rotatory_inertia: kg*m^2, 1 Ton*mm^2, 1e-2 kg*cm^2
+inverse_temperature: One/Cel
+density: kg/m^3, 1e-12 Ton/mm^3, 1e-6 kg/cm^3
+END
+
+BEGIN SYSTEM(international)
+acceleration : m/s^2
+angle: rad
+length   : m
+mass     : kg
+pressure : Pa
+strength : N
+temperature : Cel
+area: m^2
+inertia: m^4
+momentum: N*m
+strength_linear: N/m
+rotatory_inertia: kg*m^2
+inverse_temperature: One/Cel
+density: kg/m^3
+END
+
+BEGIN SYSTEM(N,mm,Ton)
+acceleration : mm/s^2
+angle: rad
+length   : mm
+mass     : Ton
+pressure : MPa
+strength : N
+temperature : Cel
+area: mm^2
+inertia: mm^4
+momentum: N*mm
+strength_linear: N/mm
+rotatory_inertia: Ton*mm^2
+inverse_temperature: One/Cel
+density: Ton/mm^3
+END

@@ -1,0 +1,29 @@
+MATERIAL: Steel_A36
+QUESTION: E#UNITS#
+VALUE: 2.0e11 Pa
+HELP: Young's modulus
+QUESTION: G#UNITS#
+VALUE: 7.93e10 Pa
+HELP: Shear modulus
+QUESTION: Roll#UNITS#
+VALUE: 11.7e-6 One/Cel
+HELP: Thermal expansion coefficient
+QUESTION: Density#UNITS#
+VALUE: 7850 kg/m^3
+HELP: Density
+END MATERIAL
+
+MATERIAL: Aluminum_2024-T4
+QUESTION: E#UNITS#
+VALUE: 7.31e10 Pa
+HELP: Young's modulus
+QUESTION: G#UNITS#
+VALUE: 2.8e10 Pa
+HELP: Shear modulus
+QUESTION: Roll#UNITS#
+VALUE: 23.2e-6 One/Cel
+HELP: Thermal expansion coefficient
+QUESTION: Density#UNITS#
+VALUE: 2780 kg/m^3
+HELP: Density
+END MATERIAL

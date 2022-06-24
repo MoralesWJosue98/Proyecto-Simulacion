@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!-- -*- coding: utf-8;-*- -->
+<Infoproblemtype version="1.1">
+  <Program n="abaqus">
+    <Name>Abaqus</Name>
+    <Version>4.1</Version>    
+    <MinimumGiDVersion>15.1.4d</MinimumGiDVersion>
+    <ImageFileBrowser>images/abaqus_icon.gif</ImageFileBrowser>            
+    <ShortDescription>Pre and postprocessing nonlinear analysis software ABAQUS</ShortDescription> 
+    <Description>GiD prepostprocessing system adapted to ABAQUS</Description> 
+    <NewsInVersion version="4.1" date="2021-11-18">
+      * The interface do not require an extra password from wwww.compassis.com
+      * self-transform
+      * use modern GiD_Events
+    </NewsInVersion>    
+  </Program>
+</Infoproblemtype>

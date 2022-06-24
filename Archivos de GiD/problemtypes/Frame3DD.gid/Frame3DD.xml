@@ -1,0 +1,22 @@
+<Infoproblemtype version="1.0">
+    <Program>
+        <Name>Frame3DD</Name>
+        <Version>1.2</Version>
+        <MinimumGiDVersion>12.1.11d</MinimumGiDVersion>
+        <ImageFileBrowser>images/ico.png</ImageFileBrowser>
+        <Maintainer>CIMNE's GiD &lt;gid@.cimne.upc.edu&gt;</Maintainer>
+        <Homepage>http://www.gidhome.com</Homepage>
+        <ShortDescription>Interface GiD-Frame3DD open source code to solve 3D frames by the matricial method</ShortDescription>
+        <Description>Interface GiD-Frame3DD open source code to solve 3D frames by the matricial method</Description>
+        <NewsInVersion version="1.2" date="2016-01-16">
+          - Use units
+          - Line interior point load (transferred when meshing to the appropriated element of the curve)
+        </NewsInVersion>
+        <NewsInVersion version="1.1" date="2014-11-10">
+          - Updated to Frame3DD 20140514+ version
+        </NewsInVersion>
+        <NewsInVersion version="1.0" date="2012-06-19">
+          - First version
+        </NewsInVersion>
+    </Program>
+</Infoproblemtype>

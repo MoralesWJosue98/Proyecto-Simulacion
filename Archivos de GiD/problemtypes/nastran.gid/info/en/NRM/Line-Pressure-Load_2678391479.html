@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Line-Pressure-Load</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Line-Pressure-Load
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Loads → Static loads            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+Defines uniformly distributed applied loads to line entities of a geometry (bars, beams and curved beams). It is possible to select the coordinate system for data entries in this load.            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="217" width="232" loading="lazy" src="attachments/2678391479/2678391478.png?width=232" data-image-src="attachments/2678391479/2678391478.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391478" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav4d74777acc64a1b226338debf758ce2c.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391479" data-linked-resource-container-version="3" data-media-id="769ea70c-4297-4577-bc13-e63bf70f4052" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 2 – Coordinate System</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+If the option "BASIC" is selected, all data entries make reference to global (basic) axes. If the option "ELEMENT" is selected, all data entries make reference to local (element) axes. Axes are defined by the user in Local Axes condition (for more information about Local Axes, see Local Axes Condition). Remember that it is necessary to define local axes for every line of structure. <br/>
+The following figures are examples of differences between "BASIC" and "ELEMENT" coordinate system. <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="170" width="222" loading="lazy" src="attachments/2678391479/2678391484.jpeg?width=222" data-image-src="attachments/2678391479/2678391484.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391484" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavf5402eb5c781f30b777b7848dee6a35f.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391479" data-linked-resource-container-version="3" data-media-id="fee2b0d4-ca7c-4ad8-bfbb-b9362656ddd8" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="182" width="222" loading="lazy" src="attachments/2678391479/2678391489.jpeg?width=222" data-image-src="attachments/2678391479/2678391489.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391489" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavf6e5dc152cc1f9086b82d1225975436e.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391479" data-linked-resource-container-version="3" data-media-id="e130cdd5-4d59-4884-b9a2-5672fef21013" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 3 – Pressure Load Y-Element</em>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 4 – Pressure Load Y-Basic</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+In the Figure 3 (Pressure Load Y-Element), the user selects Element coordinate system. The pressure load is in a direction of Y-Element axis. In the Figure 4 (Pressure Load y-Basic) the user selects Basic coordinate system.<br/>
+In these two options the total load applies to the beam equals P*L in the Y-Basic direction. <br class="atl-forced-newline"/>
+Comment for NASTRAN advanced users: It is not necessary to mesh to assign this condition. It can be assigned directly over lines of a structure.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

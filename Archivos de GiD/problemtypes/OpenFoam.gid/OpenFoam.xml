@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Infoproblemtype version="1.0">
+    <Program>
+        <Name>OpenFoam</Name>
+        <Version>1.2</Version>    
+        <MinimumGiDVersion>9.1.0b</MinimumGiDVersion>
+        <ImageFileBrowser>images/openfoam_ico.png</ImageFileBrowser>
+        <Maintainer>CIMNE's GiD &lt;gid@.cimne.upc.edu&gt;</Maintainer>
+        <Homepage>www.gidhome.com/gid-plus/modules/plugins</Homepage>
+        <ShortDescription>Interface to OpenFOAM (CFD analysis)</ShortDescription>
+        <Description>
+          The graphical user interface between GiD and OpenFOAM (http://www.openfoam.org) allows the user to grahically create its input files.
+	  With the help of this interface the user can define the boundary conditions as well as the fluid or solid domains. 
+	  Results can be visualized if they are written in Vtk of other common format supported by GiD in postprocess.
+        </Description>
+	    <NewsInVersion version="1.2" date="2020-09-17">
+            - Avoid declared condition field Name as hidden, to allow draw them by colors.
+            - Removed wrong check of count of faces 
+        </NewsInVersion> 
+        <NewsInVersion version="1.1" date="2012-12-21">
+            - Automatically handled transform when needed (to convert a model with information of a previous version)            
+        </NewsInVersion>       
+        <NewsInVersion version="1.0" date="?">
+            * First version
+        </NewsInVersion>
+    </Program>
+</Infoproblemtype>

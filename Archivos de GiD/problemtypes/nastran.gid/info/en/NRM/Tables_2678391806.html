@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Tables</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Tables
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Loads → Tables            </p>
+            <p>This option is used to define a table of interpolated values. A table of interpolated values is used in the following cases:</p>
+            <p>- Dynamic Loads: A dynamic load is defined through a table of interpolated values. The meaning of the independent variable (X) depends on the definition domain of the load: time or frequency.  </p>
+            <p>- Thermal variation material properties: It is possible to define temperature dependent material properties. The dependency between temperature and the property, like Young Modulus, is defined through a table of interpolated values.</p>
+            <p>It is very important to select which kind of table will be created by the use of the “Value Type” combo-box placed in top left corner of the window.</p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image confluence-thumbnail" height="250" loading="lazy" src="attachments/2678391806/2678489350.jpeg?height=250" data-image-src="attachments/2678391806/2678489350.png" data-unresolved-comment-count="0" data-linked-resource-id="2678489350" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-12-7.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391806" data-linked-resource-container-version="3" data-media-id="bb12f471-3dcd-4d6e-b508-8f418c0b013e" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 14 – Tables Window</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Data Entry Section:</span>
+                </em>
+              </strong>
+ In this section it is possible selects which kind of entry user wants to perform. Exists four different types.            </p>
+            <ul>
+              <li>
+                <span style="text-decoration: underline;">Single value:</span>
+ Allows to introduce a couple of values (X,Y).              </li>
+              <li>
+                <span style="text-decoration: underline;">Linear Ramp:</span>
+ Permits define a straight line. User has to introduce: Start point (X), value of Y coordinate at start point (Y), End point (To X), value of Y coordinate at end point (To Y) and increment for coordinate X (Delta X).              </li>
+              <li>
+                <span style="text-decoration: underline;">Equation:</span>
+ It is very similar to Linear Ramp, but in this case, the user can use any kind of function to define the values of Y coordinate. To see which function are allow and their grammatical look at end of this chapter.              </li>
+              <li>
+                <span style="text-decoration: underline;">Periodic:</span>
+ Permits define a periodic function, it means: a function with the same value for Y coordinate after one period.              </li>
+            </ul>
+            <p>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Add Button:</span>
+                </em>
+              </strong>
+ After introduce the desired values to different files it is necessary to click on add button to add the new values in the interpolation table. Exists two possible ways to do this:<br/>
+              <span style="text-decoration: underline;">-Add at End:</span>
+ The new values are included at the end of the table.<br/>
+              <span style="text-decoration: underline;">-Add before Selected</span>
+: The new values are included at the selected point of the table. For use this option is necessary first select a value of the table and after click on Add Button. <br/>
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="27" width="27" loading="lazy" src="attachments/2678391806/2678391811.gif?width=27" data-image-src="attachments/2678391806/2678391811.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391811" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav7d3acca31dfcac3c77bd46adc89482e9.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391806" data-linked-resource-container-version="3" data-media-id="2ec94dbf-dae9-4763-8b9f-008d3cf3022c" data-media-type="file"/>
+              </span>
+ With this button is possible delete a set of selected entries of the table.<br/>
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="27" width="27" loading="lazy" src="attachments/2678391806/2678391816.gif?width=27" data-image-src="attachments/2678391806/2678391816.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391816" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavca940a0237e891a4fe5c17644ef3b61f.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391806" data-linked-resource-container-version="3" data-media-id="b0e5cfea-a584-4136-82f8-b1bf8498d1b9" data-media-type="file"/>
+              </span>
+ With this button is possible get a selected entry (couple of values (X,Y) ) from the table. It is possible do the same with a double click of mouse over the desired entry. <br/>
+              <strong>List of math function</strong>
+              <br/>
+              <strong>abs(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the absolute value of <em>arg</em>
+. <br/>
+              <strong>acos(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the arc cosine of <em>arg</em>
+, in the range [0,pi] radians. <em>Arg</em>
+ should be in the range [-1,1]. <br/>
+              <strong>asin(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the arc sine of <em>arg</em>
+, in the range [-pi/2,pi/2] radians. <em>Arg</em>
+ should be in the range [-1,1]. <br/>
+              <strong>atan(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the arc tangent of <em>arg</em>
+, in the range [-pi/2,pi/2] radians. <br/>
+              <strong>atan2(</strong>
+              <em>x, y</em>
+              <strong>)</strong>
+              <br/>
+Returns the arc tangent of <em>y</em>
+/<em>x</em>
+, in the range [-pi,pi] radians. <em>x</em>
+ and <em>y</em>
+ cannot both be 0. <br/>
+              <strong>ceil(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the smallest integer value not less than <em>arg</em>
+. <br/>
+              <strong>cos(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the cosine of <em>arg</em>
+, measured in radians. <br/>
+              <strong>cosh(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the hyperbolic cosine of <em>arg</em>
+. <br/>
+              <strong>exp(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the exponential of <em>arg</em>
+, defined as e**<em>arg</em>
+. <br/>
+              <strong>floor(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the largest integral value not greater than <em>arg</em>
+. <br/>
+              <strong>fmod(</strong>
+              <em>x, y</em>
+              <strong>)</strong>
+              <br/>
+Returns the floating-point remainder of the division of <em>x</em>
+ by <em>y</em>
+. <br/>
+              <strong>log(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the natural logarithm of <em>arg</em>
+. <em>Arg</em>
+ must be a positive value. <br/>
+              <strong>log10(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the base 10 logarithm of <em>arg</em>
+. <em>Arg</em>
+ must be a positive value. <br/>
+              <strong>pow(</strong>
+              <em>x, y</em>
+              <strong>)</strong>
+              <br/>
+Computes the value of <em>x</em>
+ raised to the power <em>y</em>
+. If <em>x</em>
+ is negative, <em>y</em>
+ must be an integer value. <br/>
+              <strong>sin(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the sine of <em>arg</em>
+, measured in radians. <br/>
+              <strong>sinh(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the hyperbolic sine of <em>arg</em>
+. <br/>
+              <strong>sqrt(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the square root of <em>arg</em>
+. <em>Arg</em>
+ must be non-negative. <br/>
+              <strong>tan(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the tangent of <em>arg</em>
+, measured in radians. <br/>
+              <strong>tanh(</strong>
+              <em>arg</em>
+              <strong>)</strong>
+              <br/>
+Returns the hyperbolic tangent of <em>arg</em>
+.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

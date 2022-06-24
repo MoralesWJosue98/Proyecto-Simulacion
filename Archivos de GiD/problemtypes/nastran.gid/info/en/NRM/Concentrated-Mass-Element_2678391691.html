@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Concentrated Mass Element</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Concentrated Mass Element
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <br class="atl-forced-newline"/>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Advanced Conditions<br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Defines a concentrated mass at a node of the structural model.<br/>
+There are two different ways the condition information can be introduced: <br class="atl-forced-newline"/>
+              <strong>-CONM1:</strong>
+ Properties of the concentrated mass have to be introduced using a symmetric mass matrix. This format gives total control to the user to perform the properties of the element.<br/>
+              <strong>-CONM2:</strong>
+ For a less general means of defining concentrated mass at nodes. See the following statements descriptions: <br class="atl-forced-newline"/>
+              <strong>-<em>
+                  <span style="text-decoration: underline;">Mass Value</span>
+                </em>
+:              </strong>
+ Real<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Offset distances</span>
+                </em>
+:              </strong>
+ (X1, X2, X3) Offset distances for the mass in the global coordinate system (Real). <br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">I<sub>i</sub>
+                  </span>
+                </em>
+              </strong>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">
+                    <sub>j</sub>
+                  </span>
+                </em>
+:              </strong>
+ Mass moments of inertia measured at the mass center of gravity in global coordinate system. <br/>
+Remarks<br/>
+The form of the inertia matrix about its center of gravity (c.g.) is taken as: <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678391691/2677932353.png?height=250" data-image-src="attachments/2678391691/2677932353.png" data-unresolved-comment-count="0" data-linked-resource-id="2677932353" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_14-31-2.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391691" data-linked-resource-container-version="2" data-media-id="731f0465-3c8b-4d7e-9743-845d2dec0873" data-media-type="file"/>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

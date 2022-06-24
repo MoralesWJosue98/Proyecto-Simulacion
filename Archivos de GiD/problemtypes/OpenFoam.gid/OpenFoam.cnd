@@ -1,0 +1,23 @@
+BOOK: 3D
+
+CONDITION: Surface_Boundary_conditions
+CONDTYPE: over surfaces
+CONDMESHTYPE: over face elements
+CANREPEAT: no
+QUESTION: Type#CB#(patch,wall,symmetryPlane,empty,wedge,cyclic)
+VALUE: Wall
+QUESTION: Name
+VALUE: Condition1
+TKWIDGET: OpenFoam::TkwidgetCondnameCombobox
+END CONDITION
+
+CONDITION: Volume_Continuum
+CONDTYPE: over volumes
+CONDMESHTYPE: over elements
+CANREPEAT: no
+QUESTION: Type#CB#(fluid,solid)
+VALUE: Fluid
+QUESTION: Name
+VALUE: Continuum1
+TKWIDGET: OpenFoam::TkwidgetCondnameCombobox
+END CONDITION

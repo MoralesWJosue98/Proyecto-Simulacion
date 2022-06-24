@@ -1,0 +1,15 @@
+cond point_Constraint
+2
+global
+cond(int,1) && cond(int,2) && cond(int,3) && cond(int,4) && cond(int,5) && cond(int,6)
+1
+0
+0
+symbols/constraint1_3d.geo
+global
+cond(int,1) && cond(int,2) && cond(int,3)
+1
+0
+0
+symbols/constraint2_3d.geo
+

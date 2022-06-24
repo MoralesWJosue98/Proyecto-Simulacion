@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran tutorials : Static Analysis of a Beam</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran tutorials : Static Analysis of a Beam
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>This example describes a static linear elastic analysis of a beam with double T section under several static loads.</p>
+            <p>The following list is a summary of all steps of tutorial:</p>
+            <ul>
+              <li>Create geometry of a beam with double T section.</li>
+              <li>Create a finite element model of this beam.</li>
+              <li>Run static analysis of the model.</li>
+            </ul>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="313" width="498" loading="lazy" src="attachments/2678522110/2678522109.jpeg?width=498" data-image-src="attachments/2678522110/2678522109.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522109" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav5284bd31c0ec76d6a77201b5121c1d04.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="a344ab9e-c445-46d0-92fd-bbd2a8ad7b19" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="StaticAnalysisofaBeam-DescriptionofModel:">Description of Model:</h2>
+            <p>Determine displacements and reactions in pinned points of a beam with double T section under several static loads.</p>
+            <h2 id="StaticAnalysisofaBeam-Properties:">Properties:</h2>
+            <p>
+              <br/>
+            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col style="width: 143.0px;"/>
+                  <col style="width: 93.0px;"/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Length</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>100 inch</p>
+                    </td>
+                    <td rowspan="6" class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678522110/2678849614.png?height=250" data-image-src="attachments/2678522110/2678849614.png" data-unresolved-comment-count="0" data-linked-resource-id="2678849614" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_18-10-42.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="137876c3-7dc4-490b-93ae-26e96adc89d7" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Height (Section)</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>2 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Width (Section)</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Thickness (Section)</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.1 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>I<sub>1</sub>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.229 inch<sup>4</sup>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>I<sub>2</sub>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.017 inch<sup>4</sup>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h1 id="StaticAnalysisofaBeam-">
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678522110/2678882367.jpeg?height=250" data-image-src="attachments/2678522110/2678882367.png" data-unresolved-comment-count="0" data-linked-resource-id="2678882367" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_18-11-11.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="202c7e23-bbc0-406a-a5ee-2ba3673e6871" data-media-type="file"/>
+              </span>
+            </h1>
+            <p>For basic reference, this example can be found in the distribution, directory Examples/Nastran and with the name <strong>staticbeam.gid</strong>
+            </p>
+            <h1 id="StaticAnalysisofaBeam-Procedure:">Procedure:</h1>
+            <h2 id="StaticAnalysisofaBeam-Start:">Start:</h2>
+            <p>1- Open a new project, right click on this icon in taskbar <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="27" width="27" loading="lazy" src="attachments/2678522110/2678522115.gif?width=27" data-image-src="attachments/2678522110/2678522115.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522115" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav488af7b6533fc4fcf1b00a8ad86e152e.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="56381cd5-9687-4c56-9c9c-8b01dbe4eb22" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+2- Load problem type Nastran. Follow the menu sequence below: <br class="atl-forced-newline"/>
+Data -&gt; Problem type → nastran <br class="atl-forced-newline"/>
+Appears a splash image and the name of the master window changes to NASTRAN Interface. <br class="atl-forced-newline"/>
+3- Change the view plane to XY: <br class="atl-forced-newline"/>
+View -&gt; Rotate -&gt; Plane XY (original)            </p>
+            <h2 id="StaticAnalysisofaBeam-Creategeometry:">Create geometry:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Create line.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Geometry → Create → Straight line            </p>
+            <p>Insert coordinates of points to the command line to define the beam (line). Command line is in the bottom of GiD master window.</p>
+            <p>     1<sup>st</sup>
+ point         -&gt; 0,0            </p>
+            <p>     2<sup>nd</sup>
+ point        -&gt; 30,0            </p>
+            <p>     3<sup>rd</sup>
+ point        -&gt; 60,0            </p>
+            <p>     4<sup>th</sup>
+ point        -&gt; 120,0            </p>
+            <p>  (It is only necessary to introduce points using two coordinates, the third coordinate Z is assumed to be 0).</p>
+            <p>Press escape or middle button of mouse.</p>
+            <h3 id="StaticAnalysisofaBeam-DefineLocalAxes">Define Local Axes</h3>
+            <p>The model has been created related to a global axes system XYZ that is unique for the entire problem. But every beam must have its own local axes system X’Y’Z’ in order to:</p>
+            <ol>
+              <li>Refer section properties like <em>Inertia modulus</em>
+ or <em>thickness</em>
+ and <em>height</em>
+ to this system.              </li>
+              <li>Some of the loads (that have the prefix <em>Local</em>
+) are related also to this system.              </li>
+              <li>Strength results over the beam are referred to this local axes system.</li>
+            </ol>
+            <p>The main property of this system is that the local X’ axe must have the same direction than the beam.</p>
+            <p>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522110/2679111708.png" data-image-src="attachments/2678522110/2679111708.png" data-unresolved-comment-count="0" data-linked-resource-id="2679111708" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_18-14-38.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="12972ac9-70da-405c-a629-e697280c75e2" data-media-type="file"/>
+              </span>
+            </p>
+            <p>The ways for defining local axes systems are:</p>
+            <ol>
+              <li>
+                <strong>Default</strong>
+. The program assigns a different local axes system to every beam with the following criteria:              </li>
+            </ol>
+            <ul>
+              <li>X’ axe has the direction of the beam.</li>
+              <li>If X’ axe has the same direction than global Z axe, Y’ axe has the same direction than global X. If not, Y’ axe is calculated so as to be horizontal (orthogonal to X’ and Z).</li>
+              <li>Z’ axe is the cross product of X’ axe and Y’ axe. It will try to point to the same sense than global Z (dot product of Z and Z’ axes will be positive or zero).</li>
+            </ul>
+            <p>
+              <strong>Note:</strong>
+ The intuitive idea is that vertical beams have the Y’ axe in the direction of global X. All the other beams have the Y’ axe horizontal and with the Z’ axe pointing up.            </p>
+            <ol>
+              <li>
+                <strong>Automatic</strong>
+. Similar to the previous one but the local axes system is assigned automatically to the beam by GiD. The final orientation can be checked with the <em>Draw Local Axes</em>
+ option in the GiD Conditions window.              </li>
+              <li>
+                <strong>Automatic alt</strong>
+. Similar to the previous one but an alternative proposal of local axes is given. Typically, User should assign Automatic local axes and check them, after assigning, with the <em>Draw local axes</em>
+ option. If a different local axes system is desired, normally rotated 90 degrees from the first one, then it is only necessary to assign again the same condition to the entities with the <strong>Automatic alt</strong>
+ option selected.              </li>
+              <li>
+                <strong>User defined</strong>
+. User can create different named local axes systems with the GiD command: Data-&gt;Local axes-&gt;Define              </li>
+            </ol>
+            <p>and with the different methods that can be chosen there. The names of the defined local axes will be added to the menu where Local axes are chosen.</p>
+            <p>
+              <br/>
+            </p>
+            <p>In this example we will assign automatic local axes:</p>
+            <p>Data -&gt; Properties -&gt; Local Axes</p>
+            <p>Set statement Local Axes to Automatic (An automatic local will defined for all lines selected).</p>
+            <p>Select all lines of the geometry.</p>
+            <h3 id="StaticAnalysisofaBeam-Assignpropertyandmaterial:">Assign property and material:</h3>
+            <ol>
+              <li>Define a new material.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data → Materials <br class="atl-forced-newline"/>
+Click on the following icon to create a new material: <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="31" width="31" loading="lazy" src="attachments/2678522110/2678522120.gif?width=31" data-image-src="attachments/2678522110/2678522120.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522120" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddava3f34557aab02602cb1b6307eda376e2.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="f64b8383-0fc9-491c-9f9a-3a81bd73e894" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Enter name for the new material <strong>alum.</strong>
+              <br class="atl-forced-newline"/>
+Fill all statements like in the picture:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="400" loading="lazy" src="attachments/2678522110/2679078973.png?height=400" data-image-src="attachments/2678522110/2679078973.png" data-unresolved-comment-count="0" data-linked-resource-id="2679078973" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_18-16-4.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="a80fb54d-fc69-4aaa-8177-b89b022ffee7" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>And set density, in Others page, to 0.101</p>
+            <p>
+              <br/>
+Click on the following icon to save the new material: <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="31" width="31" loading="lazy" src="attachments/2678522110/2678522130.gif?width=31" data-image-src="attachments/2678522110/2678522130.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522130" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav136b3ddfdae8ce52c23a611c11edc867.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="90c15eea-5015-462d-8829-787663967f1b" data-media-type="file"/>
+              </span>
+            </p>
+            <p>
+              <br/>
+            </p>
+            <p>2- Define and assign properties for the beam.</p>
+            <p>Data → Properties → Property</p>
+            <p>You can go directly to the property window by clicking on this icon: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522110/2679111734.png" data-image-src="attachments/2678522110/2679111734.png" data-unresolved-comment-count="0" data-linked-resource-id="2679111734" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_18-40-30.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="ff4408a5-85d7-49bf-98f9-ccb7aa42fbe5" data-media-type="file"/>
+              </span>
+ without closing the material window and going back to the menu.            </p>
+            <p>Select option <em>property</em>
+ in the menu.            </p>
+            <p>Select property <em>beam</em>
+ from the top combo box.            </p>
+            <p>Click on the following icon to create the new property:<span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522110/2678161654.png" data-image-src="attachments/2678522110/2678161654.png" data-unresolved-comment-count="0" data-linked-resource-id="2678161654" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_18-21-47.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="db151bea-caa3-4cb2-a2a1-7362044c8a96" data-media-type="file"/>
+              </span>
+            </p>
+            <p>Enter a name for the new property <strong>
+                <em>’cantilever’</em>
+              </strong>
+.            </p>
+            <p>Fill all statements as in the following picture:</p>
+            <p>
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="400" loading="lazy" src="attachments/2678522110/2678718581.jpeg?height=400" data-image-src="attachments/2678522110/2678718581.png" data-unresolved-comment-count="0" data-linked-resource-id="2678718581" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_18-43-29.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="0b196b97-ab6c-4f5e-86a5-9f33b1a51fbc" data-media-type="file"/>
+              </span>
+            </p>
+            <p>You have to select the previously created material in Composition Material.</p>
+            <p>Click on the following icon to save the new property:<span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="31" width="31" loading="lazy" src="attachments/2678522110/2678522130.gif?width=31" data-image-src="attachments/2678522110/2678522130.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522130" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav136b3ddfdae8ce52c23a611c11edc867.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="90c15eea-5015-462d-8829-787663967f1b" data-media-type="file"/>
+              </span>
+            </p>
+            <p>Now click the <strong>Assign</strong>
+ button, and select all lines of the geometry.            </p>
+            <p>To see if the property is well assigned click on <strong>Draw</strong>
+ button, select <em>This property </em>
+option.            </p>
+            <p>The NASTRAN Interface program window should look like this:</p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="257" width="310" loading="lazy" src="attachments/2678522110/2678522145.jpeg?width=310" data-image-src="attachments/2678522110/2678522145.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522145" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddave1522b145a6d1e8ffe8e900c9eb76adb.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="7ae1cbdc-06d1-4aec-9b9f-20cd1cfcb59a" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="StaticAnalysisofaBeam-AssignConstraints:">Assign Constraints:</h2>
+            <p>1- Assign prescribed displacements and rotation. <br class="atl-forced-newline"/>
+Data-&gt; Boundary Conditions -&gt; Constraints <br class="atl-forced-newline"/>
+Click on the following icon to set the condition over points: <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="21" width="21" loading="lazy" src="attachments/2678522110/2678522150.gif?width=21" data-image-src="attachments/2678522110/2678522150.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522150" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav904cf9e9636ac376ac0664700c07fe23.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="4d8a88a6-d2a3-45b5-b068-4adc7aec2cc5" data-media-type="file"/>
+              </span>
+            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="58" width="475" loading="lazy" src="attachments/2678522110/2678522155.png?width=475" data-image-src="attachments/2678522110/2678522155.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522155" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav320508931abf3976912e8f9ff054b6a9.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="3cbc405a-69f3-4bb5-aac6-cf4e7e246b31" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Assign the following prescribed movements:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <br/>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>X-Displ</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Y-Displ</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Z-Displ</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>X-Rot</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Y-Rot</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Z-Rot</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Point A</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Point C</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Point D</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h2 id="StaticAnalysisofaBeam-Connections">Connections</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Disconnect degree of freedom from point B.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data → Boundary Conditions → Connections <br class="atl-forced-newline"/>
+Checks disconnect Z-Rotation statement. <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Click on <strong>Assign</strong>
+ button and select point B.            </p>
+            <p>With this condition it is possible to disconnect some degrees of freedom of the union points of some beams. In this example this condition creates a 2-D ball-joint in XY-plane.</p>
+            <h2 id="StaticAnalysisofaBeam-AssignStaticLoads">Assign Static Loads</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Assign static punctual loads.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data → Loads → Static Loads <br class="atl-forced-newline"/>
+Click on the following icon to set the condition over points: <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="21" width="21" loading="lazy" src="attachments/2678522110/2678522150.gif?width=21" data-image-src="attachments/2678522110/2678522150.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522150" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav904cf9e9636ac376ac0664700c07fe23.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="4d8a88a6-d2a3-45b5-b068-4adc7aec2cc5" data-media-type="file"/>
+              </span>
+            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="58" width="475" loading="lazy" src="attachments/2678522110/2678522155.png?width=475" data-image-src="attachments/2678522110/2678522155.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522155" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav320508931abf3976912e8f9ff054b6a9.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="3cbc405a-69f3-4bb5-aac6-cf4e7e246b31" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Point A<br/>
+Select from the top combo box static load <em>Moment.</em>
+            </p>
+            <p>(Mx-Force, My-Force, Mz-Force) = (0,0, -60)</p>
+            <p>Click on <strong>Assign</strong>
+ button and select point A.            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+Point B            </p>
+            <p>Select the static load <em>Point-Force-Load</em>
+ from the top combo box<em>.</em>
+            </p>
+            <p>(X-Force, Y-Force, Z-Force) = (0, -20, 0)</p>
+            <p>Click on <strong>Assign</strong>
+ button and select point B.            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+2- Assign static distributed loads. <br class="atl-forced-newline"/>
+Data → Loads → Static Loads <br class="atl-forced-newline"/>
+Click on the following icon to set the condition over lines: <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="21" width="21" loading="lazy" src="attachments/2678522110/2678522160.gif?width=21" data-image-src="attachments/2678522110/2678522160.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522160" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddava7fea0e979d97f28fec298636222f220.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="f87a927f-51e3-4cb4-a751-63bfc88c0214" data-media-type="file"/>
+              </span>
+              <br/>
+Line from C to D<br/>
+Select from the top combo box static load <em>Line-Pressure-Load.</em>
+              <br/>
+Coord. System = BASIC<br/>
+(X-Pressure, Y-Pressure, Z-Pressure)= (0, -40, 0)            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+Click on <strong>Assign</strong>
+ button and select the line C to D.            </p>
+            <h2 id="StaticAnalysisofaBeam-MeshtheGeometry:">Mesh the Geometry:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+1-Create a mesh. <br class="atl-forced-newline"/>
+Meshing → Generate <br class="atl-forced-newline"/>
+Now you are asked about the size of elements to be generated, change to value 6. <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Click on <strong>OK</strong>
+ button <br class="atl-forced-newline"/>
+Appears a window with information about the mesh:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678522110/2678980686.jpeg?height=250" data-image-src="attachments/2678522110/2678980686.png" data-unresolved-comment-count="0" data-linked-resource-id="2678980686" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_18-48-41.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="49d3bb0d-3359-4dd3-8b0e-910a2a5e85ff" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Num. of linear elements = 20<br/>
+Num. of nodes = 21            </p>
+            <h2 id="StaticAnalysisofaBeam-PerformtheAnalysis:">Perform the Analysis:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Design Executive Control Section.</li>
+            </ol>
+            <p>Data → Problem Data → Executive Control</p>
+            <p>
+              <br class="atl-forced-newline"/>
+Select type of NASTRAN will be use in the analysis. <br class="atl-forced-newline"/>
+Check STATICS and leave all the other statements uncheck. <br class="atl-forced-newline"/>
+Leave the rest of statements with the default values. <br class="atl-forced-newline"/>
+Click on <strong>Accept Data</strong>
+ button.            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+2 - Design Case Control Section. <br class="atl-forced-newline"/>
+Data → Problem Data → Case Control            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+2.1. - Input data <br class="atl-forced-newline"/>
+Leave all statements with default values. <br class="atl-forced-newline"/>
+2.2. - Output data            </p>
+            <p>Set Title to “<strong>
+                <em>Beam_example”</em>
+              </strong>
+            </p>
+            <p>Select which format file you want to use:</p>
+            <p>-Small: Every file of a Bulk Data statement will use the 8-characters definition.</p>
+            <p>- Large: Every file of a Bulk Data statement will use the 16-characters definition.</p>
+            <p>Leave Subtitle, Label … and Post process with default values.</p>
+            <p>Check Displacements and constraint forces and uncheck the rest of output requests.</p>
+            <p>In the Output Design section leave the default values.</p>
+            <p>
+              <em>Note: If you want to post process the results of MI/NASTRAN analysis with NASTRAN Interface, you have to set the output device to PUNCH.</em>
+            </p>
+            <p>Click on <strong>Accept Data</strong>
+ button.            </p>
+            <h2 id="StaticAnalysisofaBeam-ObtainInputFileforNASTRANCode:">Obtain Input File for NASTRAN Code:</h2>
+            <p>
+              <br/>
+            </p>
+            <p>
+              <strong>Option 1:</strong>
+            </p>
+            <p>Calculate → Calculate</p>
+            <p>
+              <br/>
+            </p>
+            <p>
+              <strong>Option 2:</strong>
+            </p>
+            <p>Files → Export → Calculation File</p>
+            <p>Select a folder and a file name to write the file. It is very important to write the correct extension of the NASTRAN input file (i.e. *.nas, *.dat, *.nid …).</p>
+            <h1 id="StaticAnalysisofaBeam-Postprocess:">Post process:</h1>
+            <p>Click on the following icon to enter in the post process: <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="27" width="27" loading="lazy" src="attachments/2678522110/2678522170.gif?width=27" data-image-src="attachments/2678522110/2678522170.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522170" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav79ebbe45322713db2870d660448028b0.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="27e1f8b2-6366-4c48-a338-16ab5c550c2b" data-media-type="file"/>
+              </span>
+            </p>
+            <h2 id="StaticAnalysisofaBeam-Importpunchfile:">Import punch file:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Import the punch file (***.pch) obtained from NASTRAN.</li>
+            </ol>
+            <p>Files → Import → Import PUNCH</p>
+            <p>When the file import process is finished, close the file-find window.</p>
+            <p>
+              <span style="font-size: 1.43em;">Import FEMAP ASCII neutral file:</span>
+            </p>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Import the FEMAP ASCII file (***.neu) obtained from NE/NASTRAN.</li>
+            </ol>
+            <p>Files → Import → FEMAP file</p>
+            <p>When the file import process is finished, close the file-find window.</p>
+            <p>Note: To obtain a FEMAP ASCII file in NE/NASTRAN go to NASTRAN editor:</p>
+            <p>Setup → Default Analysis Options <br class="atl-forced-newline"/>
+Selects RSLTFILETYPE and set to FEMAP ASCII in Output Control Directives <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <h2 id="StaticAnalysisofaBeam-Visualizationofresults:">Visualization of results:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Contour Fill.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+View results → Contour Fill <br class="atl-forced-newline"/>
+Select <em>"Displacements".</em>
+            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="59" width="282" loading="lazy" src="attachments/2678522110/2678522175.jpeg?width=282" data-image-src="attachments/2678522110/2678522175.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522175" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav8388c377decc4c8c99cb6897fb9a9443.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="9771cad8-2046-411a-8a80-d4d8e11271f9" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="270" width="169" loading="lazy" src="attachments/2678522110/2678522180.png?width=169" data-image-src="attachments/2678522110/2678522180.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522180" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav7f0dad8ad5e8dc77280e348a4f2f91e3.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="7b6414ad-32bc-4646-8f3d-c604baf18470" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <h3 id="StaticAnalysisofaBeam-ContourFill">Contour Fill</h3>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Displacements</p>
+                    </td>
+                    <th class="confluenceTh">
+                      <p>
+                        <br/>
+                      </p>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Deformation</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+View results → Deformation <br class="atl-forced-newline"/>
+Select <em>"Displacements".</em>
+            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="133" width="422" loading="lazy" src="attachments/2678522110/2678522185.jpeg?width=422" data-image-src="attachments/2678522110/2678522185.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522185" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav47038e44aeac059ee3bb92c53cf1ddc1.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="18c391f9-6890-4b78-883b-94087db0e028" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Deformation Displacements</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <ol>
+              <li>Line Diagram</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+View results → Line Diagram <br class="atl-forced-newline"/>
+Select <em>Scalar</em>
+ and option Y-Displacements            </p>
+            <p>. <br class="atl-forced-newline"/>
+Now change the setting for line diagram. <br class="atl-forced-newline"/>
+Options → Line Diagrams → Show elevations <br class="atl-forced-newline"/>
+Select option Filled line.            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="145" width="468" loading="lazy" src="attachments/2678522110/2678522190.png?width=468" data-image-src="attachments/2678522110/2678522190.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522190" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavdfc05aaa5dc4ad3182486f3382b5a48e.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522110" data-linked-resource-container-version="12" data-media-id="325c3b2a-5572-4073-9d54-5d8878d01a6e" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <h3 id="StaticAnalysisofaBeam-ScalarLineDiagramofY-Displacements">Scalar Line Diagram of Y-Displacements</h3>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

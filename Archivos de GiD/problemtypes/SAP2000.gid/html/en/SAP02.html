@@ -1,0 +1,67 @@
+<html>
+    <!---*- coding: utf-8;-*- -->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <style type="text/css">
+	    p { text-align:justify; }
+	    body { font-family: Verdana, Arial, Helvetica, Geneva; font-size 8px; }
+	    a { text-decoration:none }
+	    pre { font-family:Courier New, Courier, Mono; }
+	    h1 { font-family:Arial; font-size: 28; font-weight: bold; color:DarkBlue; }
+	    h2 { font-family:Arial; font-size: 24; font-weight: bold; color:DarkBlue; }
+	    h3 { font-family:Arial; font-size: 22; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    P { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+	    code { font-family:Courier New, Courier, Mono; font-size: 16; }
+	    li { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	    ol { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17;  
+		margin-top: 7px; }
+	    ul { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	</style>
+        <title>Introduction</title>
+    </head>
+    <body>
+        <a name="SAP2000&gt;Introduction"/>
+        <h3>Introduction</h3>
+        <p>GiD SAP2000 problemtype is an interface between GiD and the SAP2000 structural solver.</p>
+        <p/>
+        <p>This interface let the software GiD users make the process for creating complex geometry numerical models, after of doing this it will be possible export the model to Sap2000 software for analyzing. The users have the decision for revising the results into Sap200 or come back to GiD, but it will be necessary to use the interface for visualizing the results. Moreover, this interface has an additional option that allows the users to create a reality virtual file (VRML) with a result of GiD postprocess. </p>
+        <p/>
+        <p/>
+        <p>
+            <b>Note:</b>
+ The calculation program SAP2000 itself is not included in this problemtype. The interface was tested with SAP2000 v 15.0.0        </p>
+        <p/>
+        <p>The interface customize GiD to allow: </p>
+        <ul>
+            <li> The import of meshes of SAP2000 in .s2k text format (menu: SAP2000-&gt;Import SAP2000 mesh...)</li>
+        </ul>
+        <ul>
+            <li> The creation of the .s2k ASCII input file required to run SAP2000, using the GUI of GiD that is powerful that the standard SAP2000 one.</li>
+        </ul>
+        <p>Could handle:</p>
+        <blockquote>
+            <ul>
+                <li> 3D shell models of triangles or quadrilaterals</li>
+            </ul>
+        </blockquote>
+        <blockquote>
+            <ul>
+                <li> 3d solid models: hexahedra or tetrahedra (that are supported by SAP2000 as degenerated hexahedra with repeated nodes)</li>
+            </ul>
+        </blockquote>
+        <ul>
+            <li> The execution of SAP2000, and show its log file (altought it is not possible to run it without any window)</li>
+        </ul>
+        <ul>
+            <li> The conversion of .s2k ASCII results file of SAP2000 to the GiD postprocess .post.res format, to visualize them in GiD postprocess mode.</li>
+        </ul>
+        <ul>
+            <li> Export some result in VRML format, to be visualized for example on a Internet browser</li>
+        </ul>
+    </body>
+</html>

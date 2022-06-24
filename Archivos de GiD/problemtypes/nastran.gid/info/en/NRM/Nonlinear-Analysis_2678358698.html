@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Nonlinear Analysis</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Nonlinear Analysis
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Analysis Design → Nonlinear<br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <p>The Nonlinear Analysis section is used to set different parameters of nonlinear analysis problems. This section has to be defined when a nonlinear analysis of any type (static nonlinear, dynamic nonlinear, buckling nonlinear…) is performed.</p>
+            <p>It is highly recommended to take a look to NASTRAN manual to see how to set the values of every statement, especially to NLPARM and NLTSEPT NASTRAN statements.</p>
+            <p>The following is a brief description of section fields:</p>
+            <p>
+              <br/>
+            </p>
+            <p>
+              <strong>
+                <em>
+                  <u>-Analysis Type:</u>
+                </em>
+              </strong>
+ Determines the type of solution that will be performed for the particular load set. Available options are Static, Buckling, and Transient. Only appropriate control information in the remainder of the window will be available based upon the type of solution you choose.            </p>
+            <p>
+              <strong>
+                <em>
+                  <u>-Iterations:</u>
+                </em>
+              </strong>
+ These values provide the time and iteration control information for the nonlinear analysis steps. They control the <em>Number of Increments</em>
+ and the <em>Time Increment</em>
+ to be used, as well as the <em>Maximum Iterations</em>
+ for each step. No time increment is used for static analysis.            </p>
+            <p>
+              <strong>
+                <em>
+                  <u>-Stiffness Updates:</u>
+                </em>
+              </strong>
+ Specifies the number of iterations to be performed before the stiffness matrix is updated, as well as the update <em>Method.</em>
+            </p>
+            <p>
+              <strong>
+                <em>
+                  <u>-Skip factor:</u>
+                </em>
+              </strong>
+ Allows you to request or eliminate output at every n<sup>th</sup>
+ step (dynamic).            </p>
+            <p>
+              <strong>
+                <em>
+                  <u>-Convergence Tolerances:</u>
+                </em>
+              </strong>
+ The type of <em>Convergence Tolerances</em>
+ (<em>Load, Displacement,</em>
+ and/or <em>Work</em>
+) as well as the tolerance values themselves are defined in these boxes.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

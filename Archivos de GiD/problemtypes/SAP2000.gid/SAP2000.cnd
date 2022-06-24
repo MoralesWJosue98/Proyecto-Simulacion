@@ -1,0 +1,75 @@
+BOOK: Restraints
+CONDITION: Point_Restraints
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: X-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Y-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Z-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: X-Rotation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Y-Rotation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Z-Rotation#CB#(Yes,No)
+VALUE: Yes
+END CONDITION
+
+CONDITION: Line_Restraints
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes
+QUESTION: X-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Y-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Z-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: X-Rotation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Y-Rotation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Z-Rotation#CB#(Yes,No)
+VALUE: Yes
+END CONDITION
+
+CONDITION: Surface_Restraints
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+QUESTION: X-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Y-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Z-Translation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: X-Rotation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Y-Rotation#CB#(Yes,No)
+VALUE: Yes
+QUESTION: Z-Rotation#CB#(Yes,No)
+VALUE: Yes
+END CONDITION
+
+BOOK: Loads
+
+CONDITION: point_Load 
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: X-Force
+VALUE: 0
+QUESTION: Y-Force
+VALUE: 0
+QUESTION: Z-Force
+VALUE: 0
+END CONDITION
+
+CONDITION: point_Momentum
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: X-Moment
+VALUE: 0
+QUESTION: Y-Moment
+VALUE: 0
+QUESTION: Z-Moment
+VALUE: 0
+END CONDITION

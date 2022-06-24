@@ -1,0 +1,155 @@
+BOOK: Sets
+
+CONDITION: Point_Nset
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Name
+VALUE: nset1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Line_Nset
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Name
+VALUE: nset1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Surface_Nset
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Name
+VALUE: nset1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Volume_Nset
+CONDTYPE: over volumes
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Name
+VALUE: nset1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Line_Elset
+CONDTYPE: over lines
+CONDMESHTYPE: over elements
+CANREPEAT: yes
+QUESTION: Name
+VALUE: elset1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Surface_Elset
+CONDTYPE: over surfaces
+CONDMESHTYPE: over elements
+CANREPEAT: yes
+QUESTION: Name
+VALUE: elset1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Volume_Elset
+CONDTYPE: over volumes
+CONDMESHTYPE: over elements
+CANREPEAT: yes
+QUESTION: Name
+VALUE: elset1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Surface_Surface_set
+CONDTYPE: over surfaces
+CONDMESHTYPE: over face elements
+CANREPEAT: yes
+QUESTION: Name
+VALUE: surface_set1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Point_SurfaceNodeset
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Name
+VALUE: surface_set_nodes1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Line_SurfaceNodeset
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Name
+VALUE: surface_set_nodes1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Surface_SurfaceNodeset
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes
+CANREPEAT: yes
+QUESTION: Name
+VALUE: surface_set_nodes1
+STATE: HIDDEN
+TKWIDGET: abaqus::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Line_Element_formulation
+CONDTYPE: over lines
+CONDMESHTYPE: over elements
+QUESTION: Beam_formulation:#CB#(User_defined,B21,B22,B23,B31,B32,B33,B34,B32R,B21H,B23H,B31H,B33H,PIPE21,PIPE21H,PIPE31,PIPE31H,GK3D2,GK3D2N,SAX1)
+DEPENDENCIES:(User_defined,RESTORE,Entered_element:,#CURRENT#)(#DEFAULT#,HIDE,Entered_element:,#CURRENT#)
+VALUE: B31
+QUESTION:Entered_element:
+VALUE: B31
+STATE: DISABLED
+CANREPEAT: no
+END CONDITION 
+
+CONDITION: Surface_Element_formulation
+CONDTYPE: over surfaces
+CONDMESHTYPE: over elements
+QUESTION: Element_type:#CB#(User_defined,Triangle,Quadrilateral)
+VALUE: Triangle
+DEPENDENCIES:(Quadrilateral,HIDE,Entered_element:,#CURRENT#,HIDE,Triangle_formulation,#CURRENT#,RESTORE,Quadrilateral_formulation,#CURRENT#)(Triangle,HIDE,Entered_element:,#CURRENT#,HIDE,Quadrilateral_formulation,#CURRENT#,RESTORE,Triangle_formulation,#CURRENT#)(User_defined,HIDE,Triangle_formulation,#CURRENT#,HIDE,Quadrilateral_formulation,#CURRENT#,RESTORE,Entered_element:,#CURRENT#)
+QUESTION: Triangle_formulation:#CB#(S3,S3R,STRI3,STRI35,M3D3,R3D3,DS3,STRI65,DS6,M3D6,S6)
+VALUE: S3
+QUESTION: Quadrilateral_formulation:#CB#(S4,S4R,S4R5,M3D4,M3D4R,R3D4,DS4,S8R,S8R5,S8RT,DS8,M3D8,M3D8R,S8,S9)
+VALUE: S4
+QUESTION:Entered_element:
+VALUE: S3
+CANREPEAT: no
+END CONDITION 
+
+CONDITION: Volume_Element_formulation
+CONDTYPE: over volumes
+CONDMESHTYPE: over elements
+QUESTION: Element_type:#CB#(User_defined,Tetrahedra,Hexahedra,Prism)
+VALUE: Tetrahedra
+DEPENDENCIES:(Tetrahedra,HIDE,Entered_element:,#CURRENT#,HIDE,Hexahedra_formulation,#CURRENT#,HIDE,Prism_formulation,#CURRENT#,RESTORE,Tetrahedra_formulation,#CURRENT#)(Hexahedra,HIDE,Entered_element:,#CURRENT#,HIDE,Tetrahedra_formulation,#CURRENT#,HIDE,Prism_formulation,#CURRENT#,RESTORE,Hexahedra_formulation,#CURRENT#)(Prism,HIDE,Entered_element:,#CURRENT#,HIDE,Hexahedra_formulation,#CURRENT#,HIDE,Tetrahedra_formulation,#CURRENT#,RESTORE,Prism_formulation,#CURRENT#)(User_defined,RESTORE,Entered_element:,#CURRENT#,HIDE,Hexahedra_formulation,#CURRENT#,HIDE,Tetrahedra_formulation,#CURRENT#,HIDE,Prism_formulation,#CURRENT#)
+QUESTION: Tetrahedra_formulation:#CB#(C3D4,C3D4H,DC3D4,C3D4E,DC3D4E,C3D10,C3D10H,C3D10M,C3D10MH,DC3D10,C3D10E,DC3D10E)
+VALUE: C3D4
+QUESTION: Hexahedra_formulation:#CB#(C3D8,C3D8T,C3D8H,C3D8HT,C3D8I,C3D8IH,C3D8R,C3D8RH,C3D8E,DC3D8,AC3D8,DC3D8E,DCC3D8D,GK3D8,DK3D8N,C3D20,C3D20H,C3D20R,C3D20RH,DC3D20,AC3D20,C3D20E,CDD20RE,C3D20T,C3D20HT,C3D20RT,C3D20RHT,DC3D20E,GK3D18,GK3D18N,C3D27)
+VALUE: C3D8
+QUESTION: Prism_formulation:#CB#(C3D6,C3D6H,DC3D6,C3D6E,DC3D6E,GK3D6,GK3D6N,C3D15,C3D15H,DC3D15,C3D15E,DC3D15E,GK3D12M)
+VALUE: C3D6
+QUESTION:Entered_element:
+VALUE: C3D4
+CANREPEAT: no
+END CONDITION

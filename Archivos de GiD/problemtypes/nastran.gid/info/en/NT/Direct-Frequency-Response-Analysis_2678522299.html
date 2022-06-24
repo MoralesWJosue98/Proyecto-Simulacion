@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran tutorials : Direct Frequency Response Analysis</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran tutorials : Direct Frequency Response Analysis
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>Create geometry to represent a flat rectangular plate. Create a finite elements model of plate. Use a dynamic frequency dependent load Write an input file for MI/NASTRAN to run dynamic analysis in direct formulation. Use post-processing tools to analysis results.</p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="349" width="499" loading="lazy" src="attachments/2678522299/2678522298.jpeg?width=499" data-image-src="attachments/2678522299/2678522298.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522298" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavbbb3794f902e958ebe8c421823e0646d.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="14d2e11a-5122-4d4e-b0c5-9d45bfb45593" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h1 id="DirectFrequencyResponseAnalysis-Purpose:">Purpose:</h1>
+            <p>Create geometry to represent a flat rectangular plate.<br/>
+Create a finite elements model of plate.<br/>
+Use a dynamic frequency dependent load<br/>
+Write an input file for MI/NASTRAN to run dynamic analysis in direct formulation.<br/>
+Use post-processing tools to analysis results.            </p>
+            <h1 id="DirectFrequencyResponseAnalysis-DescriptionofModel:">Description of Model:</h1>
+            <p>Determine the frequency response of a 5x2 inch flat plate under frequency-varying excitation by using the direct formulation.<br/>
+A unit load at a corner of the tip will excite the plate model.<br/>
+A frequency step of 20Hz will be used for this analysis within the range of 20 and 100Hz.<br/>
+Structural dumping will be set to 0,06.            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-Properties:">Properties:</h2>
+            <p>
+              <br/>
+            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Length</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>5 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Weight</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>2 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Thickness</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.1 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Mass Density</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.282 lbs/inch<sup>3</sup>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Young's Modulus</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>30.0e+6 lbs/inch<sup>2</sup>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Poisson's Ratio</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.3</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <h1 id="DirectFrequencyResponseAnalysis-Procedure:">Procedure:</h1>
+            <h2 id="DirectFrequencyResponseAnalysis-Start:">Start:</h2>
+            <p>1- Open a new project, right click on this icon in taskbar <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2678980650.png" data-image-src="attachments/2678522299/2678980650.png" data-unresolved-comment-count="0" data-linked-resource-id="2678980650" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-36-45.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="357e7ffe-16e3-4749-8dd6-5e9217c20b60" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+2- Load problem type Nastran. Follow the menu sequence below: <br class="atl-forced-newline"/>
+Data -&gt; Problem type -&gt; nastran <br class="atl-forced-newline"/>
+Appears a splash image and the name of the master window changes to NASTRAN Interface. <br class="atl-forced-newline"/>
+3- Change the view plane to XY: <br class="atl-forced-newline"/>
+View -&gt; Rotate -&gt; Plane XY (original)            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-Creategeometry:">Create geometry:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Create contour lines of the plate.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Geometry -&gt; Create -&gt; Line <br class="atl-forced-newline"/>
+Now insert in command line the coordinates of points to define the plate. Follow the order is very important. <br class="atl-forced-newline"/>
+First point -&gt; 0,0<br/>
+Second point -&gt; 5,0<br/>
+Third point -&gt; 5,2<br/>
+Fourth point -&gt; 0,2<br/>
+Fifth point -&gt; 0,0 <br class="atl-forced-newline"/>
+(Only it is necessary introduce points using two coordinates, the third coordinate Z is assume to 0 ). <br class="atl-forced-newline"/>
+Now you are asked if you want to join the first point and <br class="atl-forced-newline"/>
+the fifth point , select <strong>Join</strong>
+              <br class="atl-forced-newline"/>
+Press escape or middle button of mouse.            </p>
+            <ol>
+              <li>Create surface.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Geometry -&gt; Create -&gt; NURBS Surface -&gt; By contour <br class="atl-forced-newline"/>
+Or a more quick option is click on the following icon: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2678620211.png" data-image-src="attachments/2678522299/2678620211.png" data-unresolved-comment-count="0" data-linked-resource-id="2678620211" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-37-9.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="377e318e-39aa-4edc-8062-39fe2a1ccfc6" data-media-type="file"/>
+              </span>
+              <br/>
+Situated in right vertical tool bar. <br class="atl-forced-newline"/>
+Now the pointer of mouse change to this form <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="14" width="14" loading="lazy" src="attachments/2678522299/2678522304.gif?width=14" data-image-src="attachments/2678522299/2678522304.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522304" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav9a214f091d675450f9ed9289c6c0dfb4.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="61259c54-2956-49ad-be6a-dcc6585fc3ef" data-media-type="file"/>
+              </span>
+              <br/>
+It means that now is possible select the four lines created before to create the surface. <br class="atl-forced-newline"/>
+Select the four lines in the screen. <br class="atl-forced-newline"/>
+Press escape or middle button of mouse. <br class="atl-forced-newline"/>
+Now in the NASTRAN Interface program window has to be geometry like this:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="298" width="278" loading="lazy" src="attachments/2678522299/2678522309.jpeg?width=278" data-image-src="attachments/2678522299/2678522309.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522309" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavcc0d8f0ac5bd87063fa1718fdedaa6f8.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="78f11781-488b-4922-a5b7-931a1f29ab11" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-Assignpropertyandmaterial:">Assign property and material:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Define a new material.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Materials <br class="atl-forced-newline"/>
+Click on the following icon to create a new material: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2678915121.png" data-image-src="attachments/2678522299/2678915121.png" data-unresolved-comment-count="0" data-linked-resource-id="2678915121" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-37-32.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="870e253e-fe00-4cb2-9ac6-62c10a7c3e05" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Enter name for the new material <strong>
+                <em>mat_1</em>
+              </strong>
+              <br class="atl-forced-newline"/>
+Fill all statements like in the picture:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="345" width="330" loading="lazy" src="attachments/2678522299/2678522314.png?width=330" data-image-src="attachments/2678522299/2678522314.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522314" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavb1bb75780db8a004298c3b70ee7c84fd.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="5cca74c8-79d8-4af2-ab18-f6ca1f8785a9" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Click on the following icon to save the new material: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2679078952.png" data-image-src="attachments/2678522299/2679078952.png" data-unresolved-comment-count="0" data-linked-resource-id="2679078952" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-38-4.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="a5694bbd-eee4-42fb-b028-22bb7e84214e" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+2-Define and assign the property for the surface. <br class="atl-forced-newline"/>
+Data -&gt; Properties -&gt; Property <br class="atl-forced-newline"/>
+If you don't close material window is possible get the property window clicking on the following icon <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2679078957.png" data-image-src="attachments/2678522299/2679078957.png" data-unresolved-comment-count="0" data-linked-resource-id="2679078957" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-38-42.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="54705b24-28c2-4a84-9c17-33b646265ee6" data-media-type="file"/>
+              </span>
+              <br/>
+and select option "property" in the menu. <br class="atl-forced-newline"/>
+Select from the top combo box the property <em>membrane</em>
+. <br class="atl-forced-newline"/>
+Click on the following icon to create a new property: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2678849591.png" data-image-src="attachments/2678522299/2678849591.png" data-unresolved-comment-count="0" data-linked-resource-id="2678849591" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-38-28.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="fad68b87-8dd1-444a-932d-7041178db54d" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Enter name for the new property <strong>
+                <em>property_1</em>
+              </strong>
+. <br class="atl-forced-newline"/>
+Fill all statements like in the picture:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="191" width="259" loading="lazy" src="attachments/2678522299/2678522319.png?width=259" data-image-src="attachments/2678522299/2678522319.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522319" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavc07b13bac09b1f022cec2fae82ddb2af.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="dceec9be-9eb7-4e41-9dcd-1486e5247477" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Look that in Composition Material there is selected the material created before.<br/>
+Click on the following icon to save the new property: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2679078952.png" data-image-src="attachments/2678522299/2679078952.png" data-unresolved-comment-count="0" data-linked-resource-id="2679078952" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-38-4.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="a5694bbd-eee4-42fb-b028-22bb7e84214e" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Now click on <strong>Assign</strong>
+ button, choose Surfaces and <br class="atl-forced-newline"/>
+select the surface of the geometry. <br class="atl-forced-newline"/>
+To make a proof if the property is well assigned click on <strong>Draw</strong>
+ button, select <em>This property</em>
+ option. <br class="atl-forced-newline"/>
+Now in the NASTRAN Interface program window has to be an image like this:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="223" width="257" loading="lazy" src="attachments/2678522299/2678522324.jpeg?width=257" data-image-src="attachments/2678522299/2678522324.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522324" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav7afba59c8b241d25cd9ea555aa0ae419.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="4ddc341c-c6b2-4045-9703-187c39e3447d" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-AssignConstraints:">Assign Constraints:</h2>
+            <ol>
+              <li>Assign prescribed displacements and rotation.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data-&gt; Boundary Conditions -&gt; Constraints <br class="atl-forced-newline"/>
+Click on the following icon to set the condition over lines: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2679046171.png" data-image-src="attachments/2678522299/2679046171.png" data-unresolved-comment-count="0" data-linked-resource-id="2679046171" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-39-34.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="f6d874c5-5fbc-4c8a-9272-8cb9c253380b" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Uncheck Z-Rotation and leave all other statements check. <br class="atl-forced-newline"/>
+Now click on <strong>Assign</strong>
+ button and select the vertical line on the left side (line number 4). <br class="atl-forced-newline"/>
+              <em>Note: It is possible label geometry entities using this option:</em>
+              <br/>
+              <em>-Press right button mouse to get the contextual menu.</em>
+              <br/>
+              <em>-Select option Label and choose All.</em>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-AssignDynamicLoad">Assign Dynamic Load</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Define the table of interpolation values associate to dynamic load.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Loads -&gt; Tables <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Click on the following icon to create a new table: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2678849591.png" data-image-src="attachments/2678522299/2678849591.png" data-unresolved-comment-count="0" data-linked-resource-id="2678849591" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-38-28.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="fad68b87-8dd1-444a-932d-7041178db54d" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Enter name for the new table <strong>
+                <em>freq_var</em>
+              </strong>
+. <br class="atl-forced-newline"/>
+Data Entry            </p>
+            <ul>
+              <li>Check Single Value</li>
+            </ul>
+            <p>
+              <br/>
+            </p>
+            <ul>
+              <li>X= 0.0 and Y= 1.0</li>
+            </ul>
+            <p>
+              <br/>
+            </p>
+            <ul>
+              <li>Click on <strong>Add</strong>
+ button              </li>
+            </ul>
+            <p>
+              <br/>
+            </p>
+            <ul>
+              <li>X=1000 and Y= 1.0</li>
+            </ul>
+            <p>
+              <br/>
+            </p>
+            <ul>
+              <li>Click on <strong>Add</strong>
+ button              </li>
+            </ul>
+            <p>
+              <br/>
+            </p>
+            <ul>
+              <li>Click on the following icon to save the new table: <span class="confluence-embedded-file-wrapper">
+                  <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2679078952.png" data-image-src="attachments/2678522299/2679078952.png" data-unresolved-comment-count="0" data-linked-resource-id="2679078952" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-38-4.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="a5694bbd-eee4-42fb-b028-22bb7e84214e" data-media-type="file"/>
+                </span>
+              </li>
+            </ul>
+            <p>
+              <br/>
+            </p>
+            <ul>
+              <li>Click on <strong>Close</strong>
+ button.              </li>
+            </ul>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Assign dynamic load.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Loads -&gt; Dynamics Loads <br class="atl-forced-newline"/>
+Click on the following icon to set the condition over points: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2678161629.png" data-image-src="attachments/2678522299/2678161629.png" data-unresolved-comment-count="0" data-linked-resource-id="2678161629" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-40-14.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="20874bbd-8c7b-489d-a04a-f3e3ed323419" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Select from the top combo box dynamic load <em>Freq Dynamic Type1</em>
+. <br class="atl-forced-newline"/>
+Fill all statements like in the picture:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="375" width="289" loading="lazy" src="attachments/2678522299/2678522329.png?width=289" data-image-src="attachments/2678522299/2678522329.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522329" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav03017a2298a97b3ef62e9415360ac48c.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="fa2b04e2-e999-4d1b-833f-5feef77b3058" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Look that for Table Interpolation Values D[f] has value <em>Table. Table</em>
+ is the default value for this statement an is equal to a blank table, it means that D[f] is equal to zero function. <br class="atl-forced-newline"/>
+Now click on Assign button and select the right bottom point (point number 2). <br class="atl-forced-newline"/>
+Click <strong>Close</strong>
+ button. <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-MeshtheGeometry:">Mesh the Geometry:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+1-Create a structured mesh. <br class="atl-forced-newline"/>
+Meshing -&gt; Structured -&gt; Surfaces <br class="atl-forced-newline"/>
+Select the surface of the geometry. <br class="atl-forced-newline"/>
+Press escape or middle button mouse. <br class="atl-forced-newline"/>
+Now you are asked for number of cells to assign to lines, set to 10. <br class="atl-forced-newline"/>
+Click <strong>OK</strong>
+ button. <br class="atl-forced-newline"/>
+Select lines 1 and 3, the large ones. <br class="atl-forced-newline"/>
+Press escape or middle button mouse. <br class="atl-forced-newline"/>
+Now you are asked again for number of cells to assign to lines, set to 4. <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Click <strong>OK</strong>
+ button. <br class="atl-forced-newline"/>
+Select lines 2 and 4, the short ones. <br class="atl-forced-newline"/>
+Press escape or middle button mouse. <br class="atl-forced-newline"/>
+Click <strong>Cancel</strong>
+ button.            </p>
+            <ol>
+              <li>Generate the structured mesh.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Meshing -&gt; Generate <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Now you are asked about the size of elements to be generate, leave default value (0.54) <br class="atl-forced-newline"/>
+Click <strong>OK</strong>
+ button <br class="atl-forced-newline"/>
+Appears a window with information about the mesh:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="227" width="289" loading="lazy" src="attachments/2678522299/2678522334.png?width=289" data-image-src="attachments/2678522299/2678522334.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522334" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav41f70a39d5fdf845593b60b3890e4579.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="39e0665a-3f25-48ef-babe-db1e4d371396" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Num. of Quadrilateral elements = 40<br/>
+Num. of nodes = 55 <br class="atl-forced-newline"/>
+Click <strong>OK</strong>
+ button. <br class="atl-forced-newline"/>
+              <em>Note: It is possible label mesh elements and nodes using this option:</em>
+              <br/>
+              <em>-Press right button mouse to get the contextual menu.</em>
+              <br/>
+              <em>-Select option Label and choose All.</em>
+              <br class="atl-forced-newline"/>
+Now in the NASTRAN Interface program window has to be an image like this:            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="349" width="499" loading="lazy" src="attachments/2678522299/2678522339.jpeg?width=499" data-image-src="attachments/2678522299/2678522339.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522339" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavfbfb72fb797b200dbf95370160cf7f79.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="f796ef1f-7fdb-4f79-bbe2-4bdf695256d2" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-PerformtheAnalysis:">Perform the Analysis:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Design Executive Control Section.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; Executive Control <br class="atl-forced-newline"/>
+Select type of NASTRAN will be use in the analysis. <br class="atl-forced-newline"/>
+Check STATICS and DIRECT FREQUENCY RESPONSE and leave all the other statements uncheck. <br class="atl-forced-newline"/>
+Leave the rest of statements with the default values. <br class="atl-forced-newline"/>
+Click <strong>Accept data</strong>
+ button. <br class="atl-forced-newline"/>
+2 - Design Case Control Section. <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; Case Control <br class="atl-forced-newline"/>
+2.1.- Input data <br class="atl-forced-newline"/>
+Leave all statements with default values. <br class="atl-forced-newline"/>
+2.2.- Output data <br class="atl-forced-newline"/>
+Set Title to <strong>
+                <em>"Direct_frequency _Response"</em>
+              </strong>
+              <br class="atl-forced-newline"/>
+Leave Subtitle, Label … and Post process with default values. <br class="atl-forced-newline"/>
+Check Displacements and Velocity, and uncheck the rest of output requests. <br class="atl-forced-newline"/>
+In Output Design section leave the default values. <br class="atl-forced-newline"/>
+              <em>Note: If the user wants to post processing the results of the analysis with MI/NASTRAN Interface is mandatory that the output device has to set to PUNCH.</em>
+              <br class="atl-forced-newline"/>
+Click <strong>Accept data</strong>
+ button            </p>
+            <ol>
+              <li>Design Dynamic Analysis.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; Dynamics <br class="atl-forced-newline"/>
+Set these values to the different statements: <br class="atl-forced-newline"/>
+Solution Method = Direct<br/>
+Domain of Solution = Frequency <br class="atl-forced-newline"/>
+Overall Structural Damping Coeff. = 0.06 <br class="atl-forced-newline"/>
+Frequency Step<br/>
+Initial step = 20<br/>
+Frequency Increment = 20<br/>
+Number of frequency increments = 49 <br class="atl-forced-newline"/>
+Mass formulation = Coupled <br class="atl-forced-newline"/>
+Click <strong>Accept data</strong>
+ button            </p>
+            <ol>
+              <li>Set PARAM values.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; PARAM <br class="atl-forced-newline"/>
+In MI/NASTRAN tab set WTMASS to 0.00259<br/>
+Leave the rest of statements with default values. <br class="atl-forced-newline"/>
+Click <strong>Accept data</strong>
+ button.            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-ObtainInputFileforNASTRANCode:">Obtain Input File for NASTRAN Code:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+File -&gt; Import/Export -&gt; Write Calculation File <br class="atl-forced-newline"/>
+Appears a window to select in which folder and the name for save the file. It is very important write extension of the file in the name.            </p>
+            <h1 id="DirectFrequencyResponseAnalysis-Postprocess:">Post process:</h1>
+            <p>Click on the following icon to enter in the post process: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522299/2678751301.png" data-image-src="attachments/2678522299/2678751301.png" data-unresolved-comment-count="0" data-linked-resource-id="2678751301" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-40-59.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="49a9a412-8efd-48ca-b570-48a02c6f7d0d" data-media-type="file"/>
+              </span>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-Importpunchfile:">Import punch file:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Import the punch file (***.pch) obtained from NASTRAN.</li>
+            </ol>
+            <p>File -&gt; Import -&gt; Import PUNCH <br class="atl-forced-newline"/>
+Appears a window to select the punch file located in NASTRAN results folder. <br class="atl-forced-newline"/>
+After importing process is finished close the window.            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-ImportFEMAPASCIIneutralfile:">Import FEMAP ASCII neutral file:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Import the FEMAP ASCII file (***.neu) obtained from NE/NASTRAN.</li>
+            </ol>
+            <p>File -&gt; Import -&gt; FEMAP file <br class="atl-forced-newline"/>
+Appears a window to select the *.neu file located in NASTRAN results folder. <br class="atl-forced-newline"/>
+After importing process is finished close the window. <br class="atl-forced-newline"/>
+Note: To obtain a FEMAP ASCII file in NE/NASTRAN go to NASTRAN editor: <br class="atl-forced-newline"/>
+Setup -&gt; Default Analysis Options <br class="atl-forced-newline"/>
+Selects RSLTFILETYPE and set to FEMAP ASCII in Output Control Directives <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-Visualizationofresults:">Visualization of results:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Contour Fill.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+View results -&gt; Contour Fill <br class="atl-forced-newline"/>
+Select one of the results displacements or velocity.            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="105" width="228" loading="lazy" src="attachments/2678522299/2678522344.jpeg?width=228" data-image-src="attachments/2678522299/2678522344.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522344" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavba7cbf1b5bcee90896a10f0f4d005d92.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="0b787c1e-adf4-4088-bb01-a22410f728b5" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="205" width="136" loading="lazy" src="attachments/2678522299/2678522349.png?width=136" data-image-src="attachments/2678522299/2678522349.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522349" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav5458e9fbd90553102c5ddba1ef76e984.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="813dabca-361c-4874-a1f3-aa2c672c0579" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <h3 id="DirectFrequencyResponseAnalysis-ContourFillZ-DisplacementStep20Hz">Contour Fill Z-Displacement Step 20Hz</h3>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <br/>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+To change step of analysis use this menu sequence: <br/>
+View results -&gt; Default Analysis/Step -&gt; 1 <br class="atl-forced-newline"/>
+Select that step you want to see.            </p>
+            <ol>
+              <li>Deformation.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+View results -&gt; Deformation <br class="atl-forced-newline"/>
+Select one of the results displacements or velocity. <br class="atl-forced-newline"/>
+Use trackball rotation to rotate the plate and see better the deformation. <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="29" width="29" loading="lazy" src="attachments/2678522299/2678522354.png?width=29" data-image-src="attachments/2678522299/2678522354.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522354" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav4c5b877092fc5791fedaa733550dd1e8.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="b41ac005-6629-41b1-9d36-2e03a6c7194e" data-media-type="file"/>
+              </span>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-Numericalresults:">Numerical results:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+To see numerical results in nodes, click on this icon <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="28" width="28" loading="lazy" src="attachments/2678522299/2678522359.gif?width=28" data-image-src="attachments/2678522299/2678522359.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522359" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavd73f546aff9925b721285ed9923482de.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522299" data-linked-resource-container-version="3" data-media-id="5f65b864-a239-4dc8-8c2d-e49bce683288" data-media-type="file"/>
+              </span>
+              <br/>
+and select in which nodes you want to see the current numerical results display in the screen. <br class="atl-forced-newline"/>
+For example: <br/>
+Node 51 step 200Hz <br class="atl-forced-newline"/>
+Displacements            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>X= 1.28075e-19</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Y= -4.89892e-20</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Z= -0.00547175</p>
+                    </td>
+                    <th class="confluenceTh">
+                      <p>Dis.</p>
+                    </th>
+                    <td class="confluenceTd">
+                      <p>=0.0547175</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Velocity            </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>X= -1.23013e-19</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Y= -5.22769e-19</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Z= 0.467011</p>
+                    </td>
+                    <th class="confluenceTh">
+                      <p>Vel.</p>
+                    </th>
+                    <td class="confluenceTd">
+                      <p>= 0.467011</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="DirectFrequencyResponseAnalysis-CreateanAnimation:">Create an Animation:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Select which kind of results will be displayed</li>
+              <li>Open Animation Window.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Windows -&gt; Animate            </p>
+            <ol>
+              <li>Click <strong>Play</strong>
+ button.              </li>
+            </ol>
+            <p>
+              <br/>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,833 @@
+<?xml version="1.0" encoding="utf-8"?><!-- -*- coding: utf-8;-*- -->
+<!DOCTYPE ramtranslator SYSTEM "ramtranslator.dtd">
+<ramtranslator version="1.11b">
+    <maxrow>90</maxrow>
+    <languages>
+        <langlist>Spanish es English en</langlist>
+        <current>Spanish</current>
+    </languages>
+    <srcstrings>
+        <src id="3">
+            <base>X-Force</base>
+            <position>SAP2000.cnd:59</position>
+            <priority>0</priority>
+        </src>
+        <src id="4">
+            <base>X-Moment</base>
+            <position>SAP2000.cnd:70</position>
+            <priority>0</priority>
+        </src>
+        <src id="5">
+            <base>X-Rotation</base>
+            <position>SAP2000.cnd:46</position>
+            <priority>0</priority>
+        </src>
+        <src id="6">
+            <base>X-Translation</base>
+            <position>SAP2000.cnd:40</position>
+            <priority>0</priority>
+        </src>
+        <src id="7">
+            <base>Y-Force</base>
+            <position>SAP2000.cnd:61</position>
+            <priority>0</priority>
+        </src>
+        <src id="8">
+            <base>Y-Moment</base>
+            <position>SAP2000.cnd:72</position>
+            <priority>0</priority>
+        </src>
+        <src id="9">
+            <base>Y-Rotation</base>
+            <position>SAP2000.cnd:48</position>
+            <priority>0</priority>
+        </src>
+        <src id="10">
+            <base>Y-Translation</base>
+            <position>SAP2000.cnd:42</position>
+            <priority>0</priority>
+        </src>
+        <src id="11">
+            <base>Z-Force</base>
+            <position>SAP2000.cnd:63</position>
+            <priority>0</priority>
+        </src>
+        <src id="12">
+            <base>Z-Moment</base>
+            <position>SAP2000.cnd:74</position>
+            <priority>0</priority>
+        </src>
+        <src id="13">
+            <base>Z-Rotation</base>
+            <position>SAP2000.cnd:50</position>
+            <priority>0</priority>
+        </src>
+        <src id="14">
+            <base>Z-Translation</base>
+            <position>SAP2000.cnd:44</position>
+            <priority>0</priority>
+        </src>
+        <src id="15">
+            <base>Concrete</base>
+            <position>SAP2000.mat:15</position>
+            <priority>0</priority>
+        </src>
+        <src id="16">
+            <base>E</base>
+            <position>SAP2000.mat:55</position>
+            <priority>0</priority>
+        </src>
+        <src id="17">
+            <base>Iron</base>
+            <position>SAP2000.mat:41</position>
+            <priority>0</priority>
+        </src>
+        <src id="18">
+            <base>Masonry</base>
+            <position>SAP2000.mat:54</position>
+            <priority>0</priority>
+        </src>
+        <src id="19">
+            <base>Mass</base>
+            <position>SAP2000.mat:50</position>
+            <priority>0</priority>
+        </src>
+        <src id="20">
+            <base>Poisson's ratio</base>
+            <position>SAP2000.mat:57</position>
+            <priority>0</priority>
+        </src>
+        <src id="21">
+            <base>Steel</base>
+            <position>SAP2000.mat:2</position>
+            <priority>0</priority>
+        </src>
+        <src id="22">
+            <base>Thickness</base>
+            <position>SAP2000.mat:59</position>
+            <priority>0</priority>
+        </src>
+        <src id="23">
+            <base>Weight</base>
+            <position>SAP2000.mat:61</position>
+            <priority>0</priority>
+        </src>
+        <src id="24">
+            <base>Wood</base>
+            <position>SAP2000.mat:28</position>
+            <priority>0</priority>
+        </src>
+        <src id="25">
+            <base>Active</base>
+            <position>SAP2000.prb:7</position>
+            <priority>0</priority>
+        </src>
+        <src id="28">
+            <base>Deactive</base>
+            <position>SAP2000.prb:7</position>
+            <priority>0</priority>
+        </src>
+        <src id="37">
+            <base>Factor scale Model</base>
+            <position>SAP2000.tcl:634</position>
+            <priority>0</priority>
+        </src>
+        <src id="38">
+            <base>KN-cm-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="39">
+            <base>KN-m-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="40">
+            <base>KN-mm-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="41">
+            <base>Kgf-cm-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="42">
+            <base>Kgf-m-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="43">
+            <base>Kgf-mm-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="44">
+            <base>Kip-ft-F</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="45">
+            <base>Kip-in-F</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="52">
+            <base>N-cm-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="53">
+            <base>N-m-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="54">
+            <base>N-mm-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="69">
+            <base>SAP2000 Version</base>
+            <position>SAP2000.prb:10</position>
+            <priority>0</priority>
+        </src>
+        <src id="77">
+            <base>Scale color number</base>
+            <position>SAP2000.tcl:645</position>
+            <priority>0</priority>
+        </src>
+        <src id="78">
+            <base>Self weight</base>
+            <position>SAP2000.prb:7</position>
+            <priority>0</priority>
+        </src>
+        <src id="79">
+            <base>Shell</base>
+            <position>SAP2000.prb:4</position>
+            <priority>0</priority>
+        </src>
+        <src id="82">
+            <base>Ton-cm-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="83">
+            <base>Ton-m-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="84">
+            <base>Ton-mm-C</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="86">
+            <base>Units</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="95">
+            <base>lb-ft-F</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="96">
+            <base>lb-in-F</base>
+            <position>SAP2000.prb:13</position>
+            <priority>0</priority>
+        </src>
+        <src id="105">
+            <base>SAP2000 file</base>
+            <position>SAP2000.tcl:142;SAP2000.tcl:293</position>
+            <priority>0</priority>
+        </src>
+        <src id="106">
+            <base>Read SAP2000</base>
+            <position>SAP2000.tcl:295</position>
+            <priority>0</priority>
+        </src>
+        <src id="107">
+            <base>Before Reading SAP2000, a project title is needed. Save project to get it</base>
+            <position>SAP2000.tcl:401</position>
+            <priority>0</priority>
+        </src>
+        <src id="108">
+            <base>SAP2000 file read. It is possible to postprocess now</base>
+            <position>SAP2000.tcl:300</position>
+            <priority>0</priority>
+        </src>
+        <src id="111">
+            <base>Coord centre base model</base>
+            <position>SAP2000.tcl:623</position>
+            <priority>0</priority>
+        </src>
+        <src id="113">
+            <base>Lower limit</base>
+            <position>SAP2000.tcl:588</position>
+            <priority>0</priority>
+        </src>
+        <src id="114">
+            <base>Upper limit</base>
+            <position>SAP2000.tcl:599</position>
+            <priority>0</priority>
+        </src>
+        <src id="115">
+            <base>Load</base>
+            <position>SAP2000.cnd:56</position>
+            <priority>0</priority>
+        </src>
+        <src id="116">
+            <base>Momentum</base>
+            <position>SAP2000.cnd:67</position>
+            <priority>0</priority>
+        </src>
+        <src id="117">
+            <base>No</base>
+            <position>SAP2000.cnd:50;SAP2000.prb:25</position>
+            <priority>0</priority>
+        </src>
+        <src id="118">
+            <base>Restraints</base>
+            <position>SAP2000.cnd:37</position>
+            <priority>0</priority>
+        </src>
+        <src id="119">
+            <base>Yes</base>
+            <position>SAP2000.cnd:50;SAP2000.prb:25</position>
+            <priority>0</priority>
+        </src>
+        <src id="120">
+            <base>12.0.0</base>
+            <position>SAP2000.prb:10</position>
+            <priority>0</priority>
+        </src>
+        <src id="121">
+            <base>15.0.0</base>
+            <position>SAP2000.prb:10</position>
+            <priority>0</priority>
+        </src>
+        <src id="122">
+            <base>Behavior</base>
+            <position>SAP2000.prb:4</position>
+            <priority>0</priority>
+        </src>
+        <src id="123">
+            <base>Degree of freedom DX</base>
+            <position>SAP2000.prb:15</position>
+            <priority>0</priority>
+        </src>
+        <src id="124">
+            <base>Degree of freedom DY</base>
+            <position>SAP2000.prb:17</position>
+            <priority>0</priority>
+        </src>
+        <src id="125">
+            <base>Degree of freedom DZ</base>
+            <position>SAP2000.prb:19</position>
+            <priority>0</priority>
+        </src>
+        <src id="126">
+            <base>Degree of freedom ROTX</base>
+            <position>SAP2000.prb:21</position>
+            <priority>0</priority>
+        </src>
+        <src id="127">
+            <base>Degree of freedom ROTY</base>
+            <position>SAP2000.prb:23</position>
+            <priority>0</priority>
+        </src>
+        <src id="128">
+            <base>Degree of freedom ROTZ</base>
+            <position>SAP2000.prb:25</position>
+            <priority>0</priority>
+        </src>
+        <src id="129">
+            <base>Membrane</base>
+            <position>SAP2000.prb:4</position>
+            <priority>0</priority>
+        </src>
+        <src id="130">
+            <base>Plate</base>
+            <position>SAP2000.prb:4</position>
+            <priority>0</priority>
+        </src>
+        <src id="131">
+            <base>SAP2000</base>
+            <position>SAP2000.prb:3</position>
+            <priority>0</priority>
+        </src>
+        <src id="132">
+            <base>Solid</base>
+            <position>SAP2000.prb:4</position>
+            <priority>0</priority>
+        </src>
+        <src id="133">
+            <base>enable or disable the self-weigh load</base>
+            <position>SAP2000.prb:9</position>
+            <priority>0</priority>
+        </src>
+        <src id="135">
+            <base>set the kind of structural model and implicilty its degrees of freedom</base>
+            <position>SAP2000.prb:6</position>
+            <priority>0</priority>
+        </src>
+        <src id="136">
+            <base>Help on SAP2000</base>
+            <position>SAP2000.tcl:108</position>
+            <priority>0</priority>
+        </src>
+        <src id="137">
+            <base>Import SAP2000 mesh</base>
+            <position>SAP2000.tcl:111</position>
+            <priority>0</priority>
+        </src>
+        <src id="138">
+            <base>Convert SAP2000 results</base>
+            <position>SAP2000.tcl:112</position>
+            <priority>0</priority>
+        </src>
+        <src id="139">
+            <base>Export VRML file</base>
+            <position>SAP2000.tcl:113</position>
+            <priority>0</priority>
+        </src>
+        <src id="140">
+            <base>About</base>
+            <position>SAP2000.tcl:114</position>
+            <priority>0</priority>
+        </src>
+        <src id="141">
+            <base>Interface developed by: %s\n updated by %s</base>
+            <position>SAP2000.tcl:128</position>
+            <priority>0</priority>
+        </src>
+        <src id="142">
+            <base>SAP2000 file read</base>
+            <position>SAP2000.tcl:143</position>
+            <priority>0</priority>
+        </src>
+        <src id="143">
+            <base>File read</base>
+            <position>SAP2000.tcl:146</position>
+            <priority>0</priority>
+        </src>
+        <src id="144">
+            <base>VRML results export</base>
+            <position>SAP2000.tcl:536</position>
+            <priority>0</priority>
+        </src>
+        <src id="145">
+            <base>Result to export</base>
+            <position>SAP2000.tcl:577</position>
+            <priority>0</priority>
+        </src>
+        <src id="146">
+            <base>Base Model</base>
+            <position>SAP2000.tcl:610</position>
+            <priority>0</priority>
+        </src>
+        <src id="147">
+            <base>Export</base>
+            <position>SAP2000.tcl:657</position>
+            <priority>0</priority>
+        </src>
+        <src id="148">
+            <base>Close</base>
+            <position>SAP2000.tcl:658</position>
+            <priority>0</priority>
+        </src>
+        <src id="149">
+            <base>VRML file %s created.</base>
+            <position>SAP2000.tcl:1141</position>
+            <priority>0</priority>
+        </src>
+        <src id="150">
+            <base>can't open file %s</base>
+            <position>SAP2000.tcl:1143</position>
+            <priority>0</priority>
+        </src>
+        <src id="151">
+            <base>format version of the .s2k file written as input for SAP2000 (version formats could have small differences)</base>
+            <position>SAP2000.prb:12</position>
+            <priority>0</priority>
+        </src>
+        <src id="152">
+            <base>Loads</base>
+            <position>SAP2000.cnd:54</position>
+            <priority>0</priority>
+        </src>
+    </srcstrings>
+    <translatestrings>
+        <lan lan="es">
+            <translate id="3">
+                <base>Fuerza-X</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="4">
+                <base>Momento-X</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="5">
+                <base>Rotación-X</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="6">
+                <base>Traslación-X</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="7">
+                <base>Fuerza-Y</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="8">
+                <base>Momento-Y</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="9">
+                <base>Rotación-Y</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="10">
+                <base>Traslación-Y</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="11">
+                <base>Fuerza-Z</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="12">
+                <base>Momento-Z</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="13">
+                <base>Rotación-Z</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="14">
+                <base>Traslación-Z</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="15">
+                <base>Hormigón</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="16">
+                <base>E</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="17">
+                <base>Hierro</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="18">
+                <base>Obra fábrica</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="19">
+                <base>Masa</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="20">
+                <base>Coeficiente Poisson</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="21">
+                <base>Acero</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="22">
+                <base>Espesor</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="23">
+                <base>Peso</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="24">
+                <base>Madera</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="25">
+                <base>Activado</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="28">
+                <base>Desctivado</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="37">
+                <base>Factor escala modelo</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="69">
+                <base>Versión SAP2000</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="77">
+                <base>Número colores escala</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="78">
+                <base>Peso propio</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="79">
+                <base>Lámina</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="86">
+                <base>Unidades</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="105">
+                <base>Fichero SAP2000</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="106">
+                <base>Leer SAP2000</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="107">
+                <base>Antes de leer el fichero SAP2000 es necesario un título de proyecto. Salve el proyecto</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="108">
+                <base>Fichero SAP2000 leido. Ahora es posible postprocesarlo</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="111">
+                <base>Coord. centro base modelo</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="113">
+                <base>Límite inferior</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="114">
+                <base>Límite superior</base>
+                <tuser>escolano</tuser>
+                <date>2012-05-14</date>
+            </translate>
+            <translate id="115">
+                <base>Carga</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="116">
+                <base>Momento</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="117">
+                <base>No</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="118">
+                <base>Restricciones</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="119">
+                <base>Si</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="122">
+                <base>Comportamiento</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="123">
+                <base>Grado de libertad DX</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="124">
+                <base>Grado de libertad DY</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="125">
+                <base>Grado de libertad DZ</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="126">
+                <base>Grado de libertad ROTX</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="127">
+                <base>Grado de libertad ROTY</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="128">
+                <base>Grado de libertad ROTZ</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="129">
+                <base>Membrana</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="130">
+                <base>Placa</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="132">
+                <base>Sólido</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="133">
+                <base>activa o desactiva la carga de peso propio</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="135">
+                <base>establece el tipo de modelo estructural</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="136">
+                <base>Ayuda de SAP2000</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="137">
+                <base>Importar malla SAP2000</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="138">
+                <base>Convertir resultado SAP2000</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="139">
+                <base>Exportar fichero VRML</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="140">
+                <base>Acerca de</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="141">
+                <base>Interfaz desarrollada por: %s\n actualizada por %s</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="142">
+                <base>Leer fichero SAP2000</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="143">
+                <base>Fichero leido</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="144">
+                <base>Exportar fichero VRML</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="145">
+                <base>Resultado a exportar</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="146">
+                <base>Base modelo</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="147">
+                <base>Exportar</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="148">
+                <base>Cerrar</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="149">
+                <base>Fichero VRML '%s' creado</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="150">
+                <base>no se puede abrir el fichero '%s'</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="151">
+                <base>version del formato del fichero .s2k de entrada para SAP2000 (puede haber ligeras diferencias entre versiones)</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+            <translate id="152">
+                <base>Cargas</base>
+                <tuser>escolano</tuser>
+                <date>2012-06-04</date>
+            </translate>
+        </lan>
+        <lan lan="en"/>
+    </translatestrings>
+    <users>
+        <user id="1">Programmer</user>
+        <user id="2">Translator</user>
+        <user id="3">Web</user>
+        <user id="4">escolano</user>
+        <current>escolano</current>
+    </users>
+    <abbrevs/>
+    <options>
+        <option name="defaultexportdir" value="C:/gid project more/Proyectos/SAP2000/problemtypes/SAP2000.gid/msgs"/>
+        <option name="TranslationProgram" value="SAP2000 {{C:\gid project more\Proyectos\SAP2000\problemtypes\SAP2000.gid}} {.cnd .mat .prb .tcl} 1"/>
+    </options>
+</ramtranslator>

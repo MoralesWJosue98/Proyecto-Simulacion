@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Material</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Material
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Materials <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <p>Defines new materials. It is possible to define a material with the following properties:</p>
+            <p>          <strong>
+                <em>
+                  <u>-Stiffness Page: </u>
+                </em>
+              </strong>
+In this page it is possible to define mechanical         properties of a material.            </p>
+            <p>                   - E, Young Modulus</p>
+            <p>                   - G, Shear Modulus</p>
+            <p>                   - nu, Poisson coefficient.</p>
+            <p>- Limit Stress: Allowable stresses in tension, compression,        and shear. Required if composite element failure index is desired.</p>
+            <p>          <strong>
+                <em>
+                  <u>-Thermal Page:</u>
+                </em>
+              </strong>
+ In this page it is possible to define thermal     properties of a material.            </p>
+            <p>          <strong>
+                <em>
+                  <u>-Others:</u>
+                </em>
+              </strong>
+ Defines different properties not defined in previous     pages.            </p>
+            <p>
+              <br/>
+            </p>
+            <p>A mouse-over help is available for all labels of all entries.</p>
+            <p>Every filed has a “Temp…” button associated. By the means of this button it is possible to define a temperature dependent property. When “Temp..” button is pressed the Tables window will appear. Please see Tables section of this manual to see how this option works.</p>
+            <p>
+              <strong>
+                <em>
+                  <u>Stress-dependent material properties</u>
+                </em>
+              </strong>
+            </p>
+            <p>
+              <br/>
+            </p>
+            <p>Defines stress-dependent material properties for nonlinear analysis. Click the <em>Nonlinear…</em>
+ button to open the properties window.            </p>
+            <p>Nonlinear elastic materials are defined by stress-strain curve. This curve can be defined by clicking at the <em>Function… </em>
+button. Stress-strain curve should be defined in the first and third quadrants to accommodate different uniaxial tensions and compression properties. All other properties do not apply to this type of materials.            </p>
+            <p>
+              <br/>
+            </p>
+            <p>It is possible to define elasto-plastic materials in two different ways:</p>
+            <p style="text-align: left;">          -Use the linear constants coupled with the plasticity modulus H. This is the work hardening slope, and it is related to the tangential modulus, E<sub>T</sub>
+(the slope of stress vs. plastic strain) by the following:            </p>
+            <p style="text-align: left;">
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391707/2678456491.png" data-image-src="attachments/2678391707/2678456491.png" data-unresolved-comment-count="0" data-linked-resource-id="2678456491" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-8-40.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391707" data-linked-resource-container-version="4" data-media-id="5af2df99-c775-4d31-9e6b-b4db246f4d06" data-media-type="file"/>
+              </span>
+            </p>
+            <p>          -Define a curve in stress-strain plane. The curve must be defined in the first quadrant. The first point must be at origin</p>
+            <p>          (X1 = 0, Y1    = 0) and the second point (X2, Y2) must be at the initial yield point (<em>Y</em>
+              <em>1 </em>
+or <em>2c</em>
+). The slope of the line joining the origin       to the yield stress must be equal to the value of <em>E</em>
+.            </p>
+            <p>
+              <br/>
+            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <tbody>
+                  <tr>
+                    <td width="508" class="confluenceTd">
+                      <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                        <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678391707/2678325525.png?height=250" data-image-src="attachments/2678391707/2678325525.png" data-unresolved-comment-count="0" data-linked-resource-id="2678325525" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-7-41.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391707" data-linked-resource-container-version="4" data-media-id="6e4d0ff3-d540-426a-b9c5-11a5ca1c4a76" data-media-type="file"/>
+                      </span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="508" class="confluenceTd">
+                      <p>
+                        <em>Figure </em>
+                        <em>9</em>
+                        <em> Nonlinear Properties Window</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

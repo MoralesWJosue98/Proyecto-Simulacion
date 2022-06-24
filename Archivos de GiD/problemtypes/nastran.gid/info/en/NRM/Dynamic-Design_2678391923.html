@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Dynamic Design</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Dynamic Design
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>Provides the solution type and control information for Dynamic Analyses. Each dynamic load used in a Dynamic Analysis must have the appropriate Solution Method activated.  
+<br class="atl-forced-newline"/>
+            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="589" width="375" loading="lazy" src="attachments/2678391923/2678391922.png?width=375" data-image-src="attachments/2678391923/2678391922.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391922" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavcbfbe8e49b8d8f990dbbea07ef7227e0.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391923" data-linked-resource-container-version="1" data-media-id="f652267a-3906-47ef-ba6a-905aa701955e" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 20 – Dynamics Section</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">- Solution Method and Domain of Solution</span>
+                </em>
+:              </strong>
+ chooses the type of Dynamics Solution to be performed.  The four following options are available: (1) Direct Transient, (2) Modal Transient, (3) Direct Frequency, and (4) Modal Frequency.  The inappropriate boxes for each Solution Method will be inactivated automatically.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Equivalent Viscous Damping:</span>
+                </em>
+              </strong>
+ These statements provide damping information of a structure.  The Overall Structural Damping Coefficient is an input for all four-solution methods.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Equivalent Viscous Damping Conversion:</span>
+                </em>
+              </strong>
+ Information for both System Damping and Element Damping is provided in this box. These values are only inputs for Direct and Modal Transient Analysis.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Transient Time Step Interval:</span>
+                </em>
+              </strong>
+ For transient analyses, these options control the number of steps, steps sizes, and the output interval.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Frequency Step</span>
+                </em>
+:              </strong>
+ The Solutions Frequencies are defined in this section. These statements define analyzed frequencies for both Direct and Modal Frequency Analysis.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Response Based On Modes:</span>
+                </em>
+              </strong>
+ For modal solution methods, these options allow choosing the number and/or range of modes to include in the frequency response or transient formulation.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Select Range of Frequencies for Output:</span>
+                </em>
+              </strong>
+ Allows to set which frequencies will be printed in the output file. In some cases it is interesting to run analysis for more frequencies that can be studied later.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

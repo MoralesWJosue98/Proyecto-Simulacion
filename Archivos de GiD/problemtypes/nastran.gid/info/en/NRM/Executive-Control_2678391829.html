@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Executive Control</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Executive Control
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Problem → Executive Control<br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+This dialog box is used to define the Executive Control commands for your NASTRAN model.            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678391829/2678325530.jpeg?height=250" data-image-src="attachments/2678391829/2678325530.png" data-unresolved-comment-count="0" data-linked-resource-id="2678325530" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-14-2.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391829" data-linked-resource-container-version="3" data-media-id="3bad7c89-4d1e-4948-acf6-db0782be14b8" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 15 – Executive Control Window</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-The NASTRAN type</span>
+                </em>
+              </strong>
+ defines the type of NASTRAN code used in the analysis. At the moment, it is possible to use MI, MSC and NE NASTRAN.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-The ID</span>
+                </em>
+              </strong>
+ is written as a title to the ID command.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-The Type of analysis</span>
+                </em>
+              </strong>
+ defines which type of analysis will be run with NASTRAN. It is possible to select more than one analysis type at the same time, but only without any contradiction between them.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-The Time</span>
+                </em>
+              </strong>
+ (min) option sets the maximum allowable CPU time for this analysis. If this number is very low, the analysis can prematurely terminate.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-The Diagnostics</span>
+                </em>
+              </strong>
+ requests additional information to be generated or requests executive operations to be performed. (See NASTRAN manual for details.)<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Rigid Format approach</span>
+                </em>
+              </strong>
+ combo box allows the user to select the Rigid Format approach or a user provided Direct Matrix Abstraction Program (DMAP). There are three possible formats:<br/>
+-Displacement: Indicates one of the Displacement Approach rigid formats.<br/>
+-Heat: Indicates one of the Heat Transfer Approach rigid formats. Not available in this version. <br/>
+-Aero: Indicates one of the Aero-elastic Approach rigid formats. Not available in this version.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

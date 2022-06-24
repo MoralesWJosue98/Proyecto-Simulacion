@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Time Dynamic Type 1</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Time Dynamic Type 1
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <br class="atl-forced-newline"/>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Loads → Dynamics Loads<br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Defines a time dependent dynamic load of the form: <br class="atl-forced-newline"/>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391579/2678456399.png" data-image-src="attachments/2678391579/2678456399.png" data-unresolved-comment-count="0" data-linked-resource-id="2678456399" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_12-53-54.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391579" data-linked-resource-container-version="4" data-media-id="2724923b-4662-46e7-abfd-776ddd128154" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+This condition is used in transient response problems, where:<br/>
+t= independent variable, it is a time.<br/>
+A= Scale factor <br/>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391579/2678489217.png" data-image-src="attachments/2678391579/2678489217.png" data-unresolved-comment-count="0" data-linked-resource-id="2678489217" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_13-0-36.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391579" data-linked-resource-container-version="4" data-media-id="322487fa-2dd4-492b-b256-9e69e783e75e" data-media-type="file"/>
+              </span>
+= Time delay<br/>
+F(t-<span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391579/2678489217.png" data-image-src="attachments/2678391579/2678489217.png" data-unresolved-comment-count="0" data-linked-resource-id="2678489217" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_13-0-36.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391579" data-linked-resource-container-version="4" data-media-id="322487fa-2dd4-492b-b256-9e69e783e75e" data-media-type="file"/>
+              </span>
+) is a function defined by table of interpolation. Table has to be created before assigning this condition and associated to the condition using statements "Table Interpolation Values F(t-<span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391579/2678489217.png" data-image-src="attachments/2678391579/2678489217.png" data-unresolved-comment-count="0" data-linked-resource-id="2678489217" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_13-0-36.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391579" data-linked-resource-container-version="4" data-media-id="322487fa-2dd4-492b-b256-9e69e783e75e" data-media-type="file"/>
+              </span>
+)".<br/>
+The user has to define these tables using the following menu sequence: Materials-&gt;Tables. More information about table creation can be found in the chapter Tables of this manual.<br/>
+This condition can be assigned over points, lines and surfaces and affects nodes of the mesh.            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

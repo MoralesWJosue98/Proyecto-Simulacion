@@ -1,0 +1,51 @@
+BOOK: 2D
+
+CONDITION: Line_Boundary_conditions
+CONDTYPE: over lines
+CONDMESHTYPE: over face elements
+CANREPEAT: no
+QUESTION: Type:#CB#(wall,pressure-inlet,inlet-vent,intake-fan,pressure-outlet,exhaust-fan,outlet-vent,symmetry,pressure-far-field,velocity-inlet,periodic,fan,porous-jump,radiator,mass-flow-inlet,interface,parent,outflow,axis)
+VALUE: Wall
+QUESTION: Name
+VALUE: Condition1
+STATE: HIDDEN
+TKWIDGET: Fluent::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Surface_Continuum
+CONDTYPE: over surfaces
+CONDMESHTYPE: over elements
+CANREPEAT: no
+QUESTION: Type:#CB#(fluid,solid)
+VALUE: Fluid
+QUESTION: Name
+VALUE: Continuum1
+STATE: HIDDEN
+TKWIDGET: Fluent::ComunicateWithGiD
+END CONDITION 
+
+BOOK: 3D
+
+CONDITION: Surface_Boundary_conditions
+CONDTYPE: over surfaces
+CONDMESHTYPE: over face elements
+CANREPEAT: no
+QUESTION: Type:#CB#(wall,pressure-inlet,inlet-vent,intake-fan,pressure-outlet,exhaust-fan,outlet-vent,symmetry,pressure-far-field,velocity-inlet,periodic,fan,porous-jump,radiator,mass-flow-inlet,interface,parent,outflow,axis)
+VALUE: Wall
+QUESTION: Name
+VALUE: Condition1
+STATE: HIDDEN
+TKWIDGET: Fluent::ComunicateWithGiD
+END CONDITION
+
+CONDITION: Volume_Continuum
+CONDTYPE: over volumes
+CONDMESHTYPE: over elements
+CANREPEAT: no
+QUESTION: Type:#CB#(fluid,solid)
+VALUE: Fluid
+QUESTION: Name
+VALUE: Continuum1
+STATE: HIDDEN
+TKWIDGET: Fluent::ComunicateWithGiD
+END CONDITION

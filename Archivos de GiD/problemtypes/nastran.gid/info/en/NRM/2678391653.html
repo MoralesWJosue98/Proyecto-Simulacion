@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Pressure Time Type 1 (lines and surfaces)</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Pressure Time Type 1 (lines and surfaces)
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <br class="atl-forced-newline"/>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+              <span style="color: rgb(9,30,66);">Data → Loads → Dynamics Loads</span>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Defines a time dependent dynamic pressure for use in transient response problems. <br/>
+This load is very similar to "Time Dynamic Type 1" with some changes in parameters:<br/>
+A=scale factor was changed to a vector that the user has to introduce using statements: X-Pressure, Y-Pressure, and Z-Pressure.<br/>
+              <span class="confluence-embedded-file-wrapper" style="color: rgb(9,30,66);">
+                <span class="confluence-embedded-file-wrapper">
+                  <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391653/2678423794.png" data-image-src="attachments/2678391653/2678423794.png" data-unresolved-comment-count="0" data-linked-resource-id="2678423794" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_13-0-36.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391653" data-linked-resource-container-version="4" data-media-id="a5f98b8d-12f3-45be-b8d8-8bd2ac96a7c1" data-media-type="file"/>
+                </span>
+              </span>
+= Time delay is equal to zero.<br/>
+F(t-<span class="confluence-embedded-file-wrapper" style="color: rgb(9,30,66);">
+                <span class="confluence-embedded-file-wrapper">
+                  <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391653/2678423794.png" data-image-src="attachments/2678391653/2678423794.png" data-unresolved-comment-count="0" data-linked-resource-id="2678423794" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_13-0-36.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391653" data-linked-resource-container-version="4" data-media-id="a5f98b8d-12f3-45be-b8d8-8bd2ac96a7c1" data-media-type="file"/>
+                </span>
+              </span>
+) is a functions defined by table of interpolation. Table has to be created before assigning this condition and associated to the condition using statements "Table Interpolation Values F(t-<span class="confluence-embedded-file-wrapper" style="color: rgb(9,30,66);">
+                <span class="confluence-embedded-file-wrapper">
+                  <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391653/2678423794.png" data-image-src="attachments/2678391653/2678423794.png" data-unresolved-comment-count="0" data-linked-resource-id="2678423794" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_13-0-36.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391653" data-linked-resource-container-version="4" data-media-id="a5f98b8d-12f3-45be-b8d8-8bd2ac96a7c1" data-media-type="file"/>
+                </span>
+              </span>
+)". <br class="atl-forced-newline"/>
+The user has to define these tables using the following menu sequence: Materials-&gt;Tables. More information about table creation can be found in chapter Tables of this manual.<br/>
+In conclusion, the final aspect of the load is like this: <br class="atl-forced-newline"/>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391653/2678784012.png" data-image-src="attachments/2678391653/2678784012.png" data-unresolved-comment-count="0" data-linked-resource-id="2678784012" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_14-28-31.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391653" data-linked-resource-container-version="4" data-media-id="0b6cf3e3-e133-4aea-bac0-561a1d10e2c0" data-media-type="file"/>
+              </span>
+              <br/>
+If lines are used, it is possible to select in which coordinate system (BASIC, ELEMENT) and which type of load (NORMAL, PROJECTED) will be applied to a line of geometry. Descriptions of these statements are explained with more details in static loads that can be applied to lines. See these chapters for more information. <br/>
+This load can be assigned over lines and affects elements of the mesh.            </p>
+            <p>
+              <br/>
+            </p>
+            <p>
+              <span style="color: rgb(9,30,66);">
+                <strong>Remarks</strong>
+              </span>
+            </p>
+            <p>
+              <span style="color: rgb(9,30,66);">This load is only available for MSC/NASTRAN and NE/NASTRAN codes.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,49 @@
+PROBLEM DATA
+TITLE: General
+QUESTION: Gravity_direction#CB#(-Z,-Y,-X,+Z,+Y,+X)
+VALUE: -Z
+HELP: Direction of gravity for self weight loads
+QUESTION: Gravity_value#UNITS#
+VALUE: 9.8 m/s^2
+HELP: gravitational acceleration
+QUESTION: Shear_deformation_effects#CB#(1,0)
+VALUE: 1
+HELP: 1=Do, 0=Don't include shear deformation effects
+QUESTION: Geometric_stiffness_effects#CB#(1,0)
+VALUE: 1
+HELP: 1=Do, 0=Don't include geometric stiffness effects
+QUESTION: Spans_internal_forces
+VALUE: 20
+HELP: number of divisions (number of graph points-1) to represent graphs of element internal forces.
+QUESTION: Scale_draw_loads
+VALUE: 1.0
+HELP: scale factor when drawing the forces applied to bars
+
+TITLE: Dynamic analysis
+QUESTION: Number_of_modes
+VALUE: 0
+HELP: number of desired dynamic modes 
+QUESTION: Method#CB#(Subspace-Jacobi,Stodola)
+VALUE: Subspace-Jacobi
+HELP: Subspace-Jacobi iteration or Stodola (matrix iteration) method
+QUESTION: Lump#CB#(Consistent_mass_matrix,Lumped_mass_matrix)
+VALUE: Consistent_mass_matrix
+HELP:consistent mass matrix or lumped mass matrix
+QUESTION: Frequency_tolerance
+VALUE: 1e-4
+HELP: frequency convergence tolerance  approx 1e-4
+QUESTION: Frequency_shift-factor
+VALUE: 0.0
+HELP: requency shift-factor for rigid body modes, make 0 for pos.def. K
+QUESTION: Matrix_condensation_method#CB#(None,Static,Guyan,Dynamic)
+VALUE: None
+HELP: matrix condensation method
+QUESTION: Number_modes_matched
+VALUE: 1
+HELP: number of modes matched in dynamic condensation
+END PROBLEM DATA
+
+INTERVAL DATA
+QUESTION: Gravity_load#CB#(1,0)
+VALUE: 0
+END INTERVAL DATA

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Output sets</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Output sets
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+              <span style="color: rgb(9,30,66);">Data → Advanced Conditions</span>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Allows create sets of points, lines or surfaces. These sets are used to configure output file of NASTRAN. NASTRAN's output file only contains output requests for elements or nodes of these sets. To use this condition, the user has to select which kind of request (see table below) should be associated with the set and after click over geometry elements included in the set.<br/>
+In case that no output set is defined, the output requests will be printed for all elements and nodes.<br/>
+This condition is used when only part of the model is of interest and not all results in every element or node have to be printed. The necessary time for running the model can be significantly reduced using this condition.            </p>
+            <h3 id="Outputsets-Tableofoutputs">
+              <strong>Table of outputs</strong>
+            </h3>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>
+                        <strong>Abbreviation</strong>
+                      </p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>
+                        <strong>Definition</strong>
+                      </p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>
+                        <strong>Entities</strong>
+                      </p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>
+                        <strong>Mesh</strong>
+                      </p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>Displacement</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Requests the displacements for a selected set of PHYSICAL points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Nodes</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>SpcForces</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Requests the single-point forces of constraint at a set of points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Nodes</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>Acceleration</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Requests the accelerations for a selected set of PHYSICAL points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Nodes</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>Velocity</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Requests the velocities for a selected set of PHYSICAL points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Nodes</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>Load</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Selects a set of applied loads for output</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Points</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Nodes</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>ESE</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Requests structural element strain energies</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Lines and Surfaces</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>1-D and 2-D elements.</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>Forces</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Requests the forces in a set of structural elements</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Lines and Surfaces</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>1-D and 2-D elements.</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>Strain</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Requests the strains/curvatures in a set of structural elements (applicable to TRIA1, TRIA2, QUAD1, and QUAD2 only).</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Lines and Surfaces</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>1-D and 2-D elements.</p>
+                    </th>
+                  </tr>
+                  <tr>
+                    <th class="confluenceTh">
+                      <p>Stress</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Requests the stresses in a set of structural elements</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>Lines and Surfaces</p>
+                    </th>
+                    <th class="confluenceTh">
+                      <p>1-D and 2-D elements.</p>
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

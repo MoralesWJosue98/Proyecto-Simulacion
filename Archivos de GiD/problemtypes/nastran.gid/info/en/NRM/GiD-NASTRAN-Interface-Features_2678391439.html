@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : GiD-NASTRAN Interface Features</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : GiD-NASTRAN Interface Features
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>The GiD-NASTRAN Interface is designed to be a bridge between NASTRAN codes and GiD pre/postprocessor. NASTRAN uses the power tools of GiD mesh and the easy way to assign conditions directly over geometry. With these special capabilities, <em>NASTRAN</em>
+ generates input files easy and fast. Working with beams is very intuitive and automatized, and the conditions can be applied directly to the line before meshing and creating linear elements.            </p>
+            <p>For NASTRAN old users, this way of defining loads and constraints may be new, but these improvements will make the work much easier. </p>
+            <p>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391439/2678882308.png" data-image-src="attachments/2678391439/2678882308.png" data-unresolved-comment-count="0" data-linked-resource-id="2678882308" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_15-37-56.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391439" data-linked-resource-container-version="4" data-media-id="b1c1c85e-bc68-4ba6-b9c0-8850862c762f" data-media-type="file"/>
+              </span>
+            </p>
+            <h2 id="GiD-NASTRANInterfaceFeatures-AboutthisManual">About this Manual</h2>
+            <p>In this manual, different kinds of fonts are used to help the users follow all the possibilities offered by GiD-NASTRAN Interface:</p>
+            <ul>
+              <li>
+                <strong>font </strong>
+is used for the options found in the menus and windows.              </li>
+            </ul>
+            <p>In the following, a menu sequence will be indicated by a graphical arrow</p>
+            <p>
+              <br/>
+            </p>
+            <p>i.e.</p>
+            <p>Data → Boundary conditions → Constraints</p>
+            <p>corresponds to the menu sequence shown in <em>Figure 2</em>
+.            </p>
+            <p>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391439/2678620191.png" data-image-src="attachments/2678391439/2678620191.png" data-unresolved-comment-count="0" data-linked-resource-id="2678620191" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_15-39-18.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391439" data-linked-resource-container-version="4" data-media-id="9004c390-cb4a-4ea1-84e7-502ed6569697" data-media-type="file"/>
+              </span>
+            </p>
+            <p>
+              <br/>
+            </p>
+            <h2 id="GiD-NASTRANInterfaceFeatures-Introduction">Introduction</h2>
+            <p>The analysis of a problem by means of GiD-NASTRAN Interface consists of the following basic steps:</p>
+            <ul>
+              <li>Pre-processing</li>
+            </ul>
+            <ol>
+              <li>Creation (or importation) of the geometry to be analyzed</li>
+              <li>Assignment of the material properties, boundary conditions and definition of general data</li>
+            </ol>
+            <ul>
+              <li>Mesh generation</li>
+              <li>Calculation</li>
+              <li>Post-processing</li>
+            </ul>
+            <h2 id="GiD-NASTRANInterfaceFeatures-Pre-processing">Pre-processing</h2>
+            <p>The first step for any analysis is the setting up of the problem. This includes the creation or importation from a CAD file of the problem's geometry assignment of boundary and initial conditions, and the generation of the mesh. This will all be made in the pre and post processor GiD.</p>
+            <p>Pre-processing part of the analysis consists of the following steps:</p>
+            <ul>
+              <li>Conditions assignment</li>
+              <li>Materials definition</li>
+              <li>Boundaries definition</li>
+              <li>General problem data insertion</li>
+              <li>Solver data definition</li>
+              <li>Units definition</li>
+              <li>Mesh size assignment</li>
+              <li>Mesh Generation</li>
+            </ul>
+            <p>The GiD-NASTRAN Interface icon bar has been designed to guide the user, during the preprocessing part of the analysis.</p>
+            <p>To load GiD-NASTRAN Interface in GiD to follow the menu sequence bellow:</p>
+            <p>Data → Problemtype</p>
+            <p>A splash image will appear the first time that GiD-NASTRAN interface is loaded.</p>
+            <h2 id="GiD-NASTRANInterfaceFeatures-Itemhelp">Item help</h2>
+            <p>
+              <span style="color: rgb(9,30,66);">To obtain specific item help, click the question mark icon in the toolkit and then click on the item you need help on.<span> </span>
+              </span>
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size" style="color: rgb(9,30,66);">
+                <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                  <img class="confluence-embedded-image" height="23" width="23" loading="lazy" src="attachments/2678391439/2678456324.gif?width=23" data-image-src="attachments/2678391439/2678456324.png" data-unresolved-comment-count="0" data-linked-resource-id="2678456324" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavf5dc99ea84c6bb1125bb9b596f65f297.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391439" data-linked-resource-container-version="4" data-media-id="3c2a1809-d799-4c8b-bcf5-604cc25d3a5b" data-media-type="file"/>
+                </span>
+              </span>
+            </p>
+            <h2 id="GiD-NASTRANInterfaceFeatures-LoadCases">Load Cases</h2>
+            <p>One load case is a group of one ore more loads assigned to entities. When a new model is defined in GiD-NASTRAN Interface a default load case, called Load case 1, is defined. It is possible to rename this loadcase or define new ones by using the loadcase button in the toolbar or in the load cases window.</p>
+            <p>When a load is assigned to one or several entities, this load is inserted inside the loadcase that is currently active. To make a loadcase active, select it in the loadcase menu in the toolbar or in the loadcases window. To show which load case is currently active, the loadcase button changes to reflect the load case number.</p>
+            <p>If combined load cases are not defined, GiD-NASTRAN Interface calculates just one analysis that is equivalent to that of all the loads belonging to one load case.</p>
+            <h3 id="GiD-NASTRANInterfaceFeatures-Combinedloadcases">Combined load cases</h3>
+            <p>Data → Load cases</p>
+            <p>Combined load cases are defined in the load cases window</p>
+            <p>Options are:</p>
+            <ul>
+              <li>
+                <strong>Prestress model: </strong>
+Some NASTRAN codes offer the possibility to simulate models affected by a pre-stiffened or pre-stressed load case. The basic idea is to run a first combined loadcase that will contain all the simple loadcases used to calculate pre-stress in the model and another combined loadcase with the post-stress load.              </li>
+              <li>
+                <strong>One result for every loadcase: </strong>
+One combined loadcase is created for every simple loadcase. It is possible to enter amplification factors for every loadcase. This option is equal to run so many models as loadcases defined.              </li>
+              <li style="list-style-type: none;">
+                <ul>
+                  <li>
+                    <strong>Use combined loadcases: </strong>
+User can define as many loadcases as needed. It is possible to enter amplification factors for every combination of simple loadcases in combined loadcases.                  </li>
+                </ul>
+                <p>When using combined loadcases, one default combined loadcase is already existent. To create more, press right mouse button over the existent combined load case name. A menu appears that offers several options.</p>
+                <p> One factor must be entered for every simple loadcase. This factor will multiply the load in order to create the combined loadcase. In the postprocessing part, after the analysis, there will be one different result for every combined loadcase. Enter value 0.0 in order to deactivate that loadcase.</p>
+                <p>It is also possible to choose the same constraints for combined loadcases. Sometimes this option can be very useful because when there are only changes in loads distribution and the constraints are always the same.  </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

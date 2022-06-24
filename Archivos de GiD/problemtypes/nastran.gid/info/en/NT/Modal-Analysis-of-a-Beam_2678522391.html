@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran tutorials : Modal Analysis of a Beam</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran tutorials : Modal Analysis of a Beam
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>Create geometry to represent a beam with double T section. Create a finite elements model of beam. Run modal analysis of the beam.</p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="415" width="499" loading="lazy" src="attachments/2678522391/2678522390.jpeg?width=499" data-image-src="attachments/2678522391/2678522390.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522390" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav7748615e8d619b85e54b0541ca268f41.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="bc299681-2eef-4243-baba-477f709cc732" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h1 id="ModalAnalysisofaBeam-Purpose:">Purpose:</h1>
+            <p>Create geometry to represent a beam with double T section.<br/>
+Create a finite elements model of beam.<br/>
+Run modal analysis of the beam.            </p>
+            <h1 id="ModalAnalysisofaBeam-DescriptionofModel:">Description of Model:</h1>
+            <p>Determine the first three modes of a beam whit double T section, using Givens method for eigenvalues extraction.</p>
+            <h2 id="ModalAnalysisofaBeam-Properties:">Properties:</h2>
+            <p>
+              <br/>
+            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Length</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>100 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Weight (Section)</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>2 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Width (Section)</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>Thickness (Section)</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.1 inch</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>I<sub>1</sub>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.229 inch<sup>4</sup>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>I<sub>2</sub>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>0.017 inch<sup>4</sup>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <h1 id="ModalAnalysisofaBeam-Procedure:">Procedure:</h1>
+            <h2 id="ModalAnalysisofaBeam-Start:">Start:</h2>
+            <p>1- Open a new project, right click on this icon in taskbar <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2678325560.png" data-image-src="attachments/2678522391/2678325560.png" data-unresolved-comment-count="0" data-linked-resource-id="2678325560" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-42-39.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="e86c29ea-9f9a-42cf-92b3-cfc85a57188b" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+2- Load problem type Nastran. Follow the menu sequence below: <br class="atl-forced-newline"/>
+Data -&gt; Problem type -&gt; nastran <br class="atl-forced-newline"/>
+Appears a splash image and the name of the master window changes to NASTRAN Interface. <br class="atl-forced-newline"/>
+3- Change the view plane to XY: <br class="atl-forced-newline"/>
+View -&gt; Rotate -&gt; Plane XY (original)            </p>
+            <h2 id="ModalAnalysisofaBeam-Creategeometry:">Create geometry:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>
+                <ol>
+                  <li>Create line.</li>
+                </ol>
+              </li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Geometry -&gt; Create -&gt; Line <br class="atl-forced-newline"/>
+Now insert in command line the coordinates of points to define the plate. Follow the order is very important. <br class="atl-forced-newline"/>
+First point -&gt; 0,0<br/>
+Second point -&gt; 100,0 <br class="atl-forced-newline"/>
+(Only it is necessary introduce points using two coordinates, the third coordinate Z is assume to 0 ). <br class="atl-forced-newline"/>
+Press escape or middle button of mouse.            </p>
+            <h2 id="ModalAnalysisofaBeam-Assignpropertyandmaterial:">Assign property and material:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>
+                <ol>
+                  <li>Define a new material.</li>
+                </ol>
+              </li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Materials <br class="atl-forced-newline"/>
+Click on the following icon to create a new material: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2678784090.png" data-image-src="attachments/2678522391/2678784090.png" data-unresolved-comment-count="0" data-linked-resource-id="2678784090" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-43-4.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="54bd5beb-8712-4fbc-b4d1-0bce8a13c82f" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Enter name for the new material <strong>
+                <em>alum.</em>
+              </strong>
+              <br class="atl-forced-newline"/>
+Fill all statements like in the picture:            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678522391/2678587486.jpeg?height=250" data-image-src="attachments/2678522391/2678587486.png" data-unresolved-comment-count="0" data-linked-resource-id="2678587486" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-43-17.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="60879258-73e7-4dd3-a051-8eb657cdf9af" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>And set density, in Others page, to 0.101</p>
+            <p>
+              <br class="atl-forced-newline"/>
+Click on the following icon to save the new material: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2678423896.png" data-image-src="attachments/2678522391/2678423896.png" data-unresolved-comment-count="0" data-linked-resource-id="2678423896" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-44-6.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="860d44bb-e8fd-410e-8a67-f6ac8cb06b49" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+2-Define and assign the property for the surface. <br class="atl-forced-newline"/>
+Data -&gt; Properties -&gt; Property <br class="atl-forced-newline"/>
+If you don't close material window is possible get the property window clicking on the following icon <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2678423901.png" data-image-src="attachments/2678522391/2678423901.png" data-unresolved-comment-count="0" data-linked-resource-id="2678423901" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-44-22.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="d3c534e7-535f-4815-a755-7fc5c8e1eda3" data-media-type="file"/>
+              </span>
+              <br/>
+and select option "property" in the menu. <br class="atl-forced-newline"/>
+Select from the top combo boxes the property <em>"beam"</em>
+. <br class="atl-forced-newline"/>
+Click on the following icon to create a new property: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2678718546.png" data-image-src="attachments/2678522391/2678718546.png" data-unresolved-comment-count="0" data-linked-resource-id="2678718546" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-44-33.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="6e10c021-b20c-42b4-b80d-07410311d57c" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Enter name for the new property <strong>
+                <em>cantilever</em>
+              </strong>
+. <br class="atl-forced-newline"/>
+Fill all statements like in the picture:            </p>
+            <p>
+              <br/>
+            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678522391/2678587491.jpeg?height=250" data-image-src="attachments/2678522391/2678587491.png" data-unresolved-comment-count="0" data-linked-resource-id="2678587491" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-44-53.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="5a0e0d99-59bf-4aa6-9217-c892414d5f97" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>You have to select the previously created material in Composition Material.</p>
+            <p>Click on the following icon to save the new property: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2678423896.png" data-image-src="attachments/2678522391/2678423896.png" data-unresolved-comment-count="0" data-linked-resource-id="2678423896" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-44-6.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="860d44bb-e8fd-410e-8a67-f6ac8cb06b49" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Now click on Assign button, select the line. <br class="atl-forced-newline"/>
+To make a proof if the property is well assigned click on <strong>Draw</strong>
+ button, select <em>This property</em>
+ option. <br class="atl-forced-newline"/>
+Now in the NASTRAN Interface program window has to be an image like this:            </p>
+            <p>
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="250" loading="lazy" src="attachments/2678522391/2677834099.gif?height=250" data-image-src="attachments/2678522391/2677834099.png" data-unresolved-comment-count="0" data-linked-resource-id="2677834099" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-49-22.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="7dbe8f91-dcd0-47c4-b2a2-9a44c3086fba" data-media-type="file"/>
+              </span>
+            </p>
+            <h2 id="ModalAnalysisofaBeam-DefineLocalAxes">Define Local Axes</h2>
+            <p>The model has been created related to a global axes system XYZ that is unique for the entire problem. But every beam must have its own local axes system X’Y’Z’ in order to:</p>
+            <ol>
+              <li>Refer section properties like <em>Inertia modulus</em>
+ or <em>thickness</em>
+ and <em>height</em>
+ to this system.              </li>
+              <li>Some of the loads (that have the prefix <em>Local</em>
+) are related also to this system.              </li>
+              <li>Strength results over the beam are referred to this local axes system.</li>
+            </ol>
+            <p>The main property of this system is that the local X’ axe must have the same direction than the beam.<span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2678292647.png" data-image-src="attachments/2678522391/2678292647.png" data-unresolved-comment-count="0" data-linked-resource-id="2678292647" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-51-47.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="b6ee89c4-dcb6-45e1-8c47-8dbc3b2f2d3a" data-media-type="file"/>
+              </span>
+            </p>
+            <p>The ways for defining local axes systems are:</p>
+            <ol>
+              <li>
+                <strong>Default</strong>
+. The program assigns a different local axes system to every beam with the following criteria:              </li>
+            </ol>
+            <ul>
+              <li>X’ axe has the direction of the beam.</li>
+              <li>If X’ axe has the same direction than global Z axe, Y’ axe has the same direction than global X. If not, Y’ axe is calculated so as to be horizontal (orthogonal to X’ and Z).</li>
+              <li>Z’ axe is the cross product of X’ axe and Y’ axe. It will try to point to the same sense than global Z (dot product of Z and Z’ axes will be positive or zero).</li>
+            </ul>
+            <p>
+              <strong>Note:</strong>
+ The intuitive idea is that vertical beams have the Y’ axe in the direction of global X. All the other beams have the Y’ axe horizontal and with the Z’ axe pointing up.            </p>
+            <ol>
+              <li>
+                <strong>Automatic</strong>
+. Similar to the previous one but the local axes system is assigned automatically to the beam by GiD. The final orientation can be checked with the <em>Draw Local Axes</em>
+ option in the GiD Conditions window.              </li>
+              <li>
+                <strong>Automatic alt</strong>
+. Similar to the previous one but an alternative proposal of local axes is given. Typically, User should assign Automatic local axes and check them, after assigning, with the <em>Draw local axes</em>
+ option. If a different local axes system is desired, normally rotated 90 degrees from the first one, then it is only necessary to assign again the same condition to the entities with the <strong>Automatic alt</strong>
+ option selected.              </li>
+              <li>
+                <strong>User defined</strong>
+. User can created different named local axes systems with the GiD command: Data-&gt;Local axes-&gt;Define              </li>
+            </ol>
+            <p>and with the different methods that can be chosen there. The names of the defined local axes will be added to the menu where Local axes are chosen.</p>
+            <p>Assign Local Axes.</p>
+            <p>Data -&gt; Properties -&gt; Local Axes <br class="atl-forced-newline"/>
+Set statement Local Axes to Automatic (An automatic local will defined for all lines selected). <br class="atl-forced-newline"/>
+Select the line of the geometry.            </p>
+            <h2 id="ModalAnalysisofaBeam-MeshtheGeometry:">Mesh the Geometry:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+1-Create a mesh. <br class="atl-forced-newline"/>
+Meshing -&gt; Generate <br class="atl-forced-newline"/>
+Now you are asked about the size of elements to be generate, leave default value (10) <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+Click on OK button <br class="atl-forced-newline"/>
+Appears a window with information about the mesh:            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="209" width="295" loading="lazy" src="attachments/2678522391/2678522396.png?width=295" data-image-src="attachments/2678522391/2678522396.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522396" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavcbbd8441c44b7e4e344d03c7fd7c5659.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="abc0e3eb-3766-4b68-9c8f-82c578d76e74" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+Num. of linear elements = 10<br/>
+Num. of nodes = 11 <br class="atl-forced-newline"/>
+Click on <strong>OK</strong>
+ button. <br class="atl-forced-newline"/>
+              <em>Note: It is possible label mesh elements and nodes using this option:</em>
+              <br/>
+              <em>-Press right button mouse to get the contextual menu.</em>
+              <br/>
+              <em>-Select option "Label" and choose "All".</em>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <h2 id="ModalAnalysisofaBeam-AssignConstraints:">Assign Constraints:</h2>
+            <p>1- Assign prescribed displacements and rotation. <br class="atl-forced-newline"/>
+Data-&gt; Boundary Conditions -&gt; Constraints <br class="atl-forced-newline"/>
+Click on the following icon to set the condition over points: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2677932434.png" data-image-src="attachments/2678522391/2677932434.png" data-unresolved-comment-count="0" data-linked-resource-id="2677932434" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-53-33.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="471c4e96-55a4-4d8c-872f-7b32fd9e7895" data-media-type="file"/>
+              </span>
+              <br/>
+              <br class="atl-forced-newline"/>
+Show the labels of nodes using this option:<br/>
+-Press right button mouse to get the contextual menu.<br/>
+-Select option "Label" and choose "All in" and choose points. <br class="atl-forced-newline"/>
+Now in the NASTRAN Interface program window has to be an image like this:            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="48" width="495" loading="lazy" src="attachments/2678522391/2678522401.png?width=495" data-image-src="attachments/2678522391/2678522401.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522401" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav2cd25eacce4c896753920940ec1df679.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="9cd1d414-6928-47ad-992a-66cdbb5d1003" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <em>
+                <span style="text-decoration: underline;">Node 1</span>
+              </em>
+              <br/>
+Check the following items:<br/>
+X-Displacement<br/>
+Y-Displacement<br/>
+Z-Displacement<br/>
+X-Rotation<br/>
+Y-Rotation<br/>
+Uncheck Z-Rotation.            </p>
+            <h3 id="ModalAnalysisofaBeam-Node11">Node 11</h3>
+            <p>Check the following items:<br/>
+Y-Displacement<br/>
+Z-Displacement<br/>
+X-Rotation<br/>
+Y-Rotation <br class="atl-forced-newline"/>
+Uncheck X-Displacement and Z-Rotation.            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+              <em>
+                <span style="text-decoration: underline;">Rest of nodes</span>
+              </em>
+ (except node 1 and node 11)<br/>
+Check the following items:<br/>
+Z-Displacement<br/>
+X-Rotation<br/>
+Y-Rotation<br/>
+Uncheck <br/>
+X-Displacement<br/>
+Y-Displacement <br/>
+Z-Rotation. <br class="atl-forced-newline"/>
+To make a proof if the constraints are well assigned click on <strong>Draw</strong>
+ button, select <em>"Colors"</em>
+ option. <br class="atl-forced-newline"/>
+Now in the NASTRAN Interface program window has to be a image like this:            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="59" width="338" loading="lazy" src="attachments/2678522391/2678522406.png?width=338" data-image-src="attachments/2678522391/2678522406.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522406" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav84508eb50b3a179848c3a62ec9b843de.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="4ca14d7b-40d6-44de-b83d-2f0a95eb3a6c" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="55" width="115" loading="lazy" src="attachments/2678522391/2678522411.png?width=115" data-image-src="attachments/2678522391/2678522411.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522411" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavd1b5a4ad929e984626ea0ce30fa952ba.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="8d6551cf-936f-4392-8fe3-a7e202cda9ea" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="ModalAnalysisofaBeam-PerformtheAnalysis:">Perform the Analysis:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Design Executive Control Section.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; Executive Control <br class="atl-forced-newline"/>
+Select type of NASTRAN will be use in the analysis. <br class="atl-forced-newline"/>
+Check MODES and leave all the other statements uncheck. <br class="atl-forced-newline"/>
+Leave the rest of statements with the default values. <br class="atl-forced-newline"/>
+Click on <strong>Accept data</strong>
+ button. <br class="atl-forced-newline"/>
+2 - Design Case Control Section. <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; Case Control <br class="atl-forced-newline"/>
+2.1.- Input data <br class="atl-forced-newline"/>
+Leave all statements with default values. <br class="atl-forced-newline"/>
+2.2.- Output data <br class="atl-forced-newline"/>
+Set Title to <strong>
+                <em>"Modes_Analysis"</em>
+              </strong>
+              <br class="atl-forced-newline"/>
+Leave Subtitle, Label … and Post process with default values. <br class="atl-forced-newline"/>
+Check Displacements uncheck the rest of output requests. <br class="atl-forced-newline"/>
+In Output Design section leave the default values. <br class="atl-forced-newline"/>
+              <em>Note: If the user wants to post processing the results of the analysis with MI/NASTRAN Interface is mandatory that the output device has to set to PUNCH.</em>
+              <br class="atl-forced-newline"/>
+Click on <strong>Accept data</strong>
+ button. <br class="atl-forced-newline"/>
+3- Design Modes Extraction. <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; Dynamics <br class="atl-forced-newline"/>
+In modes analysis tab: <br class="atl-forced-newline"/>
+Set the following values to the different statements: <br class="atl-forced-newline"/>
+-Method of eigenvalues extraction = GIV.<br/>
+-First Frequency = 0.0<br/>
+-Last Frequency = 350.0<br/>
+-Desired number = 3<br/>
+-Check Mass orthogonality test option.<br/>
+-Leave the default values for the rest of statements. <br class="atl-forced-newline"/>
+In Dynamic Design tab:<br/>
+Set Mass formulation = Coupled <br class="atl-forced-newline"/>
+Click on <strong>Accept data</strong>
+ button            </p>
+            <ol>
+              <li>Set PARAM values.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; PARAM <br class="atl-forced-newline"/>
+In MI/NASTRAN tab set WTMASS to 0.00259<br/>
+Leave the rest of statements with default values. <br class="atl-forced-newline"/>
+Click on <strong>Accept data</strong>
+ button.            </p>
+            <h2 id="ModalAnalysisofaBeam-ObtainInputFileforNASTRANCode:">Obtain Input File for NASTRAN Code:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+File -&gt; Import/Export -&gt; Write Calculation File <br class="atl-forced-newline"/>
+Appears a window to select in which folder and the name for save the file. It is very important write extension of the file in            </p>
+            <h1 id="ModalAnalysisofaBeam-Postprocess:">Post process:</h1>
+            <p>Click on the following icon to enter in the post process: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2678554974.png" data-image-src="attachments/2678522391/2678554974.png" data-unresolved-comment-count="0" data-linked-resource-id="2678554974" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-55-4.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="8830e3bc-d084-4589-b32e-f97b1307a225" data-media-type="file"/>
+              </span>
+            </p>
+            <h2 id="ModalAnalysisofaBeam-Importpunchfile:">Import punch file:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+1- Import the punch file (***.pch) obtained from NASTRAN.<br/>
+File -&gt; Import -&gt; Import PUNCH <br class="atl-forced-newline"/>
+Appears a window to select the punch file located in NASTRAN results folder. <br class="atl-forced-newline"/>
+After importing process is finished close the window.            </p>
+            <h2 id="ModalAnalysisofaBeam-ImportFEMAPASCIIneutralfile:">Import FEMAP ASCII neutral file:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Import the FEMAP ASCII file (***.neu) obtained from NE/NASTRAN.</li>
+            </ol>
+            <p>File -&gt; Import -&gt; FEMAP file <br class="atl-forced-newline"/>
+Appears a window to select the *.neu file located in NASTRAN results folder. <br class="atl-forced-newline"/>
+After importing process is finished close the window. <br class="atl-forced-newline"/>
+Note: To obtain a FEMAP ASCII file in NE/NASTRAN go to NASTRAN editor: <br class="atl-forced-newline"/>
+Setup -&gt; Default Analysis Options <br class="atl-forced-newline"/>
+Selects RSLTFILETYPE and set to FEMAP ASCII in Output Control Directives <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <h2 id="ModalAnalysisofaBeam-Visualizationofresults:">Visualization of results:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Contour Fill.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+View results -&gt; Contour Fill <br class="atl-forced-newline"/>
+Select <em>"Displacements"</em>
+            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="54" width="312" loading="lazy" src="attachments/2678522391/2678522416.png?width=312" data-image-src="attachments/2678522391/2678522416.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522416" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav7aa27a8f3267109c6d483eb8a654e584.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="ab27840f-2cfa-42b5-ad66-fd4448c14787" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="181" width="122" loading="lazy" src="attachments/2678522391/2678522421.png?width=122" data-image-src="attachments/2678522391/2678522421.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522421" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav75a6989c66347abce6f5d083dea7ffec.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="e1fa4cf4-fb13-4d10-9002-44fce522f62b" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <h3 id="ModalAnalysisofaBeam-ContourFillY-Displacementmode22665.1">Contour Fill Y-Displacement mode 22665.1</h3>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <br/>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+To change step of analysis use this menu sequence: <br/>
+View results -&gt; Default Analysis/Step -&gt; 1 <br class="atl-forced-newline"/>
+Select that step you want to see.            </p>
+            <ol>
+              <li>Deformation.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+View results -&gt; Deformation<br/>
+Select displacements.            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="165" width="276" loading="lazy" src="attachments/2678522391/2678522426.jpeg?width=276" data-image-src="attachments/2678522391/2678522426.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522426" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav32c695f00c34c751f253d7a00c52bd71.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="8ddc902c-68fd-4aca-a318-a7990fdcf2b8" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="181" width="122" loading="lazy" src="attachments/2678522391/2678522421.png?width=122" data-image-src="attachments/2678522391/2678522421.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522421" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav75a6989c66347abce6f5d083dea7ffec.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="e1fa4cf4-fb13-4d10-9002-44fce522f62b" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <h3 id="ModalAnalysisofaBeam-Deformationmode1.84e6">Deformation mode 1.84e6</h3>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <br/>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <h2 id="ModalAnalysisofaBeam-Numericalresults:">Numerical results:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+To see numerical results in nodes, click on the following icon <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522391/2679078968.png" data-image-src="attachments/2678522391/2679078968.png" data-unresolved-comment-count="0" data-linked-resource-id="2679078968" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-55-39.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522391" data-linked-resource-container-version="3" data-media-id="e901ed65-2d55-44ab-9eca-bee7c4e68b95" data-media-type="file"/>
+              </span>
+              <br/>
+Select in which nodes you want to see the current numerical results display in the screen.            </p>
+            <h2 id="ModalAnalysisofaBeam-CreateanAnimation:">Create an Animation:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Select which kind of results will be displayed</li>
+              <li>Open Animation Window.</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Windows -&gt; Animate            </p>
+            <ol>
+              <li>Click on Play button.</li>
+            </ol>
+            <p>
+              <br/>
+            </p>
+            <h1 id="ModalAnalysisofaBeam-Modesofbeam">Modes of beam</h1>
+            <p>It is necessary edit the results file ***.F06 located in results folder of NASTRAN. <br/>
+Here are the results with (MI/NASTRAN):            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <strong>Modes no.</strong>
+                      </p>
+                    </td>
+                    <td class="confluenceTd">
+                      <h2 id="ModalAnalysisofaBeam-EIGENVALUE">EIGENVALUE</h2>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <strong>CYCLIC FREQUENCY</strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>1</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>2.266509E+04</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <strong>
+                          <em>2.396066E+01</em>
+                        </strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>2</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>3.627142E+05</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <strong>
+                          <em>9.585227E+01</em>
+                        </strong>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>3</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>1.837810E+06</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>
+                        <strong>
+                          <em>2.157598E+02</em>
+                        </strong>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

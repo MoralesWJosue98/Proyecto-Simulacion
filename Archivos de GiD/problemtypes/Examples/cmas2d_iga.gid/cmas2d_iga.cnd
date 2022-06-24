@@ -1,0 +1,6 @@
+CONDITION: Point-Weight
+CONDTYPE: over points
+CONDMESHTYPE: over nodes
+QUESTION: Weight
+VALUE: 0
+END CONDITION

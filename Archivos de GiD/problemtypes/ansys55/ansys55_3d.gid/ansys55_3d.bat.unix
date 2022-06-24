@@ -1,0 +1,10 @@
+#!/bin/csh
+set basename = $1
+set directory = $2
+set ProblemDirectory = $3
+
+#    OutputFile: $1.log
+#    ErrorFile: $1.err
+
+
+mv $basename.dat$basename.ans

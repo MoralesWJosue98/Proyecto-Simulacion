@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Local Axes</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Local Axes
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>
+              <span style="color: rgb(128,128,128);">MENU SEQUENCE:</span>
+              <br/>
+Data → Properties → Local Axes <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="212" width="231" loading="lazy" src="attachments/2678391524/2678391523.png?width=231" data-image-src="attachments/2678391524/2678391523.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391523" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavd63d3fc975b849568929c5bd970ed2c6.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391524" data-linked-resource-container-version="3" data-media-id="501a6c69-d669-446d-a3d0-619980d9b284" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 6 – Local Axes</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The model has been created related to a global axes system XYZ that is unique for the entire problem. But every beam must have its own local axes system X’Y’Z’ in order to:</p>
+            <ol>
+              <li>Refer section properties like <em>Inertia modulus</em>
+ or <em>thickness</em>
+ and <em>height</em>
+ to this system.              </li>
+              <li>Some of the loads (that have the prefix <em>Local</em>
+) are related also to this system.              </li>
+              <li>Strength results over the beam are referred to this local axes system.</li>
+            </ol>
+            <p>The main property of this system is that the local X’ axe must have the same direction than the beam.</p>
+            <p>
+              <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678391524/2678849558.png" data-image-src="attachments/2678391524/2678849558.png" data-unresolved-comment-count="0" data-linked-resource-id="2678849558" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_15-48-19.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391524" data-linked-resource-container-version="3" data-media-id="d4a683a5-0704-465b-827d-f26ac0747f97" data-media-type="file"/>
+              </span>
+              <br/>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+            </p>
+            <p>The ways for defining local axes systems are:</p>
+            <p>
+              <strong>1- Default</strong>
+. The program assigns a different local axes system to every beam with the following criteria:            </p>
+            <ul>
+              <li>X’ axe has the direction of the beam.</li>
+              <li>If X’ axe has the same direction than global Z axe, Y’ axe has the same direction than global X. If not, Y’ axe is calculated so as to be horizontal (orthogonal to X’ and Z).</li>
+              <li>Z’ axe is the cross product of X’ axe and Y’ axe. It will try to point to the same sense than global Z (dot product of Z and Z’ axes will be positive or zero).</li>
+            </ul>
+            <p>
+              <strong>Note:</strong>
+ The intuitive idea is that vertical beams have the Y’ axe in the direction of global X. All the other beams have the Y’ axe horizontal and with the Z’ axe pointing up.            </p>
+            <p>
+              <strong>2- Automatic</strong>
+. Similar to the previous one but the local axes system is assigned automatically to the beam by GiD. The final orientation can be checked with the <em>Draw Local Axes</em>
+ option in the GiD Conditions window.            </p>
+            <p>
+              <strong>3- Automatic alt</strong>
+. Similar to the previous one but an alternative proposal of local axes is given. Typically, User should assign Automatic local axes and check them, after assigning, with the <em>Draw local axes</em>
+ option. If a different local axes system is desired, normally rotated 90 degrees from the first one, then it is only necessary to assign again the same condition to the entities with the <strong>Automatic alt</strong>
+ option selected.            </p>
+            <p>
+              <strong>4- User defined</strong>
+. User can created different named local axes systems with the GiD command:            </p>
+            <ol>
+              <li style="list-style-type: none;">
+                <p>Data-&gt;Local axes-&gt;Define</p>
+                <p>and with the different methods that can be chosen there. The names of the defined local axes will be added to the menu where Local axes are chosen.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

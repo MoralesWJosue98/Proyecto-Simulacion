@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Post processing</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Post processing
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>To see results of NASTRAN in the GiD post processing, the interface offers to different options</p>
+            <p>
+              <strong>a) An importing tool for punch files (.pch) of NASTRAN</strong>
+.            </p>
+            <p>For information about obtaining a punch file (.pch), see Output Data menu of Case Control (output device statement).</p>
+            <p>To import a punch file of NASTRAN, do this:</p>
+            <ol>
+              <li>Go to the post process: Click this icon <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                  <img class="confluence-embedded-image" height="27" width="27" loading="lazy" src="attachments/2678391940/2678391939.gif?width=27" data-image-src="attachments/2678391940/2678391939.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391939" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav0a28d19a2e7eb2491e0ef82eaa8e857e.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391940" data-linked-resource-container-version="3" data-media-id="7c2c3071-ed8c-4a6f-834b-02ad9d771713" data-media-type="file"/>
+                </span>
+ of the toolbar              </li>
+              <li>Click: Files-&gt;Import -&gt;Import PUNCH or</li>
+            </ol>
+            <p>Files-&gt;Import -&gt;Import PUNCH(Smooth) and results for shell elements will be smoothed.</p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="243" width="331" loading="lazy" src="attachments/2678391940/2678391945.png?width=331" data-image-src="attachments/2678391940/2678391945.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391945" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavca12a2ea6b4d029952abecfbdd67125c.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391940" data-linked-resource-container-version="3" data-media-id="df59cf32-5a81-4809-aa92-e19a5d039c99" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 21 – Import PUNCH</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Search your punch file of your model.</li>
+            </ol>
+            <p>Note: The Import PUNCH only appears in the Import menu if NASTRAN problem type is loaded. <br/>
+For more information about post process of GiD see GiD manual.            </p>
+            <p>
+              <strong>b) Import FEMAP ASCII neutral file:</strong>
+            </p>
+            <ul>
+              <li>Import the FEMAP ASCII file (***.neu) obtained from NE/NASTRAN.</li>
+            </ul>
+            <p>File → Import → FEMAP file</p>
+            <p>Appears a window to select the *.neu file located in NASTRAN results folder.</p>
+            <p>After importing process is finished close the window.</p>
+            <p>Note: To obtain a FEMAP ASCII file in NE/NASTRAN go to NASTRAN editor:</p>
+            <p>          Setup -&gt; Default Analysis Options</p>
+            <p>Selects RSLTFILETYPE and set to FEMAP ASCII in Output Control Directives</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

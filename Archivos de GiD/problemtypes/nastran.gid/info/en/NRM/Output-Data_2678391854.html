@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Output Data</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Output Data
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>This section controls what output will be calculated and written to the output files. Undesired output types can be turned off.</p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="469" width="364" loading="lazy" src="attachments/2678391854/2678391853.png?width=364" data-image-src="attachments/2678391854/2678391853.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391853" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddave0e2bc9c0bb25c36b1cef6ce8a95c3c4.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391854" data-linked-resource-container-version="2" data-media-id="a56a7216-c136-4107-9d45-f86f41c64185" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-anchor-link" id="OutputData-_Ref13392021">
+                            <span class="confluence-anchor-link" id="_Ref13392021"/>
+                          </span>
+                          <em>Figure 17 – Output Section</em>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <strong>-<em>
+                  <span style="text-decoration: underline;">Title</span>
+                </em>
+              </strong>
+: Alphanumeric strings introduced in these statements have to start with a letter. These inputs appear at the start of every page of NASTRAN's output file. <br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Format File:</span>
+                </em>
+              </strong>
+ These options determine the format that will be used for writing Bulk Data commands. By default, NASTRAN Interface uses Small field format (8 character fields). For an extra precision for some of your models, choose the large field formats (16 character fields). The large field formats produces larger files that are harder to read<em>.</em>
+              <br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Displacement, applied loads…</span>
+                </em>
+              </strong>
+These statements are used to make output requests for stresses, forces … as well as the calculated response of degrees of freedom used in the model.<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Output Design:</span>
+                </em>
+              </strong>
+ Sets which kind of output file presentation is desired<br/>
+              <strong>-<span style="text-decoration: underline;">Output Sort:</span>
+              </strong>
+ Sets which sort is used for presentation.<br/>
+SORT1: Output will be presented as a tabular listing of nodes for each load, frequency, eigenvalue or time depending on the rigid format. SORT1 is not available in transient problems (where the default is SORT2).<br/>
+SORT2: Output will be presented as a tabular listing of load, frequency, or time for each node. SORT2 is available only in static analysis, transient, and frequency response problems.<br/>
+              <strong>-<span style="text-decoration: underline;">Output Device</span>
+:              </strong>
+ Sets the presentation output device.<br/>
+PRINT: A printer<br/>
+NO PRINT: An output file. The output file will not be sent to the output device.<br/>
+PUNCH: A punch file. (.pch). This output file can be used in post process of GiD. (More information can be found in the Post Process chapter). <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Complex eigenvalue or frequency response:</span>
+                </em>
+              </strong>
+ Sets which kind of representation is desired for complex numbers.<br/>
+PHASE: Requests magnitude and phase (0.0° <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="16" width="14" loading="lazy" src="attachments/2678391854/2678391859.gif?width=14" data-image-src="attachments/2678391854/2678391859.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391859" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavac338fb7425a7539a0cc9efad07fee8c.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391854" data-linked-resource-container-version="2" data-media-id="e00113eb-f58a-4830-8dee-84211fa28c8a" data-media-type="file"/>
+              </span>
+ phase &lt; 360.0°) on complex eigenvalue or frequency response problems.<br/>
+REAL o IMG: Requests real or imaginary output on complex eigenvalue or frequency response problems. <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Auxiliary Output Points:</span>
+                </em>
+              </strong>
+ Defines a series of points along the axis of a bar element (CBAR entry) for stress and force recovery output. A maximum of six internal points can be specified.            </p>
+            <p>
+              <strong>Remarks</strong>
+            </p>
+            <p>
+              <span style="color: rgb(9,30,66);">1. All outputs have the same presentation.</span>
+              <br style=""/>
+              <span style="color: rgb(9,30,66);">2. An output request for ALL in transient and frequency response problems generally produces large amounts of printout. An alternative to this can be to define a set of parts of the model that are of interest, using output sets condition (For more information see the Advanced Conditions chapter).</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

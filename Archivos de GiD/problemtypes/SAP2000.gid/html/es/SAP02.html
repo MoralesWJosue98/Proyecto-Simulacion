@@ -1,0 +1,67 @@
+<html>
+    <!---*- coding: utf-8;-*- -->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <style type="text/css">
+	    p { text-align:justify; }
+	    body { font-family: Verdana, Arial, Helvetica, Geneva; font-size 8px; }
+	    a { text-decoration:none }
+	    pre { font-family:Courier New, Courier, Mono; }
+	    h1 { font-family:Arial; font-size: 28; font-weight: bold; color:DarkBlue; }
+	    h2 { font-family:Arial; font-size: 24; font-weight: bold; color:DarkBlue; }
+	    h3 { font-family:Arial; font-size: 22; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    P { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+	    code { font-family:Courier New, Courier, Mono; font-size: 16; }
+	    li { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	    ol { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17;  
+		margin-top: 7px; }
+	    ul { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	</style>
+        <title>Introducci&#243;n</title>
+    </head>
+    <body>
+        <a name="SAP2000&gt;Introduction"/>
+        <h3>Introducci&#243;n</h3>
+        <p>El tipo de problema GiD SAP2000 es un interfaz entre GiD y el programa SAP2000 de c&#225;lculo e estructuras.</p>
+        <p/>
+        <p>Esta interfaz permite a los usuarios de GiD realizar todo el preproceso para la generaci&#243;n de modelos num&#233;ricos de geometr&#237;a compleja y despu&#233;s, pueda exportar el archivo a Sap2000 para su an&#225;lisis. Una vez ah&#237;, el usuario puede decidir si continua analizando el modelo dentro de Sap2000 o regresar a GiD mediante esta interfaz para visualizar los resultados en GiD. Adem&#225;s esta interfaz implementa una opci&#243;n para que el usuario pueda generar un archivo de entorno virtual (vrml) con un resultado de postproceso de GiD. </p>
+        <p/>
+        <p/>
+        <p>
+            <b>Nota:</b>
+ El programa de c&#225;lculo SAP2000 en si mismo no est&#225; incluido en esta interfaz, que ha sido testeada con SAP2000 v 15.0.0        </p>
+        <p/>
+        <p>La interfaz adapta GiD para permitir: </p>
+        <ul>
+            <li> La importaci&#243;n de mallas de SAP2000 en formato de texto .s2k  (menu: SAP2000-&gt;Importar malla SAP2000...)</li>
+        </ul>
+        <ul>
+            <li> La creaci&#243;n del fichero ASCII .s2k que es la entrada requerida para ejecutar SAP2000 usando la GUI de GiD que es mas potente que la est&#225;ndar de SAP2000.</li>
+        </ul>
+        <p>Puede manejare:</p>
+        <blockquote>
+            <ul>
+                <li> Modelos 3D de l&#225;minas de tri&#225;ngulos o cuadril&#225;teros</li>
+            </ul>
+        </blockquote>
+        <blockquote>
+            <ul>
+                <li> Modelos 3d de s&#243;lidos: hexaedros or tetraedros (que se soportan por SAP2000 como hexaedros degenerados con nodos repetidos)</li>
+            </ul>
+        </blockquote>
+        <ul>
+            <li> La execuci&#243;n de SAP2000, y mostrar su fichero 'log'  (aunque no es posible su ejecuci&#243;n sin ninguna ventana)</li>
+        </ul>
+        <ul>
+            <li> La conversi&#243;n del fichero .s2k ASCII de resultados de SAP2000 al formato .post.res de GiD postproceso, para visualizarlo en modo GiD postproceso.</li>
+        </ul>
+        <ul>
+            <li> La exportaci&#243;n de un resultado en formato VRML, para ser visualizado por ejemplo en un navegador de  Internet.</li>
+        </ul>
+    </body>
+</html>

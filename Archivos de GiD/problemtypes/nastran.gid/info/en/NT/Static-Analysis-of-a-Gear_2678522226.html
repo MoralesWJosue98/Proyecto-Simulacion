@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran tutorials : Static Analysis of a Gear</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran tutorials : Static Analysis of a Gear
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>Create geometry to represent a gear with octagonal axis. Create a finite elements model of gear. Run static analysis of the gear.</p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="313" width="499" loading="lazy" src="attachments/2678522226/2678522225.jpeg?width=499" data-image-src="attachments/2678522226/2678522225.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522225" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav1b74e8874ff14833451c1d66b259b624.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="00be4a9a-075e-42a7-b5d2-66e038140aa7" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h1 id="StaticAnalysisofaGear-Purpose:">Purpose:</h1>
+            <p>Create geometry to represent a gear with octagonal axis. Create a finite elements model of gear. Run static analysis of the gear.</p>
+            <h1 id="StaticAnalysisofaGear-DescriptionoftheModel:">Description of the Model:</h1>
+            <p>Determine different results of linear static analysis of a gear pinned at the ends of axis with a normal pressure on one tooth.</p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="279" width="445" loading="lazy" src="attachments/2678522226/2678522231.jpeg?width=445" data-image-src="attachments/2678522226/2678522231.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522231" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavb7424e6c59de31aa05892ab3ee745144.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="2b17c077-9f7d-4491-9941-ced70ce5e3e7" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h1 id="StaticAnalysisofaGear-Procedure:">Procedure:</h1>
+            <h2 id="StaticAnalysisofaGear-Start:">Start:</h2>
+            <p>
+              <br/>
+            </p>
+            <ol>
+              <li>Open GiD file called pieza.gid. This file is localized in the Examples folder in the GiD installation directory.</li>
+            </ol>
+            <p>To get this file, use the Internet Retrieve option of GiD and download Nastran Examples.<br/>
+Internet Retrieve option is available under: <br/>
+Data -&gt;Problem Type -&gt; Internet Retrieve<br/>
+For more information see GiD manuals.            </p>
+            <h3 id="StaticAnalysisofaGear-Comment:">Comment:</h3>
+            <p>If you want to create the gear's CAD model manually without downloading it, see the Post-process Tutorial of GiD, which can be obtained from the GiD web page in Support section.</p>
+            <h2 id="StaticAnalysisofaGear-Preferences:">Preferences:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+With the target to obtain a good mesh some changes in meshing preferences of GiD have to be made.            </p>
+            <ol>
+              <li>Open Preferences window:</li>
+            </ol>
+            <p>
+              <br class="atl-forced-newline"/>
+Utilities -&gt; Preferences            </p>
+            <ol>
+              <li>Select meshing tab and set window entries to the following values:</li>
+            </ol>
+            <p>Surface mesher: Rsurf<br/>
+Mesh until end<br/>
+Automatic correct sizes<br/>
+Unstructured size transition: 0.6<br/>
+Smoothing: High Angle<br/>
+No mesh frozen layers<br/>
+Allow automatic structured <br class="atl-forced-newline"/>
+These settings will prevent the creation of tetrahedron elements with seek angle bigger than 80 degrees. Please note, that gear's CAD model is designed like unique volume to allow the creation of a correct finite elements model.            </p>
+            <h2 id="StaticAnalysisofaGear-AssignProperty:">Assign Property:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+1- Define and assign the property for the surface. <br class="atl-forced-newline"/>
+Data -&gt; Properties -&gt; Property <br class="atl-forced-newline"/>
+Select from the top combo boxes the property <em>Tetrahedron</em>
+. <br class="atl-forced-newline"/>
+Click on the following icon to create a new property: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522226/2678292642.png" data-image-src="attachments/2678522226/2678292642.png" data-unresolved-comment-count="0" data-linked-resource-id="2678292642" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-32-12.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="d3f1d7e2-d042-4297-a4a0-19848e0f6844" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Enter name for the new property <strong>
+                <em>gear</em>
+              </strong>
+. <br class="atl-forced-newline"/>
+Fill all statements like in the picture:            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="151" width="225" loading="lazy" src="attachments/2678522226/2678522236.jpeg?width=225" data-image-src="attachments/2678522226/2678522236.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522236" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavc604148e82a388073b50535dfebeaf12.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="44884268-d806-457f-a420-556081dd783f" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Make sure, that a one of the default materials is defined in Composition Material. <br class="atl-forced-newline"/>
+Click on the following icon to save the new property: <span class="confluence-embedded-file-wrapper">
+                <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522226/2678915116.png" data-image-src="attachments/2678522226/2678915116.png" data-unresolved-comment-count="0" data-linked-resource-id="2678915116" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-32-33.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="fa39c3f8-f17d-4c23-8894-62ecfe1f6cd5" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+Now click on <strong>Assign</strong>
+ button, and select the unique volume of the geometry. <br class="atl-forced-newline"/>
+To make a proof if the property is well assigned click on <strong>Draw</strong>
+ button, select <em>This property</em>
+ option. <br class="atl-forced-newline"/>
+The following image should display the chosen property. :            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="313" width="499" loading="lazy" src="attachments/2678522226/2678522241.jpeg?width=499" data-image-src="attachments/2678522226/2678522241.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522241" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav9ec2e530adfe0ccd7a18eac38f503f61.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="7ef4eef1-0d4f-4f37-b36c-7586e1d2de75" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="StaticAnalysisofaGear-AssignConstraints:">Assign Constraints:</h2>
+            <p>1- Assign prescribed displacements and rotation. <br class="atl-forced-newline"/>
+Data-&gt; Boundary Conditions -&gt; Constraints <br class="atl-forced-newline"/>
+Click on the following icon to set the condition over surfaces:<br/>
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="29" width="29" loading="lazy" src="attachments/2678522226/2678522246.gif?width=29" data-image-src="attachments/2678522226/2678522246.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522246" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavd4d027ed90331a4d90381b3d659e1511.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="1bfe8e7b-e5be-4216-a72c-b815a8905d64" data-media-type="file"/>
+              </span>
+              <br class="atl-forced-newline"/>
+The model has the two lids of octagonal axis pinned, which means that all degrees of freedom have to be prescribed.<br/>
+To do this it is necessary to check all statements. <br class="atl-forced-newline"/>
+2- Select the two lids of octagonal cylinder (axis of the gear).            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <colgroup>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="204" width="324" loading="lazy" src="attachments/2678522226/2678522251.jpeg?width=324" data-image-src="attachments/2678522226/2678522251.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522251" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav95088b916817790ac869c52466117d69.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="37d2926b-be8c-4d6c-8c81-bbe15255af67" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="StaticAnalysisofaGear-AssignStaticLoads">Assign Static Loads</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+Assign Normal distributed pressure over one tooth of the gear. <br class="atl-forced-newline"/>
+Data -&gt; Loads -&gt; Static Loads <br class="atl-forced-newline"/>
+Click on the following icon to set the condition over surfaces:<br/>
+              <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="29" width="29" loading="lazy" src="attachments/2678522226/2678522246.gif?width=29" data-image-src="attachments/2678522226/2678522246.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522246" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavd4d027ed90331a4d90381b3d659e1511.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="1bfe8e7b-e5be-4216-a72c-b815a8905d64" data-media-type="file"/>
+              </span>
+              <br/>
+From the top combo box static load select N<em>ormal-Surface-Load.</em>
+              <br class="atl-forced-newline"/>
+Set the value of the load to <strong>
+                <em>2e4</em>
+              </strong>
+ (positive sign means that<br/>
+load is oriented inward to the surface) and select the three interior surfaces of one tooth of the gear, as stated in the following image:            </p>
+            <div class="table-wrap">
+              <table class="confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                          <img class="confluence-embedded-image" height="283" width="453" loading="lazy" src="attachments/2678522226/2678522256.jpeg?width=453" data-image-src="attachments/2678522226/2678522256.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522256" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav707bd22225049d7028778850eb845d19.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="8ba6f578-b6c6-4ae3-b4e2-867c11bed4dd" data-media-type="file"/>
+                        </span>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br/>
+            </p>
+            <h2 id="StaticAnalysisofaGear-PerformtheAnalysis:">Perform the Analysis:</h2>
+            <p>
+              <br class="atl-forced-newline"/>
+Design Executive Control Section. <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; Executive Control <br class="atl-forced-newline"/>
+              <span style="color: rgb(255,153,0);">
+                <em>
+                  <span style="text-decoration: underline;">Select the NASTRAN Type that will be used for the analysis</span>
+.                </em>
+              </span>
+              <br class="atl-forced-newline"/>
+Check STATICS and leave all the other statements uncheck or with default values. <br class="atl-forced-newline"/>
+Click on <strong>Accept Data</strong>
+ button. <br class="atl-forced-newline"/>
+2 - Design Case Control Section. <br class="atl-forced-newline"/>
+Data -&gt; Problem Data -&gt; Case Control <br class="atl-forced-newline"/>
+2.1. - Input data<br/>
+In this example we don't consider the acceleration due to the gravity. Leave all statements with default values. <br class="atl-forced-newline"/>
+2.2. - Output data<br/>
+Set Title to "Gear_example" <br class="atl-forced-newline"/>
+Select which format file you want to use:<br/>
+-Small: Every file of a Bulk Data statement will use the 8-characters definition.            </p>
+            <ul class="alternate">
+              <li>Large: Every file of a Bulk Data statement will use the 16-characters definition. <br class="atl-forced-newline"/>
+Check Displacements, constraints forces, elements forces and elements stresses, uncheck the rest of output requests. <br class="atl-forced-newline"/>
+In Output Design section leave the default values. <br class="atl-forced-newline"/>
+Note: The output device has to set to PUNCH for post-processing with MI/NASTRAN Interface. <br class="atl-forced-newline"/>
+Click on <strong>Accept Data</strong>
+ button. <br class="atl-forced-newline"/>
+                <h2 id="StaticAnalysisofaGear-ObtainInputFileforNASTRANCode:">Obtain Input File for NASTRAN Code:</h2>
+                <br class="atl-forced-newline"/>
+                <h3 id="StaticAnalysisofaGear-Option1:">Option 1:</h3>
+                <br class="atl-forced-newline"/>
+Calculate -&gt; Calculate <br class="atl-forced-newline"/>
+                <h3 id="StaticAnalysisofaGear-Option2:">Option 2:</h3>
+                <br class="atl-forced-newline"/>
+File -&gt; Import/Export -&gt; Write Calculation File <br class="atl-forced-newline"/>
+In the Save File window, select the filename and location. Please note, it is very important to use the appropriate NASTRAN file extension. <br class="atl-forced-newline"/>
+                <h1 id="StaticAnalysisofaGear-Postprocess:">Post process:</h1>
+Click on the following icon to enter in the post process: <span class="confluence-embedded-file-wrapper">
+                  <img class="confluence-embedded-image" loading="lazy" src="attachments/2678522226/2678784070.png" data-image-src="attachments/2678522226/2678784070.png" data-unresolved-comment-count="0" data-linked-resource-id="2678784070" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="image2021-11-18_16-33-38.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="049b686f-b026-49f4-960c-0f440b658295" data-media-type="file"/>
+                </span>
+                <br class="atl-forced-newline"/>
+                <h2 id="StaticAnalysisofaGear-Importpunchfile:">Import punch file:</h2>
+                <br class="atl-forced-newline"/>
+Import the punch file (*.pch) obtained from NASTRAN.<br/>
+File -&gt; Import -&gt; Import PUNCH <br class="atl-forced-newline"/>
+Select the *. pch file located in NASTRAN results folder.<br/>
+After the importing process is finished, close the window. <br class="atl-forced-newline"/>
+                <h2 id="StaticAnalysisofaGear-ImportFEMAPASCIIneutralfile:">Import FEMAP ASCII neutral file:</h2>
+                <br class="atl-forced-newline"/>
+Import the FEMAP ASCII file (*.neu) obtained from NE/NASTRAN.<br/>
+File -&gt; Import -&gt; FEMAP file <br class="atl-forced-newline"/>
+Select the *.neu file located in NASTRAN results folder.<br/>
+After the importing process is finished close the window. <br class="atl-forced-newline"/>
+Note: To obtain a FEMAP ASCII file in NE/NASTRAN go to NASTRAN editor: <br class="atl-forced-newline"/>
+Setup -&gt; Default Analysis Options <br class="atl-forced-newline"/>
+Selects RSLTFILETYPE and set to FEMAP ASCII in Output Control Directives. <br class="atl-forced-newline"/>
+                <br class="atl-forced-newline"/>
+                <h2 id="StaticAnalysisofaGear-Resultsvisualization:">Results visualization:</h2>
+Open View results window. <br class="atl-forced-newline"/>
+Windows -&gt; View Results <br class="atl-forced-newline"/>
+                <h3 id="StaticAnalysisofaGear-ContourFill">Contour Fill</h3>
+                <p class="auto-cursor-target">In View results window:<br/>
+Set View to <em>Contour Fill</em>
+.<br/>
+Set Results to <em>total translation</em>
+                  <br/>
+Set Component to <em>total translation modulus.</em>
+                  <br/>
+Click on <strong>Apply</strong>
+ button.                </p>
+                <div class="table-wrap">
+                  <table class="confluenceTable">
+                    <colgroup>
+                      <col/>
+                      <col/>
+                      <col/>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td class="confluenceTd">
+                          <p>
+                            <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                              <img class="confluence-embedded-image" height="283" width="317" loading="lazy" src="attachments/2678522226/2678522261.jpeg?width=317" data-image-src="attachments/2678522226/2678522261.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522261" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddavd061377551ff61456de110bf0a1b5b7f.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="a97a9ad0-60a3-413b-bf42-391d10522f85" data-media-type="file"/>
+                            </span>
+                          </p>
+                        </td>
+                        <td class="confluenceTd">
+                          <p>
+                            <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                              <img class="confluence-embedded-image" height="227" width="153" loading="lazy" src="attachments/2678522226/2678522266.gif?width=153" data-image-src="attachments/2678522226/2678522266.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522266" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav0c2593b3be0ab35b5c00c56dd131ce2f.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="77dd627c-9915-4102-ae7f-ed53b125e3d4" data-media-type="file"/>
+                            </span>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="confluenceTd">
+                          <h4 id="StaticAnalysisofaGear-ContourFill.1">Contour Fill</h4>
+                        </td>
+                        <td class="confluenceTd">
+                          <p>Total Translation</p>
+                        </td>
+                        <th class="confluenceTh">
+                          <p>
+                            <br/>
+                          </p>
+                        </th>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <h3 id="StaticAnalysisofaGear-DisplayVectors">Display Vectors</h3>
+                <p class="auto-cursor-target">In View results window: <br class="atl-forced-newline"/>
+Set View to <em>Display Vectors</em>
+.<br/>
+Set Results to <em>total spc forces</em>
+                  <br/>
+Set Component to <em>total spc forces modulus.</em>
+                  <br/>
+Click on <strong>Apply</strong>
+ button.                </p>
+                <div class="table-wrap">
+                  <table class="confluenceTable">
+                    <colgroup>
+                      <col/>
+                      <col/>
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td class="confluenceTd">
+                          <p>
+                            <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                              <img class="confluence-embedded-image" height="293" width="468" loading="lazy" src="attachments/2678522226/2678522271.jpeg?width=468" data-image-src="attachments/2678522226/2678522271.png" data-unresolved-comment-count="0" data-linked-resource-id="2678522271" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav498d92e254143f2af1b5de18d9a1a072.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678522226" data-linked-resource-container-version="3" data-media-id="7bac4292-c093-4f07-b0a3-e8c6a72e8d3e" data-media-type="file"/>
+                            </span>
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="confluenceTd">
+                          <h4 id="StaticAnalysisofaGear-DisplayVectors.1">Display Vectors</h4>
+                        </td>
+                        <td class="confluenceTd">
+                          <p>total spc forces</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p class="auto-cursor-target">
+                  <br class="atl-forced-newline"/>
+Of course there are more results and more possible visualizations, user is invited to explore all possibilities of GiD. <br class="atl-forced-newline"/>
+                  <br class="atl-forced-newline"/>
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Infoproblemtype version="1.0">
+    <Program>
+        <Name>Fluent</Name>
+        <Version>1.2</Version>    
+        <MinimumGiDVersion>9</MinimumGiDVersion>
+        <ImageFileBrowser>images/fluent_ico.png</ImageFileBrowser>
+        <Maintainer>CIMNE's GiD &lt;gid@.cimne.upc.edu&gt;</Maintainer>
+        <Homepage>http://www.gidhome.com/gid-plus/modules/plugins</Homepage>
+        <ShortDescription>Interface to Fluent v.6 (CFD analysis)</ShortDescription>
+        <Description>
+            
+        </Description>
+        <NewsInVersion version="1.2" date="2012-12-21">
+            - Automatically handled transform when needed (to convert a model with information of a previous version)            
+        </NewsInVersion>
+        <NewsInVersion version="1.1.2" date="?">
+            - Files exporting speed much faster
+        </NewsInVersion>
+        <NewsInVersion version="1.1" date="?">
+            - New (being tested) reinitialization algorithm.
+            - Big improvement in the files exporting speed
+            - Prism and pyramid elements are now supported
+            - Boundary conditions have been reviewed
+            - Graphical interface and interactive help have been updated
+            - Solved problems with surface meshing in 3D problems and with linear meshing in 2D cases
+            - Solved the handedness problem exporting tetrahedra elements
+        </NewsInVersion>
+        <NewsInVersion version="1.0" date="?">
+            * First version
+        </NewsInVersion>
+    </Program>
+</Infoproblemtype>

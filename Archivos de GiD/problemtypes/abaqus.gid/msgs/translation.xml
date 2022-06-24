@@ -1,0 +1,1540 @@
+<?xml version="1.0" encoding="utf-8"?><!-- -*- coding: utf-8;-*- -->
+<!DOCTYPE ramtranslator SYSTEM "ramtranslator.dtd">
+<ramtranslator version="1.17">
+    <maxrow>152</maxrow>
+    <languages>
+        <langlist>Spanish es English en</langlist>
+        <current>Spanish</current>
+    </languages>
+    <srcstrings>
+        <src id="1">
+            <base>AC3D20</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="2">
+            <base>AC3D8</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="3">
+            <base>B31</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="4">
+            <base>B31H</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="5">
+            <base>B32</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="6">
+            <base>B32R</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="7">
+            <base>B33</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="8">
+            <base>B33H</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="9">
+            <base>B34</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="10">
+            <base>Beam formulation:</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="11">
+            <base>C3D10</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="12">
+            <base>C3D10E</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="13">
+            <base>C3D10H</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="14">
+            <base>C3D10MH</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="15">
+            <base>C3D15</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="16">
+            <base>C3D15E</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="17">
+            <base>C3D15H</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="18">
+            <base>C3D20</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="19">
+            <base>C3D20E</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="20">
+            <base>C3D20H</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="21">
+            <base>C3D20HT</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="22">
+            <base>C3D20R</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="23">
+            <base>C3D20RH</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="24">
+            <base>C3D20RHT</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="25">
+            <base>C3D20RT</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="26">
+            <base>C3D20T</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="27">
+            <base>C3D4</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="28">
+            <base>C3D4E</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="29">
+            <base>C3D4H</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="30">
+            <base>C3D6</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="31">
+            <base>C3D6E</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="32">
+            <base>C3D6H</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="33">
+            <base>C3D8</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="34">
+            <base>C3D8E</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="35">
+            <base>C3D8H</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="36">
+            <base>C3D8HT</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="37">
+            <base>C3D8I</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="38">
+            <base>C3D8IH</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="39">
+            <base>C3D8R</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="40">
+            <base>C3D8RH</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="41">
+            <base>C3D8T</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="42">
+            <base>CD310M</base>
+            <priority>0</priority>
+        </src>
+        <src id="43">
+            <base>CDD20RE</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="44">
+            <base>DC3D10</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="45">
+            <base>DC3D10E</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="46">
+            <base>DC3D15</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="47">
+            <base>DC3D15E</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="48">
+            <base>DC3D20</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="49">
+            <base>DC3D20E</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="50">
+            <base>DC3D4</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="51">
+            <base>DC3D4E</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="52">
+            <base>DC3D6</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="53">
+            <base>DC3D6E</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="54">
+            <base>DC3D8</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="55">
+            <base>DC3D8E</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="56">
+            <base>DCC3D8D</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="57">
+            <base>DK3D8N</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="58">
+            <base>DS3</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="59">
+            <base>DS4</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="60">
+            <base>DS6</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="61">
+            <base>DS8</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="62">
+            <base>Element formulation</base>
+            <position>abaqus.cnd:141</position>
+            <priority>0</priority>
+        </src>
+        <src id="63">
+            <base>Element type:</base>
+            <position>abaqus.cnd:144</position>
+            <priority>0</priority>
+        </src>
+        <src id="64">
+            <base>Elset</base>
+            <position>abaqus.cnd:64</position>
+            <priority>0</priority>
+        </src>
+        <src id="65">
+            <base>GK3D12M</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="66">
+            <base>GK3D18</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="67">
+            <base>GK3D18N</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="68">
+            <base>GK3D2</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="69">
+            <base>GK3D2N</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="70">
+            <base>GK3D6</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="71">
+            <base>GK3D6N</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="72">
+            <base>GK3D8</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="73">
+            <base>Hexahedra</base>
+            <position>abaqus.cnd:144</position>
+            <priority>0</priority>
+        </src>
+        <src id="74">
+            <base>Hexahedra formulation:</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="75">
+            <base>M3D3</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="76">
+            <base>M3D4</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="77">
+            <base>M3D4R</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="78">
+            <base>M3D6</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="79">
+            <base>M3D8</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="80">
+            <base>M3D8R</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="81">
+            <base>Name</base>
+            <position>abaqus.cnd:108;abaqus.tcl:423</position>
+            <priority>0</priority>
+        </src>
+        <src id="82">
+            <base>Nset</base>
+            <position>abaqus.cnd:34</position>
+            <priority>0</priority>
+        </src>
+        <src id="83">
+            <base>PIPE31</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="84">
+            <base>PIPE31H</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="85">
+            <base>Prism</base>
+            <position>abaqus.cnd:144</position>
+            <priority>0</priority>
+        </src>
+        <src id="86">
+            <base>Prism formulation:</base>
+            <position>abaqus.cnd:151</position>
+            <priority>0</priority>
+        </src>
+        <src id="87">
+            <base>Quadrilateral</base>
+            <position>abaqus.cnd:129</position>
+            <priority>0</priority>
+        </src>
+        <src id="88">
+            <base>Quadrilateral formulation:</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="89">
+            <base>R3D3</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="90">
+            <base>R3D4</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="91">
+            <base>S3</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="92">
+            <base>S3R</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="93">
+            <base>S4</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="94">
+            <base>S4R</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="95">
+            <base>S4R5</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="96">
+            <base>S6</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="97">
+            <base>S8</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="98">
+            <base>S8R</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="99">
+            <base>S8R5</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="100">
+            <base>S8RT</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="101">
+            <base>STRI3</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="102">
+            <base>STRI35</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="103">
+            <base>STRI65</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="106">
+            <base>Tetrahedra</base>
+            <position>abaqus.cnd:144</position>
+            <priority>0</priority>
+        </src>
+        <src id="107">
+            <base>Tetrahedra formulation:</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="108">
+            <base>Triangle</base>
+            <position>abaqus.cnd:129</position>
+            <priority>0</priority>
+        </src>
+        <src id="109">
+            <base>Triangle formulation:</base>
+            <position>abaqus.cnd:132</position>
+            <priority>0</priority>
+        </src>
+        <src id="110">
+            <base>AISI 4340 Steel</base>
+            <position>abaqus.mat:2</position>
+            <priority>0</priority>
+        </src>
+        <src id="111">
+            <base>Density</base>
+            <position>abaqus.mat:7</position>
+            <priority>0</priority>
+        </src>
+        <src id="112">
+            <base>Poisson Ratio</base>
+            <position>abaqus.mat:5</position>
+            <priority>0</priority>
+        </src>
+        <src id="113">
+            <base>Young Modulus</base>
+            <position>abaqus.mat:3</position>
+            <priority>0</priority>
+        </src>
+        <src id="115">
+            <base>Enter the name for the set</base>
+            <position>abaqus.tcl:434</position>
+            <priority>0</priority>
+        </src>
+        <src id="116">
+            <base>Name is not valid</base>
+            <position>abaqus.tcl:445</position>
+            <priority>0</priority>
+        </src>
+        <src id="117">
+            <base>Name is too long</base>
+            <position>abaqus.tcl:447</position>
+            <priority>0</priority>
+        </src>
+        <src id="118">
+            <base>Sets</base>
+            <position>abaqus.cnd:2</position>
+            <priority>0</priority>
+        </src>
+        <src id="119">
+            <base>Surface set</base>
+            <position>abaqus.cnd:74</position>
+            <priority>0</priority>
+        </src>
+        <src id="120">
+            <base>SurfaceNodeset</base>
+            <position>abaqus.cnd:104</position>
+            <priority>0</priority>
+        </src>
+        <src id="121">
+            <base>ABAQUS interface help</base>
+            <position>abaqus.tcl:65</position>
+            <priority>0</priority>
+        </src>
+        <src id="122">
+            <base>About Abaqus interface</base>
+            <position>abaqus.tcl:66</position>
+            <priority>0</priority>
+        </src>
+        <src id="123">
+            <base>Define sets</base>
+            <position>abaqus.tcl:78</position>
+            <priority>0</priority>
+        </src>
+        <src id="124">
+            <base>Output file</base>
+            <priority>0</priority>
+        </src>
+        <src id="125">
+            <base>ABAQUS bar</base>
+            <position>abaqus.tcl:90;abaqus.tcl:91</position>
+            <priority>0</priority>
+        </src>
+        <src id="126">
+            <base>Choose ABAQUS libraries directory</base>
+            <position>abaqus.tcl:468</position>
+            <priority>0</priority>
+        </src>
+        <src id="127">
+            <base>The selected directory does not seem to contain ABAQUS libraries. Proceed?</base>
+            <position>abaqus.tcl:471</position>
+            <priority>0</priority>
+        </src>
+        <src id="128">
+            <base>ABAQUS results file</base>
+            <position>abaqus.tcl:488</position>
+            <priority>0</priority>
+        </src>
+        <src id="129">
+            <base>B21</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="130">
+            <base>B21H</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="131">
+            <base>B22</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="132">
+            <base>B23</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="133">
+            <base>B23H</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="134">
+            <base>C3D27</base>
+            <position>abaqus.cnd:149</position>
+            <priority>0</priority>
+        </src>
+        <src id="135">
+            <base>Entered element:</base>
+            <position>abaqus.cnd:153</position>
+            <priority>0</priority>
+        </src>
+        <src id="136">
+            <base>PIPE21</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="137">
+            <base>PIPE21H</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="138">
+            <base>S9</base>
+            <position>abaqus.cnd:134</position>
+            <priority>0</priority>
+        </src>
+        <src id="139">
+            <base>SAX1</base>
+            <position>abaqus.cnd:117</position>
+            <priority>0</priority>
+        </src>
+        <src id="140">
+            <base>User defined</base>
+            <position>abaqus.cnd:144</position>
+            <priority>0</priority>
+        </src>
+        <src id="141">
+            <base>This is the limited version of GiD-Abaqus interface. Please go to Help-&gt;Register Problem type and enter the password</base>
+            <priority>0</priority>
+        </src>
+        <src id="142">
+            <base>This is the evaluation version of GiD-Abaqus interface. Please enter your password or go to Help-&gt;Get Problem Type password</base>
+            <priority>0</priority>
+        </src>
+        <src id="143">
+            <base>Error writing abaqus.ini file</base>
+            <priority>0</priority>
+        </src>
+        <src id="144">
+            <base>Evaluation version works with 2000 nodes max. Please enter your password or go to Help-&gt;Get Problem type password</base>
+            <priority>0</priority>
+        </src>
+        <src id="145">
+            <base>Get Problem type password</base>
+            <priority>0</priority>
+        </src>
+        <src id="146">
+            <base>Define sets and element formulation</base>
+            <position>abaqus.tcl:88</position>
+            <priority>0</priority>
+        </src>
+        <src id="147">
+            <base>Define and apply elastic materials</base>
+            <position>abaqus.tcl:88</position>
+            <priority>0</priority>
+        </src>
+        <src id="148">
+            <base>Define local axes systems</base>
+            <position>abaqus.tcl:88</position>
+            <priority>0</priority>
+        </src>
+        <src id="149">
+            <base>Output .inp file for ABAQUS simulations</base>
+            <position>abaqus.tcl:88</position>
+            <priority>0</priority>
+        </src>
+        <src id="150">
+            <base>Some $elemtype mesh elements are related with $element_type elements formulation</base>
+            <position>abaqus.tcl:215;abaqus.tcl:232</position>
+            <priority>0</priority>
+        </src>
+        <src id="151">
+            <base>Error, not supported element type</base>
+            <position>abaqus.tcl:244</position>
+            <priority>0</priority>
+        </src>
+        <src id="152">
+            <base>Error in condition 'Surface set'. It cannot be applied to the element $num, bad element type</base>
+            <position>abaqus.tcl:357</position>
+            <priority>0</priority>
+        </src>
+        <src id="153">
+            <base>error loading library</base>
+            <priority>0</priority>
+        </src>
+        <src id="154">
+            <base>C3D10M</base>
+            <position>abaqus.cnd:147</position>
+            <priority>0</priority>
+        </src>
+        <src id="155">
+            <base>This problemtype requires GiD %s or later</base>
+            <position>abaqus.tcl:7</position>
+            <priority>0</priority>
+        </src>
+    </srcstrings>
+    <translatestrings>
+        <lan lan="es">
+            <translate id="1">
+                <base>AC3D20</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="2">
+                <base>AC3D8</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="3">
+                <base>B31</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="4">
+                <base>B31H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="5">
+                <base>B32</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="6">
+                <base>B32R</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="7">
+                <base>B33</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="8">
+                <base>B33H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="9">
+                <base>B34</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="10">
+                <base>Formulación vigas:</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="11">
+                <base>C3D10</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="12">
+                <base>C3D10E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="13">
+                <base>C3D10H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="14">
+                <base>C3D10MH</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="15">
+                <base>C3D15</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="16">
+                <base>C3D15E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="17">
+                <base>C3D15H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="18">
+                <base>C3D20</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="19">
+                <base>C3D20E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="20">
+                <base>C3D20H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="21">
+                <base>C3D20HT</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="22">
+                <base>C3D20R</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="23">
+                <base>C3D20RH</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="24">
+                <base>C3D20RHT</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="25">
+                <base>C3D20RT</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="26">
+                <base>C3D20T</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="27">
+                <base>C3D4</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="28">
+                <base>C3D4E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="29">
+                <base>C3D4H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="30">
+                <base>C3D6</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="31">
+                <base>C3D6E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="32">
+                <base>C3D6H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="33">
+                <base>C3D8</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="34">
+                <base>C3D8E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="35">
+                <base>C3D8H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="36">
+                <base>C3D8HT</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="37">
+                <base>C3D8I</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="38">
+                <base>C3D8IH</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="39">
+                <base>C3D8R</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="40">
+                <base>C3D8RH</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="41">
+                <base>C3D8T</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="42">
+                <base>CD310M</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="43">
+                <base>CDD20RE</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="44">
+                <base>DC3D10</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="45">
+                <base>DC3D10E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="46">
+                <base>DC3D15</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="47">
+                <base>DC3D15E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="48">
+                <base>DC3D20</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="49">
+                <base>DC3D20E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="50">
+                <base>DC3D4</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="51">
+                <base>DC3D4E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="52">
+                <base>DC3D6</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="53">
+                <base>DC3D6E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="54">
+                <base>DC3D8</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="55">
+                <base>DC3D8E</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="56">
+                <base>DCC3D8D</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="57">
+                <base>DK3D8N</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="58">
+                <base>DS3</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="59">
+                <base>DS4</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="60">
+                <base>DS6</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="61">
+                <base>DS8</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="62">
+                <base>Formulación elemento</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="63">
+                <base>Tipo elemento:</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="64">
+                <base>Set elemento</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="65">
+                <base>GK3D12M</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="66">
+                <base>GK3D18</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="67">
+                <base>GK3D18N</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="68">
+                <base>GK3D2</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="69">
+                <base>GK3D2N</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="70">
+                <base>GK3D6</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="71">
+                <base>GK3D6N</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="72">
+                <base>GK3D8</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="73">
+                <base>Hexaedro</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="74">
+                <base>Formulación hexaedro:</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="75">
+                <base>M3D3</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="76">
+                <base>M3D4</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="77">
+                <base>M3D4R</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="78">
+                <base>M3D6</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="79">
+                <base>M3D8</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="80">
+                <base>M3D8R</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="81">
+                <base>Nombre</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="82">
+                <base>Set nodos</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="83">
+                <base>PIPE31</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="84">
+                <base>PIPE31H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="85">
+                <base>Prisma</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="86">
+                <base>Formulación prisma:</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="87">
+                <base>Cuadrilátero</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="88">
+                <base>Formulación cuadrilátero:</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="89">
+                <base>R3D3</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="90">
+                <base>R3D4</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="91">
+                <base>S3</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="92">
+                <base>S3R</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="93">
+                <base>S4</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="94">
+                <base>S4R</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="95">
+                <base>S4R5</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="96">
+                <base>S6</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="97">
+                <base>S8</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="98">
+                <base>S8R</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="99">
+                <base>S8R5</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="100">
+                <base>S8RT</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="101">
+                <base>STRI3</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="102">
+                <base>STRI35</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="103">
+                <base>STRI65</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="106">
+                <base>Tetraedro</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="107">
+                <base>Formulación tetraedro:</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="108">
+                <base>Triángulo</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="109">
+                <base>Formulación triángulo:</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="110">
+                <base>AISI 4340 Acero</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="111">
+                <base>Densidad</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="112">
+                <base>Módulo poisson</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="113">
+                <base>Módulo young</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="115">
+                <base>Entrar el nombre del set</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="116">
+                <base>El nombre no es válido</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="117">
+                <base>El nombre es demasiado largo</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="118">
+                <base>Sets</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="119">
+                <base>Set superficies</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="120">
+                <base>Set nodos superficie</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="121">
+                <base>Ayuda interface Abaqus</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-09</date>
+            </translate>
+            <translate id="122">
+                <base>Acerca de la interface Abaqus</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-10</date>
+            </translate>
+            <translate id="123">
+                <base>Definir sets</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-10</date>
+            </translate>
+            <translate id="124">
+                <base>Fichero salida</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-10</date>
+            </translate>
+            <translate id="125">
+                <base>Barra ABAQUS</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-10</date>
+            </translate>
+            <translate id="126">
+                <base>Seleccionar directorio de librerias ABAQUS</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-10</date>
+            </translate>
+            <translate id="127">
+                <base>El directorio seleccionado no parece contener librerias de ABAQUS. ¿Continuar?</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="128">
+                <base>Fichero resultados ABAQUS</base>
+                <tuser>escolano</tuser>
+                <date>2008-10-10</date>
+            </translate>
+            <translate id="129">
+                <base>B21</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="130">
+                <base>B21H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="131">
+                <base>B22</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="132">
+                <base>B23</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="133">
+                <base>B23H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="134">
+                <base>C3D27</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="135">
+                <base>Elemento entrado:</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="136">
+                <base>PIPE21</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="137">
+                <base>PIPE21H</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="138">
+                <base>S9</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="139">
+                <base>SAX1</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="140">
+                <base>Definido por el usuario</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="141">
+                <base>Esta es una versión limitiada de la interface GiD-Abaqus. Por favor vaya a Ayuda-&gt;Registrar tipo de problema y entre su clave</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="142">
+                <base>Esta es una versión limitiada de la interface GiD-Abaqus. Por favor vaya a Ayuda-&gt;Registrar tipo de problema y entre su clave</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="143">
+                <base>Error en la escritura de abaqus.ini</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="144">
+                <base>La versión de evaluación funciona con un máximo de 2000 nodos. Por favor entre su clave o vaya a Ayuda-&gt;Conseguir clave Tipo de Problema para conseguir una nueva</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="145">
+                <base>Conseguir clave Tipo de Problema</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="146">
+                <base>Definir sets y formulación de los elementos</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="147">
+                <base>Definir y aplicar materiales elásticos</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="148">
+                <base>Definir sistemas de ejes locales</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="149">
+                <base>Escribir fichero .inp para simulaciones con ABAQUS</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="150">
+                <base>Algunos elementos de malla $elemtype estan relacionados con formulaciones de elementos $element:type</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="151">
+                <base>Error, tipo de elemento no soportado</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="152">
+                <base>Error en la conidión "Surface set". No puede ser aplicada sobre el elemento $num, ya que se trata de un tipo de elemento incorrecto</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="153">
+                <base>Error cargando la librería</base>
+                <tuser>Sergiog</tuser>
+                <date>2009-04-25</date>
+            </translate>
+            <translate id="154">
+                <base>C3D10M</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+            <translate id="155">
+                <base>Este tipo de problema requiere GiD %s o posterior</base>
+                <tuser>escolano</tuser>
+                <date>2021-11-18</date>
+            </translate>
+        </lan>
+        <lan lan="en"/>
+    </translatestrings>
+    <users>
+        <user id="1">Programmer</user>
+        <user id="2">Translator</user>
+        <user id="3">Web</user>
+        <user id="4">escolano</user>
+        <user id="5">Sergiog</user>
+        <current>escolano</current>
+    </users>
+    <abbrevs/>
+    <options>
+        <option name="TranslationProgram" value="abaque_escolano {{C:/gid project/problemtypes/abaqus.gid}} {.cnd .mat .prb .tcl} 1"/>
+    </options>
+</ramtranslator>

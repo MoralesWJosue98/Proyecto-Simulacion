@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<!--  -*- coding: utf-8;-*- --> 
+<Infoproblemtype version="2.0">
+  <Program n="lsDyna">
+    <Name>Lsdyna</Name> 
+    <Version>2.3</Version>     
+    <MinimumGiDVersion>15.1.4d</MinimumGiDVersion> 
+    <ImageFileBrowser>images/appuser16.gif</ImageFileBrowser>         
+    <ShortDescription>Interface with LS-DYNA (nonlinear analysis software)</ShortDescription>
+    <Description>GiD LS-Dyna Interface, which is compatible with LS-DYNA v. 971, provides a completely graphical environment for several types of structural simulations. 
+    However, the product is focused on crash test problems and necessary tools for seatbelt and airbag definitions have been implemented.
+    Interface capabilities:
+    * Handles discrete, beam, shell, solid, seatbelt and airbag elements.
+    * Several material types vailable (elastic, rigid, isotropic, anisotropic, fabric, plastic, viscoelastic, springs, dampers, etc.).
+    * Single and Master and Slave contacts definition.
+    * Dynamic loads and constraints.
+    * Several Joint types available (spherical, revolute, translational).
+    * Fully GiD postprocessing functionality.
+    </Description> 
+    <NewsInVersion version="2.3" date="2021-11-18">
+      * The interface do not require an extra password from wwww.compassis.com      
+      * use modern GiD_Events
+    </NewsInVersion>
+  </Program>
+</Infoproblemtype>

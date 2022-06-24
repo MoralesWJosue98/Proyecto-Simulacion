@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Abaqus : Create Sets</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Abaqus : Create Sets
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>To create a new set with GiD it is necessary to assign a condition to the geometry entities (recommended), before generating the mesh, or to the mesh entities, after generating it.</p>
+            <p>
+              <br class="atl-forced-newline"/>
+To create the sets, open the condition window:            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+              <em>Data-&gt;Define Sets</em>
+              <br class="atl-forced-newline"/>
+Or use the following icon of the Abaqus interface: <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image" height="24" width="24" loading="lazy" src="attachments/2522743230/2522743229.gif?width=24" data-image-src="attachments/2522743230/2522743229.png" data-unresolved-comment-count="0" data-linked-resource-id="2522743229" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav1cf471461ecff9f6741ef946539b2385.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2522743230" data-linked-resource-container-version="2" data-media-id="eb91e89a-e12b-4b18-940e-a93cd4b90be0" data-media-type="file"/>
+              </span>
+            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+Use condition <strong>Nset</strong>
+ to create nodes sets and the condition <strong>Elset</strong>
+ to create element sets. Surface sets can also be defined with the help of <strong>GiD-Abaqus</strong>
+ interface by selecting the surface nodes directly from the screen (<strong>SurfaceNodeSet</strong>
+ condition). These surfaces can also be defined from 3D element faces (<strong>SurfaceSet</strong>
+ condition). The choice of the surface definition scheme can affect its behavior during the computation.            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+              <span class="confluence-embedded-file-wrapper image-center-wrapper confluence-embedded-manual-size">
+                <img class="confluence-embedded-image image-center" height="253" width="201" loading="lazy" src="attachments/2522743230/2522743235.jpeg?width=201" data-image-src="attachments/2522743230/2522743235.png" data-unresolved-comment-count="0" data-linked-resource-id="2522743235" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav2dfc8d3ac968779b357023502c991686.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2522743230" data-linked-resource-container-version="2" data-media-id="85e858d7-5b6d-4b26-9fc0-3dbbf4c5424f" data-media-type="file"/>
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

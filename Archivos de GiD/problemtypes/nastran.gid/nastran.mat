@@ -1,0 +1,624 @@
+BOOK: Material
+NUMBER: 1 MATERIAL: Isotropic
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION:Type
+VALUE: isotropic
+STATE: hidden
+QUESTION: young
+VALUE: void
+STATE: hidden
+QUESTION: mo_shear
+VALUE: void
+STATE: hidden
+QUESTION: poisson
+VALUE: void
+STATE: hidden
+QUESTION: density
+VALUE: void
+STATE: hidden
+QUESTION: temp_ref
+VALUE: void
+STATE: hidden
+QUESTION: tension
+VALUE: void
+STATE: hidden
+QUESTION: compression
+VALUE: void
+STATE: hidden
+QUESTION: shear
+VALUE: void
+STATE: hidden
+QUESTION: damping
+VALUE: void
+STATE: hidden
+QUESTION: expansion
+VALUE: void
+STATE: hidden
+QUESTION: conductivity
+VALUE:void
+STATE: hidden
+QUESTION: spec_heat
+VALUE: void
+STATE: hidden
+QUESTION: free_conv
+VALUE: void
+STATE: hidden
+QUESTION: heatgen
+VALUE: void
+STATE: hidden
+QUESTION: nontype
+VALUE: none
+STATE: hidden
+QUESTION: plasticity
+VALUE:void
+STATE: hidden
+QUESTION: harden
+VALUE:void
+STATE: hidden
+QUESTION: yield_func
+VALUE: void
+STATE: hidden
+QUESTION:initial
+VALUE: void
+STATE: hidden
+QUESTION: friction
+VALUE: void
+STATE: hidden
+QUESTION: stress-strain
+VALUE: void
+STATE: hidden
+TKWIDGET: nasmat::ComunicateWithGiD
+END MATERIAL 
+NUMBER: 2 MATERIAL: Anisotropic_Shell
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: Type
+VALUE: anisotropic_shell
+STATE: hidden
+QUESTION: G11
+VALUE: void
+STATE: hidden
+QUESTION: G12
+VALUE: void
+STATE: hidden
+QUESTION: G13
+VALUE: void
+STATE: hidden
+QUESTION: G22
+VALUE: void
+STATE: hidden
+QUESTION: G23
+VALUE: void
+STATE: hidden
+QUESTION: G33
+VALUE: void
+STATE: hidden
+QUESTION: rho
+VALUE: void
+STATE: hidden
+QUESTION: A1
+VALUE: void
+STATE: hidden
+QUESTION: A2
+VALUE: void
+STATE: hidden
+QUESTION: A3
+VALUE: void
+STATE: hidden
+QUESTION: Tref
+VALUE: void
+STATE: hidden
+QUESTION: Ge
+VALUE: void
+STATE: hidden
+QUESTION: St
+VALUE: void
+STATE: hidden
+QUESTION: Sc
+VALUE: void
+STATE: hidden
+QUESTION: Ss
+VALUE: void
+STATE: hidden
+QUESTION: Cs
+VALUE: void
+STATE: hidden
+QUESTION: K11
+VALUE: void
+STATE: hidden
+QUESTION: K12
+VALUE: void
+STATE: hidden
+QUESTION: K13
+VALUE: void
+STATE: hidden
+QUESTION: K22
+VALUE: void
+STATE: hidden
+QUESTION: K23
+VALUE: void
+STATE: hidden
+QUESTION: K33
+VALUE: void
+STATE: hidden
+QUESTION: Cp
+VALUE: void
+STATE: hidden
+QUESTION: Hgen
+VALUE: void
+STATE: hidden
+QUESTION: nontype
+VALUE: none
+STATE: hidden
+QUESTION: plasticity
+VALUE:void
+STATE: hidden
+QUESTION: harden
+VALUE:void
+STATE: hidden
+QUESTION: yield_func
+VALUE: void
+STATE: hidden
+QUESTION:initial
+VALUE: void
+STATE: hidden
+QUESTION: friction
+VALUE: void
+STATE: hidden
+QUESTION: stress-strain
+VALUE: void
+STATE: hidden
+TKWIDGET: nasmat_anisotropicshell::ComunicateWithGiD
+END MATERIAL
+
+NUMBER: 3 MATERIAL: Orthotropic_Shell
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: Type
+VALUE: orthotropic_shell
+STATE: hidden
+QUESTION: E1
+VALUE: void
+STATE: hidden
+QUESTION: E2
+VALUE: void
+STATE: hidden
+QUESTION: nu12
+VALUE: void
+STATE: hidden
+QUESTION: G12
+VALUE: void
+STATE: hidden
+QUESTION: G1Z
+VALUE: void
+STATE: hidden
+QUESTION: G2Z
+VALUE: void
+STATE: hidden
+QUESTION: rho
+VALUE: void
+STATE: hidden
+QUESTION: A1
+VALUE: void
+STATE: hidden
+QUESTION: A2
+VALUE: void
+STATE: hidden
+QUESTION: Tref
+VALUE: void
+STATE: hidden
+QUESTION: Xt
+VALUE: void
+STATE: hidden
+QUESTION: Xc
+VALUE: void
+STATE: hidden
+QUESTION:Yc
+VALUE: void
+STATE: hidden
+QUESTION: Yt
+VALUE: void
+STATE: hidden
+QUESTION: S
+VALUE: void
+STATE: hidden
+QUESTION: Ge
+VALUE: void
+STATE: hidden
+QUESTION: F12
+VALUE: void
+STATE: hidden
+QUESTION: Strn
+VALUE: void
+STATE: hidden
+QUESTION: Cs
+VALUE: void
+STATE: hidden
+QUESTION: K11
+VALUE: void
+STATE: hidden
+QUESTION: K12
+VALUE: void
+STATE: hidden
+QUESTION: K13
+VALUE: void
+STATE: hidden
+QUESTION: K22
+VALUE: void
+STATE: hidden
+QUESTION: K23
+VALUE: void
+STATE: hidden
+QUESTION: K33
+VALUE: void
+STATE: hidden
+QUESTION: Cp
+VALUE: void
+STATE: hidden
+QUESTION: Hgen
+VALUE: void
+STATE: hidden
+QUESTION: nontype
+VALUE: none
+STATE: hidden
+QUESTION: plasticity
+VALUE:void
+STATE: hidden
+QUESTION: harden
+VALUE:void
+STATE: hidden
+QUESTION: yield_func
+VALUE: void
+STATE: hidden
+QUESTION:initial
+VALUE: void
+STATE: hidden
+QUESTION: friction
+VALUE: void
+STATE: hidden
+QUESTION: stress-strain
+VALUE: void
+STATE: hidden
+TKWIDGET: nasmat_orthotropicshell::ComunicateWithGiD
+END MATERIAL
+BOOK:Property 
+NUMBER: 4 MATERIAL: Bar
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(BAR)
+VALUE: BAR
+QUESTION: win_info
+VALUE: MA==
+STATE: hidden
+QUESTION:Area:
+VALUE:0.0
+QUESTION:Moments_of_Inertia:#CB#(I)
+VALUE:I
+QUESTION:I1:
+VALUE:0.0
+QUESTION:I2:
+VALUE:0.0
+QUESTION:I12:
+VALUE:0.0
+QUESTION:Torsional_Constant:
+VALUE:0.0
+QUESTION:Y_Shear_Area:
+VALUE:0.0
+QUESTION:Z_Shear_Area:
+VALUE:0.0
+QUESTION:Nonstructural_mass/length:
+VALUE:0.0
+QUESTION:Stress_Recovery#CB#(2_to_4_Blank=Square)
+VALUE:2_to_4_Blank=Square
+QUESTION:Values:(Y,Z)
+VALUE: #N# 8 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: sections::ComunicateWithGiDs
+END MATERIAL
+NUMBER: 5 MATERIAL: Beam
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(BEAM)
+VALUE: BEAM
+QUESTION: win_info
+VALUE: MA==
+STATE: hidden
+QUESTION:Area:
+VALUE:0.0
+QUESTION:Moments_of_Inertia:#CB#(I)
+VALUE:I
+QUESTION:I1:
+VALUE:0.0
+QUESTION:I2:
+VALUE:0.0
+QUESTION:I12:
+VALUE:0.0
+QUESTION:Torsional_Constant:
+VALUE:0.0
+QUESTION:Y_Shear_Area:
+VALUE:0.0
+QUESTION:Z_Shear_Area:
+VALUE:0.0
+QUESTION:Nonstructural_mass/length:
+VALUE:0.0
+QUESTION: Y_Neutral_Axis_Offset:
+VALUE:0.0
+QUESTION: Z_Neutral_Axis_Offset:
+VALUE:0.0
+QUESTION:Stress_Recovery#CB#(2_to_4_Blank=Square)
+VALUE:2_to_4_Blank=Square
+QUESTION:Values:(Y,Z)
+VALUE: #N# 8 0.0 0.0 0.0 0.0 0.0 0.0 0.0 0.0
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: sections::ComunicateWithGiDs
+END MATERIAL
+
+NUMBER: 6 MATERIAL: Tube
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(TUBE)
+VALUE:TUBE
+QUESTION:Outside_diameter_of_tube:
+VALUE:0.0
+QUESTION:Solid_Circular_Rod#CB#(0,1)
+VALUE:0
+DEPENDENCIES: (1,SET,Thickness_of_tube,#CURRENT#)(0,RESTORE,Thickness_of_tube,#CURRENT#)
+QUESTION:Thickness_of_tube:
+VALUE:0.0  
+QUESTION:Nonstructural_mass/length:
+VALUE:0.0
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: buttonmat::comunicatewithGiD
+END MATERIAL
+
+NUMBER: 7 MATERIAL: Pipe
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(PIPE)
+VALUE:PIPE
+QUESTION:Outside_diameter_of_pipe:
+VALUE:0.0
+QUESTION:Pipe_wall_thickness:
+VALUE:0.0  
+QUESTION:Internal_pressure:
+VALUE:0.0:
+QUESTION:End_condition#CB#(CLOSED,OPEN)
+VALUE:CLOSED
+HELP:CLOSED=Both ends are closed\nOPEN= Both ends are open
+QUESTION:Nonstructural_mass/length:
+VALUE:0.0
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: buttonmat::comunicatewithGiD
+END MATERIAL
+NUMBER: 8 MATERIAL: Cable
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(CABLE)
+VALUE:CABLE
+QUESTION:Initial_conditions#CB#(cable_slack,cable_tension)
+VALUE:cable_slack
+HELP:The initial cable slack, U0, is the distance the cable must stretch before it will carry load.\nThe initial cable tension, T0, is the tensile preload in untis of force that exists in the cable at the start of the analisys.
+DEPENDENCIES: (cable_slack,RESTORE,Slack_U0,#CURRENT#,HIDE,Tension_T0,#CURRENT#)(cable_tension,HIDE,Slack_U0,#CURRENT#,RESTORE,Tension_T0,#CURRENT#)
+QUESTION:Slack_U0:
+VALUE:0.0  
+QUESTION:Tension_T0:
+VALUE:0.0  
+QUESTION:Area_cross_section:
+VALUE:0.0  
+QUESTION:Moment_of_Inertia:
+VALUE:0.0:
+QUESTION: Allowable_tensile_stress:
+VALUE:0.0
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: buttonmat::comunicatewithGiD
+END MATERIAL
+NUMBER: 9 MATERIAL: Rod
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION:PROPERTY#CB#(ROD)
+VALUE:ROD
+QUESTION: Area_Cross_Section:
+VALUE: 0.0
+QUESTION: Torsional_Constant:
+VALUE: 0.0
+QUESTION:Coeff._Torsional_Stress:
+VALUE: 0.0
+HELP: The formula used to compute torsional stress is\n Stress=(T*coeff.Torsional)/J\n where T is the torsional moment\n and J torsional moment
+QUESTION:Nonstructural_mass/length:
+VALUE:0.0
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: buttonmat::comunicatewithGiD
+END MATERIAL
+NUMBER: 10 MATERIAL: Shear_Panel
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(SHEAR_PANEL)
+VALUE:SHEAR_PANEL
+QUESTION:Thickness:
+VALUE: 0.0
+QUESTION:Nonstructural_mass/area:
+VALUE:0.0
+QUESTION:Effectiveness_Factors#CB#(:)
+VALUE::
+QUESTION:F1:
+VALUE:0.0
+QUESTION:F2:
+VALUE:0.0
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: buttonmat::comunicatewithGiD
+END MATERIAL
+NUMBER: 11 MATERIAL: Plate
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(PLATE)
+VALUE: PLATE
+STATE: hidden
+QUESTION:thick
+VALUE: void
+STATE: hidden
+QUESTION: matid
+VALUE:SXNvdHJvcGljIFBsYXRlLU1hdGVyaWFsIFBsYXRlLU1hdGVyaWFsIE5vbmUtSWdub3Jl
+STATE: hidden
+QUESTION: bend
+VALUE:void
+STATE: hidden
+QUESTION: trans
+VALUE:void
+STATE: hidden
+QUESTION:nomass
+VALUE:void
+STATE: hidden
+QUESTION:stress
+VALUE: dm9pZCB2b2lk
+STATE: hidden
+QUESTION:nastran
+VALUE:SXNvdHJvcGljIHt9IFBsYXRlLU1hdGVyaWFsIHt9IFBsYXRlLU1hdGVyaWFsIHt9IHt9IHt9IHt9IE5vbmUtSWdub3Jl
+STATE:hidden
+QUESTION:Composition_Material
+VALUE:-ANY-
+STATE: hidden
+TKWIDGET: plate::comunicatewithGiD
+END MATERIAL
+NUMBER: 12 MATERIAL: Viscous_Damper 
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(VISCOUS_DAMPER)
+VALUE: VISCOUS_DAMPER
+QUESTION:Viscous_coefficient_extension: 
+VALUE:0.0
+QUESTION:Viscous_coefficient_rotation:
+VALUE:0.0 
+QUESTION:Composition_Material#CB#(-ANY-)
+VALUE:-ANY-
+STATE:HIDDEN
+END MATERIAL
+NUMBER: 13 MATERIAL: Laminate
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION:PROPERTY#CB#(LAMINATE)
+VALUE: LAMINATE
+STATE: hidden
+QUESTION: laminate_prop
+VALUE: dm9pZCB2b2lkIE5vbmUgdm9pZCB2b2lkIHZvaWQ=
+STATE: hidden
+QUESTION: laminate_seq
+VALUE: dm9pZA== 
+STATE: hidden
+QUESTION: matlist
+VALUE: dm9pZA==
+STATE: hidden
+QUESTION:nastran
+VALUE: MCB2b2lkIHZvaWQgdm9pZCB7fSB2b2lkIHZvaWQ=
+STATE: hidden
+QUESTION:Composition_Material#CB#(-ANY-)
+VALUE: -ANY-
+STATE:HIDDEN
+TKWIDGET: NasComposite::ComunicateWithGiD
+END MATERIAL
+NUMBER: 14 MATERIAL: Spring 
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(SPRING)
+VALUE: SPRING
+QUESTION:Property_Values:#CB#(Axial,Torsional)
+VALUE:Axial
+QUESTION:Stiffness_coefficient: 
+VALUE:0.0
+QUESTION:Composition_Material#CB#(-ANY-)
+VALUE:-ANY-
+STATE:HIDDEN
+END MATERIAL
+NUMBER: 15 MATERIAL: DOF_Spring
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION:PROPERTY#CB#(DOF_SPRING)
+VALUE:DOF_SPRING
+QUESTION:Stiffness:
+VALUE:0.0
+QUESTION:Damping:
+VALUE:0.0
+QUESTION: Connect_to#CB#(DOF)
+VALUE:DOF
+QUESTION:EndA#CB#(X-Displacement,Y-Displacement,Z-Displacement,X-Rotation,Y-Rotation,Z-Rotation)
+VALUE:X-Displacement
+QUESTION:EndB#CB#(X-Displacement,Y-Displacement,Z-Displacement,X-Rotation,Y-Rotation,Z-Rotation)
+VALUE:X-Displacement
+QUESTION:Composition_Material#CB#(-ANY-)
+VALUE:-ANY-
+STATE: HIDDEN
+END MATERIAL
+NUMBER: 16 MATERIAL: Tetrahedron 
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(TETRAHEDRON)
+VALUE: TETRAHEDRON
+QUESTION:Coord_System:#CB#(ELEMENT,BASIC)
+VALUE:ELEMENT
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: buttonmat::comunicatewithGiD
+END MATERIAL
+NUMBER: 17 MATERIAL: Hexahedron 
+QUESTION:Table
+VALUE:0
+STATE: hidden
+QUESTION: PROPERTY#CB#(HEXAHEDRON)
+VALUE: HEXAHEDRON
+QUESTION:Coord_System:#CB#(ELEMENT,BASIC)
+VALUE:ELEMENT
+QUESTION:Composition_Material#MAT#(Material)
+VALUE:Isotropic
+TKWIDGET: buttonmat::comunicatewithGiD
+END MATERIAL
+BOOK: Tables
+NUMBER: 18 MATERIAL: Table
+QUESTION:Table
+VALUE:1
+STATE: hidden
+QUESTION:Table_Interpolation_Values:(x,y[x])
+VALUE: #N# 1 none
+STATE: hidden
+QUESTION: Value_type:
+VALUE:vs._Time
+STATE: hidden
+QUESTION: Type_of_Interpolation:#CB#(TABLED1,TABLED2,TABLED3,TABLED4)
+VALUE:TABLED1
+STATE: hidden
+QUESTION:Table_parameter1:
+VALUE:0.0
+STATE: hidden
+QUESTION:Table_parameter2:
+VALUE:0.0
+STATE: hidden
+QUESTION:Table_parameter3:
+VALUE:0.0
+STATE: hidden
+QUESTION:Table_parameter4:
+VALUE:0.0
+STATE: hidden
+TKWIDGET: Function::ComunicateWithGiD
+END MATERIAL 

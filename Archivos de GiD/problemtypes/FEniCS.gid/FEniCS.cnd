@@ -1,0 +1,54 @@
+
+BOOK: domains_3d
+
+CONDITION: domain_face_of_volume
+CONDTYPE: over surfaces
+CONDMESHTYPE: over face elements
+QUESTION: id
+VALUE: 0
+HELP: integer number to identify a domain
+END CONDITION
+
+CONDITION: domain_body_of_volume
+CONDTYPE: over volumes
+CONDMESHTYPE: over body elements
+QUESTION: id
+VALUE: 0
+HELP: integer number to identify a domain
+END CONDITION
+
+BOOK: domains_2d
+
+CONDITION: domain_edge_of_surface
+CONDTYPE: over lines
+CONDMESHTYPE: over face elements multiple
+QUESTION: id
+VALUE: 0
+HELP: integer number to identify a domain
+END CONDITION
+
+CONDITION: domain_body_of_surface
+CONDTYPE: over surfaces
+CONDMESHTYPE: over body elements
+QUESTION: id
+VALUE: 0
+HELP: integer number to identify a domain
+END CONDITION
+
+BOOK: mesh_functions
+
+CONDITION: mesh_function_face_of_volume
+CONDTYPE: over surfaces
+CONDMESHTYPE: over face elements multiple
+QUESTION: value
+VALUE: 0
+HELP: integer number to identify a domain
+END CONDITION
+
+CONDITION: mesh_function_body_of_volume
+CONDTYPE: over volumes
+CONDMESHTYPE: over body elements
+QUESTION: value
+VALUE: 0
+HELP: mesh function value
+END CONDITION

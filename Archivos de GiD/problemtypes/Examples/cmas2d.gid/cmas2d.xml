@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- -*- coding: utf-8;-*- -->
+<Infoproblemtype version="1.0">
+  <Program>
+    <Name>cmas2d</Name>
+    <Version>1.1</Version>   
+    <MinimumGiDVersion>12.1.11d</MinimumGiDVersion>
+    <EnableDeprecated>0</EnableDeprecated>
+    <ImageFileBrowser>images/ico.png</ImageFileBrowser>
+    <ShortDescription>Calculates the center of mass of a 2D object</ShortDescription>
+    <Description>Calculates the center of mass of a 2D object. Uses the same solver 
+      module as cmas2d_customlib problemtype, but this example is implemented as a 'classic problemtype'
+    </Description>
+    <NewsInVersion version="1.1" date="2021-03-04">
+      * code to show how to protect a problemtype
+    </NewsInVersion>
+    <NewsInVersion version="1.0" date="2015-09-16">
+      * example of classic problemtype
+    </NewsInVersion>
+    <!--
+    <ValidatePassword>
+      <![CDATA[
+      source [file join $dir scripts protection.tcl]
+      return [Cmas2d::ValidatePassword $key $dir $computer_name]
+      ]]> 
+    </ValidatePassword>
+    -->
+  </Program>
+</Infoproblemtype>

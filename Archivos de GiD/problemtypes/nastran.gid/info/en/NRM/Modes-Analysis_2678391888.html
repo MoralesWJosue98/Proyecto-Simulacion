@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Modes Analysis</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Modes Analysis
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>Defines data needed to perform real eigenvalue analysis.</p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <div class="content-wrapper">
+                        <p>
+                          <span class="confluence-embedded-file-wrapper confluence-embedded-manual-size">
+                            <img class="confluence-embedded-image" height="389" width="407" loading="lazy" src="attachments/2678391888/2678391887.png?width=407" data-image-src="attachments/2678391888/2678391887.png" data-unresolved-comment-count="0" data-linked-resource-id="2678391887" data-linked-resource-version="1" data-linked-resource-type="attachment" data-linked-resource-default-alias="worddav327e9811281a955ded3d62e06e7e34cc.png" data-base-url="https://gidsimulation.atlassian.net/wiki" data-linked-resource-content-type="image/png" data-linked-resource-container-id="2678391888" data-linked-resource-container-version="2" data-media-id="474a8b25-4237-47ac-aa68-550698d4a94c" data-media-type="file"/>
+                          </span>
+                        </p>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>
+                        <em>Figure 19 – Modes Analysis Section</em>
+                      </p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <br class="atl-forced-newline"/>
+              <strong>-<em>
+                  <span style="text-decoration: underline;">Method of eigenvalue extraction:</span>
+                </em>
+              </strong>
+ Sets which method will be used to find eigenvalues. See the following table:             </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>INV</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Inverse power method, symmetric matrix operations.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>DET</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Determinant method, symmetric matrix operations.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>GIV</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Givens method of tridiagonalization.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>MGIV</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Modified Givens method (see Remark 2).</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>FEER</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Tridiagonal reduction method, symmetric matrix operations.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>FEER-Q</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>See Remark 1.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>FEER-X</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>See Remark 1.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>UINV</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Inverse power method, un-symmetric matrix operations.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>UDET</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Determinant method, un-symmetric matrix operations.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <strong>Remarks</strong>
+            </p>
+            <ol>
+              <li>The rigid body frequencies are set to zero, unless FEER-X is requested. If FEER-Q is requested, certain key areas in FEER computations are done in quad precision (Real*16) for 32-bit word machines and in double precision for 60- and 64-bit word machines. The FEER-Q request would yield much better rigid body eigenvalues, but it may take two to three times longer to compute than FEER or FEER-X.</li>
+              <li>Givens method requires the mass matrix not to be singular. The MGIV method allows a singular mass matrix. The bigger dynamic matrix will require more CPU time and more memory.</li>
+            </ol>
+            <p>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Frequency range of interest</span>
+                </em>
+:              </strong>
+ (Required for METHOD = DET, INV, UDET, or UINV) (Real &lt;=0.0; F1&lt;= F2). If METHOD = GIV, frequency range acts over desired eigenvectors. The frequency range is ignored if ND &gt; 0. In this case the ND number of first eigenvectors associated to positive roots is found. (Real, F1&lt;=F2). <br/>
+If METHOD = FEER, F1 is the center of range of interest (Default is F1 = 0.0) (Real &gt; 0.0), and F2 is an acceptable relative error of tolerance expressed as percentage on frequency-squared (Default percentage is 0.1/n, where n is the order of the stiffness matrix) (Real &gt; 0.0).<br/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Estimate number of roots</span>
+                </em>
+              </strong>
+ in range (Required for METHOD = DET, INV, UDET, or UINV. Ignored for METHOD = FEER) (Integer &gt; 0). <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Desired number</span>
+                </em>
+              </strong>
+              <br/>
+The value of this field always has to be a positive integer.<br/>
+This field has the following functions:             </p>
+            <ul>
+              <li>For methods DET, INV, UDET, or UNIV: represents desired number of roots. If left blank, the default of '3 * Estimated number' is taken.</li>
+              <li>For method GIV: represents desired number of eigenvectors.</li>
+              <li>For method FEER: represents desired number of roots and desired number of eigenvectors. If left blank, an automatic numbers are calculated to extract at least one accurate mode.</li>
+            </ul>
+            <p>
+              <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-Mass orthogonality test:</span>
+                </em>
+              </strong>
+ Method for normalizing eigenvectors.<br/>
+The following are the available methods:             </p>
+            <div class="table-wrap">
+              <table class="wrapped confluenceTable">
+                <colgroup>
+                  <col/>
+                  <col/>
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>MASS</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Normalizes eigenvectors to unit value of the generalized mass.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>MAX</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Normalizes eigenvectors to unit value of the largest component in the analysis set.</p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="confluenceTd">
+                      <p>POINT</p>
+                    </td>
+                    <td class="confluenceTd">
+                      <p>Normalizes eigenvectors to unit value of the component defined in fields NodeID and DOF. If the defined component is set to zero, the method is changed to MAX by default.</p>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              <br class="atl-forced-newline"/>
+              <strong>
+                <em>
+                  <span style="text-decoration: underline;">-NodeID:</span>
+                </em>
+              </strong>
+ Node or scalar point identification number (Required if and only if Mass orthogonality test is set to POINT). The value of this field always has to be a positive integer.             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

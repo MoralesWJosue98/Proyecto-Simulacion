@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?><!-- -*- coding: utf-8;-*- -->
+<Infoproblemtype version="1.0">
+<Program>
+<Name>FEniCS</Name>
+<Version>1.0</Version>
+<MinimumGiDVersion>10.0</MinimumGiDVersion>
+<ImageFileBrowser>images/fenics_ico.png</ImageFileBrowser>
+<Description>Interface GiD-FEniCS open source code to solve edp's by FEM methods</Description>
+<NewsInVersion>First version</NewsInVersion>
+</Program>
+</Infoproblemtype>

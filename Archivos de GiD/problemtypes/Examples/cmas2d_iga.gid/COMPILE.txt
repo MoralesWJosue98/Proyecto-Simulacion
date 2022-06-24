@@ -1,0 +1,19 @@
+
+Compilation
+
+To compile in Linux - 64 bits
+----------------------------
+
+gcc -m64 -o cmas2d_iga-linux-64.exe cmas2d_iga.c -lm
+
+To compile in Mac OS X - general
+----------------------------
+
+gcc -o cmas2d_iga-macosx-64.exe cmas2d_iga.c -lm
+
+To compile in Linux - 32 bits
+----------------------------
+
+gcc -m32 -o cmas2d_iga-linux-32.exe cmas2d_iga.c -lm
+
+

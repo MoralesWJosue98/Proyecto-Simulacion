@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Nastran reference manual : Heat Boundaries</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Nastran reference manual : Heat Boundaries
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>MENU SEQUENCE:</p>
+            <p>Data → Boundary → Heat Boundaries</p>
+            <p>It defines a boundary surface element for heat transfer analysis. It is mandatory to assign this condition to any geometrical entity that will be a heat boundary.</p>
+            <p>Heat Boundary condition gives geometrical information of the heat boundary like the orientation of the boundary and the area factor of application.</p>
+            <p>It is possible to define five types of heat boundary:</p>
+            <ol>
+              <li>
+                <strong>Prescribed Temperature:</strong>
+ This type of heat boundary doesn’t need to be defined by the use of “heat boundary” condition. It is only necessary to assign “Fixed Temperature” condition to the desired model boundary.              </li>
+              <li>
+                <strong>Heat flow across boundary due to radiation:</strong>
+ To define this type of heat boundary is necessary to assign the “heat boundary” condition (assigning this condition we are defining a general heat boundary) and to assign “radiation boundary” condition to define a radiation boundary.              </li>
+              <li>
+                <strong>Heat flow across boundary due to convection: </strong>
+This type of boundary is very similar to the previous one. It is also necessary to assign the “heat boundary” condition and “convection boundary” to define a convection boundary.               </li>
+              <li>
+                <strong>Prescribed rate of heat flow across boundary: </strong>
+This type of boundary is useful when an imposed heat flow is boundary condition of the problem. This boundary works is the same way like the two previous ones.              </li>
+              <li>
+                <strong>Insulated </strong>
+(no heat flow across boundary): For this type of boundary any condition has to be assigned. By default all elements are insulated.              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

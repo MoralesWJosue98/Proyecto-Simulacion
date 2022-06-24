@@ -1,0 +1,1143 @@
+BOOK: Constraints
+NUMBER: 1 CONDITION: Point-Constraints
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  QUESTION:X-Displacement#CB#(1,0)
+  VALUE: 1
+  QUESTION:Y-Displacement#CB#(1,0)
+  VALUE: 1
+  QUESTION:Z-Displacement#CB#(1,0)
+  VALUE: 1
+  QUESTION:X-Rotation#CB#(1,0)
+  VALUE: 1
+  QUESTION:Y-Rotation#CB#(1,0)
+  VALUE: 1
+  QUESTION:Z-Rotation#CB#(1,0)
+  VALUE: 1
+ END CONDITION
+NUMBER: 2 CONDITION:Line-Constraints
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  QUESTION:X-Displacement#CB#(1,0) 
+  VALUE: 1
+  QUESTION:Y-Displacement#CB#(1,0)
+  VALUE: 1
+  QUESTION:Z-Displacement#CB#(1,0)
+  VALUE: 1
+  QUESTION:X-Rotation#CB#(1,0)
+  VALUE: 1
+  QUESTION:Y-Rotation#CB#(1,0)
+  VALUE: 1
+  QUESTION:Z-Rotation#CB#(1,0)
+  VALUE: 1
+END CONDITION
+NUMBER: 3 CONDITION:Surface-Constraints
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  QUESTION:X-Displacement#CB#(1,0) 
+  VALUE: 1
+  QUESTION:Y-Displacement#CB#(1,0)
+  VALUE: 1
+  QUESTION:Z-Displacement#CB#(1,0)
+  VALUE: 1
+  QUESTION:X-Rotation#CB#(1,0)
+  VALUE: 1
+  QUESTION:Y-Rotation#CB#(1,0)
+  VALUE: 1
+  QUESTION:Z-Rotation#CB#(1,0)
+  VALUE: 1
+END CONDITION
+NUMBER: 4 CONDITION:Point-Enforced-Displacement
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  QUESTION:X-Enforced_Displacement: 
+  VALUE: 0.0
+  QUESTION:Y-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Z-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Mx-Enforced_Displacement: 
+  VALUE: 0.0
+  QUESTION:My-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Mz-Enforced_Displacement:
+  VALUE: 0.0
+END CONDITION
+NUMBER: 5 CONDITION:Line-Enforced-Displacement
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  QUESTION:X-Enforced_Displacement: 
+  VALUE: 0.0
+  QUESTION:Y-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Z-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Mx-Enforced_Displacement: 
+  VALUE: 0.0
+  QUESTION:My-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Mz-Enforced_Displacement:
+  VALUE: 0.0
+END CONDITION
+NUMBER: 6 CONDITION:Surface-Enforced-Displacement
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  QUESTION:X-Enforced_Displacement: 
+  VALUE: 0.0
+  QUESTION:Y-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Z-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Mx-Enforced_Displacement: 
+  VALUE: 0.0
+  QUESTION:My-Enforced_Displacement:
+  VALUE: 0.0
+  QUESTION:Mz-Enforced_Displacement:
+  VALUE: 0.0
+END CONDITION
+NUMBER: 7 CONDITION:Point_Fixed_Temperature
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  QUESTION:Temperature: 
+  VALUE: 0.0
+END CONDITION
+NUMBER: 8 CONDITION:Line_Fixed_Temperature
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  QUESTION:Temperature: 
+  VALUE: 0.0
+END CONDITION
+NUMBER: 9 CONDITION:Surface_Fixed_Temperature
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  QUESTION:Temperature: 
+  VALUE: 0.0
+END CONDITION
+BOOK: Static_Loads
+NUMBER: 10 CONDITION: Point-Force-Load
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  QUESTION:X-Force
+  VALUE: 0.0
+  QUESTION:Y-Force
+  VALUE: 0.0
+  QUESTION:Z-Force
+  VALUE: 0.0
+END CONDITION
+NUMBER: 11 CONDITION: Moment
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  QUESTION:Mx-Force
+  VALUE:0.0
+  QUESTION:My-Force
+  VALUE:0.0
+  QUESTION:Mz-Force
+  VALUE:0.0
+END CONDITION
+NUMBER: 12 CONDITION: Line-Pressure-Load
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements
+  QUESTION:Coord_System:#CB#(BASIC,ELEMENT)
+  VALUE: BASIC
+  QUESTION:X-Pressure
+  VALUE: 0.0
+  QUESTION:Y-Pressure
+  VALUE:0.0
+  QUESTION:Z-Pressure
+  VALUE:0.0
+END CONDITION   
+NUMBER: 13 CONDITION: Line-Projected-Pressure-Load
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements
+  QUESTION:Coord_System:#CB#(BASIC,ELEMENT)
+  VALUE: BASIC
+  QUESTION:X-Pressure
+  VALUE: 0.0
+  QUESTION:Y-Pressure
+  VALUE:0.0
+  QUESTION:Z-Pressure
+  VALUE:0.0
+END CONDITION   
+NUMBER: 14 CONDITION: Surface-Pressure-Load
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over elements
+  QUESTION:X-Pressure
+  VALUE: 0.0
+  QUESTION:Y-Pressure
+  VALUE: 0.0
+  QUESTION:Z-Pressure
+  VALUE: 0.0
+END CONDITION
+NUMBER: 15 CONDITION: Line-Triangular-Pressure-Load
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements
+  COMMENT: This Condition only can be used over mesh linear elements
+  QUESTION:Coord_System:#CB#(BASIC,ELEMENT)
+  VALUE: BASIC
+  QUESTION:X-Pressure_Start_Point
+  VALUE: 0.0
+  QUESTION:Y-Pressure_Start_Point
+  VALUE:0.0
+  QUESTION:Z-Pressure_Start_Point
+  VALUE:0.0
+  QUESTION:X-Pressure_End_Point
+  VALUE: 0.0
+  QUESTION:Y-Pressure_End_Point
+  VALUE:0.0
+  QUESTION:Z-Pressure_End_Point
+  VALUE:0.0
+END CONDITION
+NUMBER: 16 CONDITION: Normal-Surface-Load
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over elements
+  QUESTION: Normal_Inward:
+  VALUE: 0.0
+END CONDITION
+BOOK: Local_Axes   
+NUMBER: 17 CONDITION:Line-Local-Axes
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements
+  HELP: All bars and beams must have Local Axes defined.
+  QUESTION:Local_Axes#LA#(GLOBAL,Auto,Auto_alt)
+  VALUE: GLOBAL
+END CONDITION
+NUMBER: 18 CONDITION: Material_Axes
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over body elements
+  HELP: Use this condition to assign the Material Cooordinate system orientation.
+  QUESTION:Material_Axes#LA#(GLOBAL,Auto,Auto_alt)
+  VALUE: GLOBAL
+END CONDITION
+BOOK: Connections
+NUMBER: 19 CONDITION:Point-Disconnect
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  HELP: To disconnect some degrees in one point.One flag chekced-->degree disconnected
+  COMMENT:These degrees of freedom codes refer to the element Axes,\nNOT global Axes.  
+  QUESTION:Disconnect_X_Displacement#CB#(0,1)
+  VALUE:0
+  QUESTION:Disconnect_Y_Displacement#CB#(0,1)
+  VALUE:0
+  QUESTION:Disconnect_Z_Displacement#CB#(0,1)
+  VALUE:0
+  QUESTION:Disconnect_X_Rotation#CB#(0,1)
+  VALUE:0
+  QUESTION:Disconnect_Y_Rotation#CB#(0,1)
+  VALUE:0
+  QUESTION:Disconnect_Z_Rotation#CB#(0,1)
+  VALUE:0
+END CONDITION
+BOOK: Dynamics_Loads
+NUMBER: 20 CONDITION:Point_Freq_Dynamic_Type1
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image1.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Phase_Lead(O):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_C[f]:#MAT#(Tables) 
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_D[f]:#MAT#(Tables) 
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image1.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 21 CONDITION:Line_Freq_Dynamic_Type1
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image1.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Phase_Lead(O):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_C[f]:#MAT#(Tables)
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_D[f]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image1.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 22 CONDITION:Surface_Freq_Dynamic_Type1
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image1.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Phase_Lead(O):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_C[f]:#MAT#(Tables)
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_D[f]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image1.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 23 CONDITION:Point_Freq_Dynamic_Type2
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image2.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Phase_Lead(O):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_B[f]:#MAT#(Tables)
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_h[f]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image2.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 24 CONDITION: Line_Freq_Dynamic_Type2
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image2.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Phase_Lead(O):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_B[f]:#MAT#(Tables)
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_h[f]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image2.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 25 CONDITION:Surface_Freq_Dynamic_Type2
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image2.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Phase_Lead(O):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_B[f]:#MAT#(Tables)
+  VALUE:Table  
+  QUESTION:Table_Interpolation_Values_h[f]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image2.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 26 CONDITION:Point_Time_Dynamic_Type1
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image3.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_F[t-T]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image3.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 27 CONDITION:Line_Time_Dynamic_Type1
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image3.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_F[t-T]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image3.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 28 CONDITION:Surface_Time_Dynamic_Type1
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image3.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_F[t-T]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image3.gif
+  TKWIDGET: button_tables::initbutton
+END CONDITION
+NUMBER: 29 CONDITION:Point_Time_Dynamic_Type2
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image4.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Inferior_Time_Limit(T1):
+  VALUE:0.0
+  QUESTION:Superior_Time_Limit(T2):
+  VALUE:0.0
+  QUESTION:Frequency_in_cycles_per_unit_time(f):
+  VALUE:0.0
+  QUESTION:Phase_angle_[in_degrees](P):  
+  VALUE:0.0
+  QUESTION:Exponential_coefficient(C):
+  VALUE:0.0 
+  QUESTION:Growth_coefficient(B):
+  VALUE:0.0 
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image4.gif
+END CONDITION
+NUMBER: 30 CONDITION:Line_Time_Dynamic_Type2
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image4.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Inferior_Time_Limit(T1):
+  VALUE:0.0
+  QUESTION:Superior_Time_Limit(T2):
+  VALUE:0.0
+  QUESTION:Frequency_in_cycles_per_unit_time(f):
+  VALUE:0.0
+  QUESTION:Phase_angle_[in_degrees](P):  
+  VALUE:0.0
+  QUESTION:Exponential_coefficient(C):
+  VALUE:0.0 
+  QUESTION:Growth_coefficient(B):
+  VALUE:0.0 
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image4.gif
+END CONDITION
+NUMBER: 31 CONDITION:Surface_Time_Dynamic_Type2
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image4.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Scale_Factor(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Inferior_Time_Limit(T1):
+  VALUE:0.0
+  QUESTION:Superior_Time_Limit(T2):
+  VALUE:0.0
+  QUESTION:Frequency_in_cycles_per_unit_time(f):
+  VALUE:0.0
+  QUESTION:Phase_angle_[in_degrees](P):  
+  VALUE:0.0
+  QUESTION:Exponential_coefficient(C):
+  VALUE:0.0 
+  QUESTION:Growth_coefficient(B):
+  VALUE:0.0 
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image4.gif
+END CONDITION
+NUMBER: 32 CONDITION:Point_cosine/sine_Load
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE:images/image5.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Amplitude(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Inferior_Time_Limit(T1):
+  VALUE:0.0
+  QUESTION:Superior_Time_Limit(T2):
+  VALUE:0.0
+  QUESTION:Frequency_in_cycles_per_unit_time(f):
+  VALUE:0.0
+  QUESTION:Phase_angle_[in_degrees](P):  
+  VALUE:0.0
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image5.gif
+END CONDITION
+NUMBER: 33 CONDITION:Line_cosine/sine_Load
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE:images/image5.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Amplitude(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Inferior_Time_Limit(T1):
+  VALUE:0.0
+  QUESTION:Superior_Time_Limit(T2):
+  VALUE:0.0
+  QUESTION:Frequency_in_cycles_per_unit_time(f):
+  VALUE:0.0
+  QUESTION:Phase_angle_[in_degrees](P):  
+  VALUE:0.0
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image5.gif
+END CONDITION
+NUMBER: 34 CONDITION:Surface_cosine/sine_Load
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE:images/image5.gif
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Amplitude(A):
+  VALUE:1.0
+  QUESTION:Time_Delay(T):
+  VALUE:0.0
+  QUESTION:Inferior_Time_Limit(T1):
+  VALUE:0.0
+  QUESTION:Superior_Time_Limit(T2):
+  VALUE:0.0
+  QUESTION:Frequency_in_cycles_per_unit_time(f):
+  VALUE:0.0
+  QUESTION:Phase_angle_[in_degrees](P):  
+  VALUE:0.0
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image5.gif
+END CONDITION
+NUMBER: 35 CONDITION:Point_Initial_Conditions
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  CANREPEAT: yes
+  VALUE:X
+  QUESTION:Initial_displacement: 
+  VALUE:0.0
+  QUESTION:Initial_velocity:
+  VALUE:0.0
+END CONDITION
+NUMBER: 36 CONDITION:Line_Initial_Conditions
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Initial_displacement: 
+  VALUE:0.0
+  QUESTION:Initial_velocity:
+  VALUE:0.0
+END CONDITION
+NUMBER: 37 CONDITION:Surface_Initial_Conditions
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Initial_displacement: 
+  VALUE:0.0
+  QUESTION:Initial_velocity:
+  VALUE:0.0
+END CONDITION
+NUMBER: 38 CONDITION: Volume_Initial_Conditions
+CONDTYPE: over volumes
+ CONDMESHTYPE: over nodes
+  CANREPEAT: yes
+  QUESTION:Degree_of_freedom:#CB#(1-X,2-Y,3-Z,4-RX,5-RY,6-RZ)
+  VALUE:X
+  QUESTION:Initial_displacement: 
+  VALUE:0.0
+  QUESTION:Initial_velocity:
+  VALUE:0.0
+END CONDITION
+NUMBER: 39 CONDITION:Line_Pressure_Freq_Type1
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image1.gif
+  QUESTION:Coord_System:#CB#(BASIC,ELEMENT)
+  VALUE: BASIC
+  QUESTION:Load_Type#CB#(NORMAL,PROJECTED)
+  VALUE: BASIC
+  QUESTION:X-Pressure
+  VALUE:0.0 
+  QUESTION:Y-Pressure
+  VALUE:0.0 
+  QUESTION:Z-Pressure
+  VALUE:0.0 
+  QUESTION:Table_Interpolation_Values_C[f]:#MAT#(Tables) 
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_D[f]:#MAT#(Tables) 
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image1.gif
+END CONDITION
+NUMBER: 40 CONDITION:Surface_Pressure_Freq_Type1
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over elements
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image1.gif
+  QUESTION:X-Pressure
+  VALUE:0.0 
+  QUESTION:Y-Pressure
+  VALUE:0.0 
+  QUESTION:Z-Pressure
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_C[f]:#MAT#(Tables)
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_D[f]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image1.gif
+END CONDITION
+NUMBER: 41 CONDITION:Line_Pressure_Freq_Type2
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image2.gif
+  QUESTION:Coord_System:#CB#(BASIC,ELEMENT)
+  VALUE: BASIC
+  QUESTION:Load_Type#CB#(NORMAL,PROJECTED)
+  VALUE: BASIC
+  QUESTION:X-Pressure
+  VALUE:0.0 
+  QUESTION:Y-Pressure
+  VALUE:0.0 
+  QUESTION:Z-Pressure
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_B[f]:#MAT#(Tables)
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_h[f]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image2.gif
+END CONDITION
+NUMBER: 42 CONDITION: Surface_Pressure_Freq_Type2
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over elements
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image2.gif
+  QUESTION:X-Pressure
+  VALUE:0.0 
+  QUESTION:Y-Pressure
+  VALUE:0.0 
+  QUESTION:Z-Pressure
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_B[f]:#MAT#(Tables)
+  VALUE:Table
+  QUESTION:Table_Interpolation_Values_h[f]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image2.gif
+END CONDITION
+NUMBER: 43 CONDITION:Line_Pressure_Time_Type1
+CONDTYPE: over lines        
+ CONDMESHTYPE: over body elements
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image3.gif
+  QUESTION:Coord_System:#CB#(BASIC,ELEMENT)
+  VALUE: BASIC
+  QUESTION:Load_Type#CB#(NORMAL,PROJECTED)
+  VALUE: BASIC
+  QUESTION:X-Pressure
+  VALUE:0.0 
+  QUESTION:Y-Pressure
+  VALUE:0.0 
+  QUESTION:Z-Pressure
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_F[t-T]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image3.gif
+END CONDITION
+NUMBER: 44 CONDITION:Surface_Pressure_Time_Type1
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over elements
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image3.gif
+  QUESTION:X-Pressure
+  VALUE:0.0 
+  QUESTION:Y-Pressure
+  VALUE:0.0 
+  QUESTION:Z-Pressure
+  VALUE:0.0
+  QUESTION:Table_Interpolation_Values_F[t-T]:#MAT#(Tables)
+  VALUE:Table
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image3.gif
+END CONDITION
+NUMBER: 45 CONDITION:Line_Pressure_Time_Type2
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image4.gif
+  QUESTION:Coord_System:#CB#(BASIC,ELEMENT)
+  VALUE: BASIC
+  QUESTION:Load_Type#CB#(NORMAL,PROJECTED)
+  VALUE: BASIC
+  QUESTION:X-Pressure
+  VALUE:0.0 
+  QUESTION:Y-Pressure
+  VALUE:0.0 
+  QUESTION:Z-Pressure
+  VALUE:0.0
+  QUESTION:Inferior_Time_Limit(T1):
+  VALUE:0.0
+  QUESTION:Superior_Time_Limit(T2):
+  VALUE:0.0
+  QUESTION:Frequency_in_cycles_per_unit_time(f):
+  VALUE:0.0
+  QUESTION:Phase_angle_[in_degrees](P):  
+  VALUE:0.0
+  QUESTION:Exponential_coefficient(C):
+  VALUE:0.0 
+  QUESTION:Growth_coefficient(B):
+  VALUE:0.0 
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image4.gif
+END CONDITION
+NUMBER: 46 CONDITION:Surface_Pressure_Time_Type2
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over elements
+  CANREPEAT: yes
+  TITLE: Data
+  IMAGE: images/image4.gif
+  QUESTION:X-Pressure
+  VALUE:0.0 
+  QUESTION:Y-Pressure
+  VALUE:0.0 
+  QUESTION:Z-Pressure
+  VALUE:0.0
+  QUESTION:Inferior_Time_Limit(T1):
+  VALUE:0.0
+  QUESTION:Superior_Time_Limit(T2):
+  VALUE:0.0
+  QUESTION:Frequency_in_cycles_per_unit_time(f):
+  VALUE:0.0
+  QUESTION:Phase_angle_[in_degrees](P):  
+  VALUE:0.0
+  QUESTION:Exponential_coefficient(C):
+  VALUE:0.0 
+  QUESTION:Growth_coefficient(B):
+  VALUE:0.0 
+  TITLE: Description
+  QUESTION: dummy
+  VALUE: dummy
+  STATE: hidden
+  IMAGE: images/image4.gif
+END CONDITION
+BOOK:Advanced_Conditions
+NUMBER:47 CONDITION:Concentrated_Mass_Element
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes  
+  QUESTION:Format:#CB#(CONM1,CONM2)
+  VALUE:CONM1
+  QUESTION:Symmetric_mass_matrix:(m1,m2,m3,m4,m5,m6)
+  VALUE:#N# 36 0.0 m12 m13 m14 m15 m16 0.0 0.0 m23 m24 m25 m26 0.0 0.0 0.0 m34 m35 m36 0.0 0.0 0.0 0.0 m45 m46 0.0 0.0 0.0 0.0 0.0 m56 0.0 0.0 0.0 0.0 0.0 0.0  
+  QUESTION:Alternative_Format:#CB#(CONM2)
+  VALUE:CONM2
+  QUESTION: Mass_Value:
+  VALUE:0.0
+  QUESTION:Offset_distances:(X1,X2,X3)
+  VALUE:#N# 3 0.0 0.0 0.0
+  QUESTION:Mass_moments_of_inertia:(I1,I2,I3)
+  VALUE:#N# 9 0.0 I12 I13 0.0 0.0 I23 0.0 0.0 0.0  
+  QUESTION:Mass#CB#(moments_of_inertia_measured_at_the_mass_c.g._in_global_system)
+  VALUE:moments_of_inertia_measured_at_the_mass_c.g._in_global_system 
+END CONDITION
+NUMBER:48 CONDITION:Output_Set_Nodes
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes  
+ CANREPEAT: yes  
+   QUESTION:Kind_of_Output:#CB#(DISPLACEMENT,SPCFORCES,ACCELERATION,VELOCITY,LOAD)
+   VALUE:DISPLACEMENT
+END CONDITION
+NUMBER: 49 CONDITION:Output_Set_Lines
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements  
+   CANREPEAT: yes
+   QUESTION:Kind_of_Output:#CB#(ESE,FORCE,STRAIN,STRESS)
+   VALUE:ESE
+END CONDITION
+NUMBER: 50 CONDITION:Output_Set_Surfaces
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over body elements  
+   CANREPEAT: yes
+   QUESTION:Kind_of_Output:#CB#(ESE,FORCE,STRAIN,STRESS)
+   VALUE:ESE
+END CONDITION
+NUMBER: 51 CONDITION: Contact
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over face elements  
+   CANREPEAT: yes
+   QUESTION:Master_slave:#CB#(Master,Slave)
+   VALUE: Master
+   QUESTION:Id#CB#(1,2,3,4,5,6)
+   VALUE: 1
+END CONDITION
+BOOK: Heat_Boundaries
+NUMBER: 52 CONDITION: Point_Heat_Boundary 
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes  
+   HELP: Defines a boundary condition surface element 
+   QUESTION:Orientation#CB#(Vector)
+   VALUE:Vector
+   QUESTION: V_x:
+   VALUE: 1.0
+   QUESTION: V_y:
+   VALUE: 0.0
+   QUESTION: V_z:
+   VALUE: 0.0
+   QUESTION:Area_factor:
+   VALUE:0.0
+   QUESTION:Absorptivity:
+   VALUE:0.0
+   STATE: hidden
+   QUESTION: Emissivity:
+   VALUE:0.0
+   STATE: hidden
+   TKWIDGET: heatboundaries::ComunicateWithGiD 
+END CONDITION
+NUMBER: 53 CONDITION: Line_Heat_Boundary 
+CONDTYPE: over lines
+ CONDMESHTYPE: over face elements  
+   HELP: Defines a boundary condition surface element 
+   QUESTION:Orientation#CB#(Vector)
+   VALUE:Vector
+   QUESTION: V_x:
+   VALUE: 1.0
+   QUESTION: V_y:
+   VALUE: 0.0
+   QUESTION: V_z:
+   VALUE: 0.0
+   QUESTION:Area_factor:
+   VALUE:0.0
+   QUESTION:Absorptivity:
+   VALUE:0.0
+   STATE: hidden
+   QUESTION: Emissivity:
+   VALUE:0.0
+   STATE: hidden
+   TKWIDGET: heatboundaries::ComunicateWithGiD 
+END CONDITION
+NUMBER: 54 CONDITION: Surface_Heat_Boundary 
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over face elements  
+   HELP: Defines a boundary condition surface element 
+   QUESTION: dummy1
+   VALUE: 0
+   STATE: hidden
+   QUESTION: dummy2
+   VALUE: 0
+   STATE: hidden
+   QUESTION: dummy3
+   VALUE: 0
+   STATE: hidden
+   QUESTION: dummy4
+   VALUE: 0
+   STATE: hidden
+   QUESTION: dummy5
+   VALUE: 0
+   STATE: hidden
+   QUESTION:Absorptivity:
+   VALUE:0.0
+   STATE: hidden
+   QUESTION: Emissivity:
+   VALUE:0.0
+   STATE: hidden
+   TKWIDGET: heatboundaries::ComunicateWithGiD 
+END CONDITION
+BOOK: Thermal_Loads
+NUMBER: 55 CONDITION: Point_Initial_Temperature
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes  
+   HELP: Defines initial temperature for all nodes of the geometric entity
+   QUESTION:Initial_Temperature:
+   VALUE:0.0
+END CONDITION
+NUMBER: 56 CONDITION: Line_Initial_Temperature
+CONDTYPE: over lines
+ CONDMESHTYPE: over nodes  
+   HELP: Defines initial temperature for all nodes of the geometric entity
+   QUESTION:Initial_Temperature:
+   VALUE:0.0
+END CONDITION
+NUMBER: 57 CONDITION: Surface_Initial_Temperature
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over nodes  
+   HELP: Defines initial temperature for all nodes of the geometric entity
+   QUESTION:Initial_Temperature:
+   VALUE:0.0
+END CONDITION
+NUMBER: 58 CONDITION: Point_Heat_Flux
+CONDTYPE: over points
+ CONDMESHTYPE: over nodes  
+   HELP: Defines a heat flux over boundary heat points
+   QUESTION:Flux_Magnitude:
+   VALUE:0.0
+END CONDITION
+NUMBER: 59 CONDITION: Line_Heat_Flux
+CONDTYPE: over lines
+ CONDMESHTYPE: over face elements  
+   HELP: Defines a heat flux over boundary heat lines
+   QUESTION:Flux_Magnitude:
+   VALUE:0.0
+END CONDITION
+NUMBER: 60 CONDITION: Surface_Heat_Flux
+CONDTYPE: over sufraces
+ CONDMESHTYPE: over face elements  
+   HELP: Defines a heat flux over boundary heat points
+   QUESTION:Flux_Magnitude:
+   VALUE:0.0
+END CONDITION
+NUMBER: 61 CONDITION: Point_Convection_Boundary
+CONDTYPE: over points 
+ CONDMESHTYPE: over nodes  
+   HELP: Defines a convetion boundary for heat transfer analysis
+   QUESTION:Convection_coef.:
+   VALUE:0.0
+   STATE: hidden
+   TKWIDGET: convection::ComunicateWithGiD 
+END CONDITION
+NUMBER: 62 CONDITION: Line_Convection_Boundary
+CONDTYPE: over lines
+ CONDMESHTYPE: over face elements  
+   HELP: Defines a convetion boundary for heat transfer analysis
+   QUESTION:Convection_coef.:
+   VALUE:0.0
+   STATE: hidden
+   TKWIDGET: convection::ComunicateWithGiD 
+END CONDITION
+NUMBER: 63 CONDITION: Surface_Convection_Boundary
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over face elements  
+   HELP: Defines a convetion boundary for heat transfer analysis
+   QUESTION:Convection_coef.:
+   VALUE:0.0
+   STATE: hidden
+   TKWIDGET: convection::ComunicateWithGiD 
+END CONDITION
+NUMBER: 64 CONDITION: Line_Volumetric_Heat
+CONDTYPE: over lines
+ CONDMESHTYPE: over body elements  
+   HELP: Defines a rate of volumetric heat addition in a conduction element
+   QUESTION:Power_input/volume:
+   VALUE:0.0
+END CONDITION
+NUMBER: 65 CONDITION: Surface_Volumetric_Heat
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over body elements  
+   HELP: Defines a rate of volumetric heat addition in a conduction element
+   QUESTION:Power_input/volume:
+   VALUE:0.0
+END CONDITION
+NUMBER: 66 CONDITION: Volume_Volumetric_heat
+CONDTYPE: over volumes
+ CONDMESHTYPE: over body elements  
+   HELP: Defines a rate of volumetric heat addition in a conduction element
+   QUESTION:Power_input/volume:
+   VALUE:0.0
+END CONDITION
+NUMBER: 67 CONDITION: Point_Radiation_Boundary
+CONDTYPE: over points 
+ CONDMESHTYPE: over nodes  
+   HELP: Defines a radiation boundary for heat transfer analysis
+   QUESTION:Radiation_View_Factor:
+   VALUE:1.0
+END CONDITION
+NUMBER: 68 CONDITION: Line_Radiation_Boundary
+CONDTYPE: over lines
+ CONDMESHTYPE: over face elements  
+   HELP: Defines a radiation boundary for heat transfer analysis
+   QUESTION:Radiation_View_Factor:
+   VALUE:1.0
+END CONDITION
+NUMBER: 69 CONDITION: Surface_Radiation_Boundary
+CONDTYPE: over surfaces
+ CONDMESHTYPE: over face elements  
+   HELP: Defines a radiation boundary for heat transfer analysis
+   QUESTION:Radiation_View_Factor:
+   VALUE:1.0
+END CONDITION
+
+BOOK:Rigid_Body
+
+NUMBER:70 CONDITION:Point_Rigid_Body
+CONDTYPE: over points
+CONDMESHTYPE: over nodes   
+  QUESTION:GN#FUNC#(NumPointToNumNode)
+  VALUE:0
+  TKWIDGET: GidUtils::TkwidgetPickPointOrNode
+  HELP: Id of the grid point to wich all six independent degrees of freedom for the element are assigned
+  QUESTION:CM
+  VALUE:123456  
+  HELP: Component numbers of dependent degrees of freedom (up to six unique digits) 
+END CONDITION
+
+NUMBER:71 CONDITION:Line_Rigid_Body
+CONDTYPE: over lines
+CONDMESHTYPE: over nodes   
+  QUESTION:GN#FUNC#(NumPointToNumNode)
+  VALUE:0
+  TKWIDGET: GidUtils::TkwidgetPickPointOrNode
+  HELP: Id of the grid point to wich all six independent degrees of freedom for the element are assigned
+  QUESTION:CM
+  VALUE:123456  
+  HELP: Component numbers of dependent degrees of freedom (up to six unique digits) 
+END CONDITION
+
+NUMBER:72 CONDITION:Surface_Rigid_Body
+CONDTYPE: over surfaces
+CONDMESHTYPE: over nodes   
+  QUESTION:GN#FUNC#(NumPointToNumNode)
+  VALUE:0
+  TKWIDGET: GidUtils::TkwidgetPickPointOrNode
+  HELP: Id of the grid point to wich all six independent degrees of freedom for the element are assigned
+  QUESTION:CM
+  VALUE:123456 
+  HELP: Component numbers of dependent degrees of freedom (up to six unique digits) 
+END CONDITION
+
+NUMBER:73 CONDITION:Volume_Rigid_Body
+CONDTYPE: over volumes
+CONDMESHTYPE: over nodes   
+  QUESTION:GN#FUNC#(NumPointToNumNode)
+  VALUE:0
+  TKWIDGET: GidUtils::TkwidgetPickPointOrNode
+  HELP: Id of the grid point to wich all six independent degrees of freedom for the element are assigned
+  QUESTION:CM
+  VALUE:123456  
+  HELP: Component numbers of dependent degrees of freedom (up to six unique digits) 
+END CONDITION

@@ -1,0 +1,54 @@
+<html>
+    <!---*- coding: utf-8;-*- -->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+        <style type="text/css">
+	    p { text-align:justify; }
+	    body { font-family: Verdana, Arial, Helvetica, Geneva; font-size 8px; }
+	    a { text-decoration:none }
+	    pre { font-family:Courier New, Courier, Mono; }
+	    h1 { font-family:Arial; font-size: 28; font-weight: bold; color:DarkBlue; }
+	    h2 { font-family:Arial; font-size: 24; font-weight: bold; color:DarkBlue; }
+	    h3 { font-family:Arial; font-size: 22; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    h4 { font-family:Arial; font-size: 18; font-weight: bold; color:DarkBlue; }
+	    P { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; }
+	    code { font-family:Courier New, Courier, Mono; font-size: 16; }
+	    li { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	    ol { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17;  
+		margin-top: 7px; }
+	    ul { text-align:justify; font-family:Arial, Helvetica, sans-serif; font-size: 17; 
+		margin-top: 7px; }
+	</style>
+        <title>How to use</title>
+    </head>
+    <body>
+        <a name="FEniCS&gt;How to use"/>
+        <h3>How to use</h3>
+        <p/>
+        <p>How to use the program:</p>
+        <p/>
+        <ul>
+            <li> Start GiD and load the FEniCS problemtype from the menu Data-&gt;Problemtype-&gt;FEniCS, then some conditions and general data are defined.</li>
+        </ul>
+        <ul>
+            <li> Create or import the geometry, apply the boundary conditions and generate the mesh.</li>
+        </ul>
+        <ul>
+            <li> Save the model and press calculate to write the .xml input files of FEniCS. Files are saved inside the .gid model folder (now only meshes of tetrahedra and triangles are exported)</li>
+        </ul>
+        <blockquote>
+            <p>If the file .win.bat or unix.bat points to the solver, it will be started (and its log file and error file could be showed in GiD)</p>
+        </blockquote>
+        <ul>
+            <li> Results are currently not written or converted to GiD format, then is not possible to directly visualize them changing to GiD postprocess mode. </li>
+        </ul>
+        <p/>
+        <p>Note: GiD postproces can import result in common formats, like Vtk, Tecplot or Femap files.</p>
+        <p/>
+        <p>To learn how to use GiD there are several tutorials at <a href="www.gidhome.com/support" target="_blank">www.gidhome.com/support</a>
+        </p>
+    </body>
+</html>

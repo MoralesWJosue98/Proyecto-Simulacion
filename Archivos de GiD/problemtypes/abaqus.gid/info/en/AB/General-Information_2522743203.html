@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Abaqus : General Information</title>
+    <link rel="stylesheet" href="styles/site.css" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  </head>
+  <body class="theme-default aui-theme-default">
+    <div id="page">
+      <div id="main" class="aui-page-panel">
+        <div id="main-header">
+          <h1 id="title-heading" class="pagetitle">
+            <span id="title-text">
+                            Abaqus : General Information
+                        </span>
+          </h1>
+        </div>
+        <div id="content" class="view">
+          <div id="main-content" class="wiki-content group">
+            <p>The <strong>GiD-Abaqus</strong>
+ interface permits to extract mesh files suitable for input for the analysis software program <strong>Abaqus</strong>
+.            </p>
+            <p>The interface is compatible from Abaqus 6.5. It is also able to import Abaqus <strong>results</strong>
+ (.odb format), but require old Abaqus 6.5 Windows x32 dll libraries (otherwise this feature is disabled)            </p>
+            <p>
+              <br class="atl-forced-newline"/>
+The data that can be output after the preprocessing is detailed below:            </p>
+            <ul>
+              <li>The mesh: elements and nodes. All <strong>GiD</strong>
+ supported elements can be printed, defining their formulation as an extra condition              </li>
+              <li>Sets of nodes</li>
+              <li>Sets of elements</li>
+              <li>Sets of surfaces (defined by nodes or face elements)</li>
+              <li>Elastic materials</li>
+              <li>Local coordinate systems</li>
+            </ul>
+            <p>
+              <br class="atl-forced-newline"/>
+Before running the simulation, the file needs to be edited in order to identify each one of the created sets with the corresponding condition.            </p>
+            <p>
+              <br/>
+            </p>
+            <p>Note: GiD can import .inp mesh files in Abaqus format without this problemtype (the Abaqus mesh importer is implemented as another GiD plugin)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
