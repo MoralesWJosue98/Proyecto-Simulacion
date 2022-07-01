@@ -1,0 +1,3 @@
+C:/Users/wilfr/Documents/Proyecto2-Simulacion/proyecto-2-n-pupas/Codigo Fuente/cmake-build-debug/CMakeFiles/Proy2_Simu.dir
+C:/Users/wilfr/Documents/Proyecto2-Simulacion/proyecto-2-n-pupas/Codigo Fuente/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/wilfr/Documents/Proyecto2-Simulacion/proyecto-2-n-pupas/Codigo Fuente/cmake-build-debug/CMakeFiles/rebuild_cache.dir
