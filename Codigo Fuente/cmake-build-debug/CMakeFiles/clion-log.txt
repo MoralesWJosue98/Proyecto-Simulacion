@@ -1,1 +1,0 @@
-CMakeLists.txt not found in C:\Users\wilfr\Documents\Proyecto2-Simulacion\proyecto-2-n-pupas\Codigo Fuente Select CMakeLists.txt
