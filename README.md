@@ -1,21 +1,13 @@
-# Proyecto 2
+# Proyecto 2 - Simulación
 # Técnicas de Simulación en Computadoras - Ciclo 01/2022
+![Assigned equation](/Images/equation.png)
+![Doublade pokemon](https://images.wikidexcdn.net/mwuploads/wikidex/6/66/latest/20190423162713/Doublade.png)
 
--	El proyecto se entregará a más tardar el día jueves 30 de junio a las 23:59.
--	La entrega está configurada como un Group Assignment.
--	Todos los miembros de todos los equipos deben enlazar su cuenta de GitHub.
--	Un miembro del equipo debe crear el grupo en Github Classroom.
--	El resto de miembros del equipo deberán unirse al grupo creado.
--	La entrega deberá ser por medio de un release.
 
-Colocar en este repositorio lo siguiente:
+## Integrantes                                      
 
--	Este README modificado con los datos de los integrantes del equipo de trabajo y notas o consideraciones que consideren relevantes.
+- Carolina María Carranza Carballo&emsp;&nbsp;&emsp;00008119
+- Wilfredo Josué Morales Alfaro&emsp;  &emsp; &emsp;  00025719
+- Nestor Eduardo Nieto Alas  &emsp; &emsp;  &emsp; &emsp;  00199019
+- Caroline Michelle Sierra Linares  &emsp; &emsp;&nbsp; 00091119
 
--	Documento Word (o equivalente) correspondiente a la Parte I.
-
--	Archivos GiD correspondientes a la Parte II.
-
--	Código C++ correspondiente a la Parte III. Archivos de entrada y de salida recibidos/generados.
-
--	Documento Word (o equivalente) correspondiente a la Parte IV.
